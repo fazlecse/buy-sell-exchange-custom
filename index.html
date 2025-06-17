@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Exchanger</title>
+  <!-- Favicon link -->
+  <link rel="shortcut icon" href="./assets/img/logo/favicon.png" type="image/x-icon" />
+  <!-- Fontawesome6 Css link -->
+  <link rel="stylesheet" href="assets/css/all.min.css" />
+  <!-- Bootstrap5 Css link -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <!-- Owl carousel Css link -->
+  <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
+  <link rel="stylesheet" href="assets/css/owl.theme.default.min.css" />
+  <!-- nice-select Css link -->
+  <link rel="stylesheet" href="assets/css/nice-select.css" />
+  <!-- select2 Css link -->
+  <link rel="stylesheet" href="assets/css/select2.min.css" />
+  <!-- Slick-slider-Css-link -->
+  <link rel="stylesheet" href="assets/css/slick.css" />
+  <link rel="stylesheet" href="assets/css/slick-theme.css" />
+  <!-- Style Css link -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body onload="preloaderFunction()" class="">
+
+  <!-- Preloader section start -->
+  <div id="preloader">
+    <img src="./assets/img/preloader/buy.png" alt="preloader-img" />
+  </div>
+  <!-- Preloader section end -->
+
+  <!-- Nav section start -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand logo" href="index.html"><img src="assets/img/logo/logo-white.png" alt="digiGoods" /></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar">
+        <i class="fa-light fa-list"></i>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbar">
+        <div class="offcanvas-header">
+          <a class="navbar-brand" href="index.html"><img class="logo" src="assets/img/logo/logo-white.png"
+              alt="digiGoods" /></a>
+
+          <button type="button" class="cmn-btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+            <i class="fa-light fa-arrow-right"></i>
+          </button>
+        </div>
+        <div class="offcanvas-body align-items-center justify-content-between">
+          <ul class="navbar-nav m-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">AML/KYC</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="nav-right">
+        <ul class="custom-nav">
+          <li class="nav-item">
+            <select class="nice-select language-select" aria-label="Default select example">
+              <option selected>English</option>
+              <option value="2">Bengali</option>
+              <option value="3">Arabic</option>
+            </select>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link login-btn" href="login.html">
+              login
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link cmn-btn2" href="login.html">
+              <div class="btn-wrapper">
+                <div class="main-text btn-single">
+                  Register
+                </div>
+                <div class="hover-text btn-single">
+                  Register
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Nav section end -->
+
+  <!-- Bottom Mobile Tab nav section start -->
+  <ul class="nav bottom-nav fixed-bottom d-lg-none">
+    <li class="nav-item">
+      <a class="nav-link" data-bs-toggle="offcanvas" role="button" aria-controls="offcanvasNavbar"
+        href="#offcanvasNavbar" aria-current="page"><i class="fa-light fa-list"></i></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#"><i class="fa-light fa-planet-ringed"></i></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active"><i class="fa-regular fa-house"></i></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#"><i class="fa-light fa-address-book"></i></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#"><i class="fa-light fa-user"></i></a>
+    </li>
+  </ul>
+  <!-- Bottom Mobile Tab nav section end -->
+
+  <!-- Calculator section start -->
+  <section class="calculator-section">
+    <div class="container">
+      <div class="notice-bar">
+        <div class="left-side">
+          <i class="fa-regular fa-circle-question"></i>
+          Warning: Our platform is committed to AML procedures. You can read more here.
+        </div>
+        <div class="right-side">
+          <a class="cmn-btn2" href="login.html">
+            <div class="btn-wrapper">
+              <div class="main-text btn-single">
+                Find out more <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </div>
+              <div class="hover-text btn-single">
+                Find out more <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <form class="calculator">
+            <div class="banner-slider" data-bs-toggle="modal" data-bs-target="#announcement-modal">
+              <div class="calculator-banner">
+                <div class="calculator-banner-wrapper">
+                  <div class="left-side">
+                    <div class="image-area">
+                      <img src="./assets/img/calculator/popularPairBanner.png" alt="" />
+                    </div>
+                    <div class="text-area">
+                      <p class="mb-0">
+                        Hottest rates for
+                        <strong> USDT/BTC, USDT/ETH</strong> swaps
+                      </p>
+                    </div>
+                  </div>
+                  <div class="right-side">
+                    <i class="fa-regular fa-angle-right"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="calculator-banner">
+                <div class="calculator-banner-wrapper">
+                  <div class="left-side">
+                    <div class="image-area">
+                      <img src="./assets/img/calculator/stablecoinRateBanner.png" alt="" />
+                    </div>
+                    <div class="text-area">
+                      <p class="mb-0">
+                        Rate for stablecoin swaps:
+                        <strong> same coin, any chain</strong>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="right-side">
+                    <i class="fa-regular fa-angle-right"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cmn-tabs mt-15 mb-15">
+              <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="pills-exchange-tab" data-bs-toggle="pill"
+                    data-bs-target="#pills-exchange" type="button" role="tab" aria-controls="pills-exchange"
+                    aria-selected="true">exchange</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="pills-Buy-tab" data-bs-toggle="pill" data-bs-target="#pills-Buy"
+                    type="button" role="tab" aria-controls="pills-Buy" aria-selected="false">Buy</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="pills-Sell-tab" data-bs-toggle="pill" data-bs-target="#pills-Sell"
+                    type="button" role="tab" aria-controls="pills-Sell" aria-selected="false">Sell</button>
+                </li>
+              </ul>
+            </div>
+            <div class="calculator-body">
+              <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-exchange" role="tabpanel"
+                  aria-labelledby="pills-exchange-tab" tabindex="0">
+
+                  <div class="input-amount-box" id="inputAmountBox">
+                    <span class="linear-gradient"></span>
+                    <div class="input-amount-wrapper">
+                      <label class="form-label mb-1">You send</label>
+                      <div class="input-amount-box-inner" id="inputAmountBoxInner">
+                        <a href="#" class="icon-area" data-bs-toggle="modal" data-bs-target="#calculator-modal">
+                          <img class="img-flag" src="./assets/img/crypto-icon/btc.svg" alt="">
+                        </a>
+                        <div class="text-area w-100">
+                          <div class="d-flex gap-3 justify-content-between">
+                            <a href="#" class="currency-name d-flex align-items-center gap-1" data-bs-toggle="modal"
+                              data-bs-target="#calculator-modal">
+                              <div class="title">BTC</div>
+                              <i class="fa-regular fa-angle-down"></i>
+                            </a>
+                            <input type="text" name="" id="" placeholder="You send" value="321"
+                              onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
+                          </div>
+                          <div class="d-flex justify-content-between">
+                            <div class="sub-title">Bitcoin</div>
+                            <div class="fw-500">Max is 2.98 BTC</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swap-area">
+                    <div class="swap-icon" id="swapBtn">
+                      <i class="fa-regular fa-arrow-up-arrow-down"></i>
+                    </div>
+                  </div>
+
+                  <div class="input-amount-box" id="inputAmountBox2">
+                    <span class="linear-gradient"></span>
+                    <div class="input-amount-wrapper">
+                      <label class="form-label mb-1">You send</label>
+                      <div class="input-amount-box-inner" id="inputAmountBoxInner2">
+                        <a href="#" class="icon-area" data-bs-toggle="modal" data-bs-target="#calculator-modal2">
+                          <img class="img-flag" src="./assets/img/crypto-icon/act.svg" alt="">
+                        </a>
+                        <div class="text-area w-100">
+                          <div class="d-flex gap-3 justify-content-between">
+                            <a href="#" class="currency-name d-flex align-items-center gap-1" data-bs-toggle="modal"
+                              data-bs-target="#calculator-modal2">
+                              <div class="title">BTC</div>
+                              <i class="fa-regular fa-angle-down"></i>
+                            </a>
+                            <input type="text" name="" id="" placeholder="You send" value="500"
+                              onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
+                          </div>
+                          <div class="d-flex justify-content-between">
+                            <div>Bitcoin</div>
+                            <div class="fw-500">Max is 2.98 BTC</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="transaction-summery mt-20">
+                    <h6 class="mb-10 fs-6 highlight">You get 113058.70552259 XRP</h6>
+                    <div class="cmn-list">
+                      <div class="item">
+                        <span>You send</span>
+                        <span>1.00000000 BTC</span>
+                      </div>
+                      <div class="item">
+                        <span>Exchange rate</span>
+                        <span>1 BTC ~ 113060.96774194 XRP</span>
+                      </div>
+                      <div class="item">
+                        <span>Service fee</span>
+                        <span>0.00100000 XRP</span>
+                      </div>
+                      <div class="item">
+                        <span>Network fee 0.002%</span>
+                        <span>2.26121935 XRP</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mt-20">
+                    <a class="cmn-btn w-100" href="login.html">
+                      <div class="btn-wrapper">
+                        <div class="main-text btn-single">
+                          proceed <i class="fa-regular fa-arrow-right-long"></i>
+                        </div>
+                        <div class="hover-text btn-single">
+                          proceed <i class="fa-regular fa-arrow-right-long"></i>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                </div>
+                <div class="tab-pane fade" id="pills-Buy" role="tabpanel" aria-labelledby="pills-Buy-tab" tabindex="0">
+                  <div class="row">
+                    <div class="col-12">
+                      <label for="send" class="form-label">You send</label>
+                      <div class="input-box">
+                        <input type="text" class="form-control" id="send" value="10"
+                          onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')" />
+                        <select class="cmn-select2-image" name="state" id="sendCurrency">
+                          <option value="btc">Bitcoin</option>
+                          <option value="eth">Ethirium</option>
+                          <option value="xrp">xrp</option>
+                          <option value="aave">aave</option>
+                          <option value="abt">abt</option>
+                          <option value="bab">bab</option>
+                          <option value="bal">bal</option>
+                          <option value="band">band</option>
+                          <option value="call">call</option>
+                          <option value="cc">cc</option>
+                          <option value="cdn">cnd</option>
+                          <option value="d">d</option>
+                          <option value="dai">dai</option>
+                        </select>
+                      </div>
+                      <div class="swap-area">
+                        <label for="receive" class="form-label">You get</label>
+                        <div class="swap-icon" id="swapBtn">
+                          <i class="fa-regular fa-arrow-up-arrow-down"></i>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="col-12">
+                      <!-- <label for="receive" class="form-label">You get</label> -->
+                      <div class="input-box">
+                        <input type="text" class="form-control" id="receive" value="30"
+                          onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')" />
+                        <select class="cmn-select2-image" name="state" id="reciveCurrency">
+                          <option value="eth">Ethirium</option>
+                          <option value="btc">Bitcoin</option>
+                          <option value="aave">aave</option>
+                          <option value="xrp">xrp</option>
+                          <option value="bab">bab</option>
+                          <option value="abt">abt</option>
+                          <option value="band">band</option>
+                          <option value="bal">bal</option>
+                          <option value="cc">cc</option>
+                          <option value="call">call</option>
+                          <option value="dai">dai</option>
+                          <option value="d">d</option>
+                          <option value="cdn">cnd</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="btn-area">
+                      <a href="" class="cmn-btn w-100">Exchange now</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="pills-Sell" role="tabpanel" aria-labelledby="pills-Sell-tab"
+                  tabindex="0">
+                  <div class="row">
+                    <div class="col-12">
+                      <label for="send" class="form-label">You send</label>
+                      <div class="input-box">
+                        <input type="text" class="form-control" id="send" value="10"
+                          onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')" />
+                        <select class="cmn-select2-image" name="state" id="sendCurrency">
+                          <option value="btc">Bitcoin</option>
+                          <option value="eth">Ethirium</option>
+                          <option value="xrp">xrp</option>
+                          <option value="aave">aave</option>
+                          <option value="abt">abt</option>
+                          <option value="bab">bab</option>
+                          <option value="bal">bal</option>
+                          <option value="band">band</option>
+                          <option value="call">call</option>
+                          <option value="cc">cc</option>
+                          <option value="cdn">cnd</option>
+                          <option value="d">d</option>
+                          <option value="dai">dai</option>
+                        </select>
+                      </div>
+                      <div class="swap-area">
+                        <label for="receive" class="form-label">You get</label>
+                        <div class="swap-icon" id="swapBtn">
+                          <i class="fa-regular fa-arrow-up-arrow-down"></i>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="col-12">
+                      <!-- <label for="receive" class="form-label">You get</label> -->
+                      <div class="input-box">
+                        <input type="text" class="form-control" id="receive" value="30"
+                          onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')" />
+                        <select class="cmn-select2-image" name="state" id="reciveCurrency">
+                          <option value="eth">Ethirium</option>
+                          <option value="btc">Bitcoin</option>
+                          <option value="aave">aave</option>
+                          <option value="xrp">xrp</option>
+                          <option value="bab">bab</option>
+                          <option value="abt">abt</option>
+                          <option value="band">band</option>
+                          <option value="bal">bal</option>
+                          <option value="cc">cc</option>
+                          <option value="call">call</option>
+                          <option value="dai">dai</option>
+                          <option value="d">d</option>
+                          <option value="cdn">cnd</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="btn-area">
+                      <a href="" class="cmn-btn w-100">Exchange now</a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col-lg-6">
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Calculator section end -->
+
+  <!-- Footer Section start -->
+  <!-- <section class="footer-section">
+    <div class="container">
+      <div class="row gy-4 g-sm-5">
+        <div class="col-lg-3 col-sm-6">
+          <div class="footer-widget">
+            <div class="widget-logo">
+              <a href="#nav_area"><img class="footer-logo" src="assets/img/logo/logo-white.png" alt="Exchanger" /></a>
+            </div>
+            <h6 class="mb-2 text-white">Address:</h6>
+            <p class="contact-item"><i class="fa-regular fa-location-dot"></i>No. 12 Adeola Odeku Street, Victoria
+              Island, Lagos, 101241, Nigeria</p>
+            <h6 class="mt-20 mb-2 text-white">Contact:</h6>
+            <p class="contact-item"><i class="fa-regular fa-phone"></i> 354-4156745674</p>
+            <p class="contact-item"><i class="fa-regular fa-envelope"></i> email@website.com</p>
+          </div>
+        </div>
+        <div class="col-lg-2 col-sm-6">
+          <div class="footer-widget">
+            <h5 class="widget-title">Quick Links</h5>
+            <ul>
+              <li><a class="widget-link" href="products.html">All Services</a></li>
+              <li><a class="widget-link" href="contact.html">Contact Us</a></li>
+              <li><a class="widget-link" href="faq.html">FAQ</a></li>
+              <li><a class="widget-link" href="blog.html">Blog</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 pt-sm-0 pt-3 ps-lg-5">
+          <div class="footer-widget">
+            <h5 class="widget-title">Company Policy</h5>
+            <ul>
+              <li>
+                <a class="widget-link" href="policy.html">Privacy Policy</a>
+              </li>
+              <li><a class="widget-link" href="">Refund Policy</a></li>
+              <li><a class="widget-link" href="">Terms of use</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 pt-sm-0 pt-3">
+          <div class="footer-widget">
+            <h5 class="widget-title">Download App</h5>
+            <p>Tackle your to-do list wherever you are with our mobile app & make your life easy.</p>
+            <div class="store-box">
+              <a href="" class="item">
+                <img src="./assets/img/store/google-play.png" alt="">
+              </a>
+              <a href="" class="item">
+                <img src="./assets/img/store/apple-store.png" alt="">
+              </a>
+            </div>
+
+            <ul class="social-box mt-30">
+              <li>
+                <a href="https://facebook.com" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              </li>
+              <li>
+                <a href="https://twitter.com" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com" aria-label="Linkedin"><i class="fab fa-linkedin"></i></a>
+              </li>
+              <li>
+                <a href="https://instagram.com" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <hr class="cmn-hr" />
+      <div class="copyright-area">
+        <p class="mb-0 text-center">
+          Copyright ©2025
+          <a class="highlight" href="index.html">Exchanger</a> All Rights
+          Reserved
+        </p>
+      </div>
+    </div>
+  </section> -->
+  <!-- Footer Section end -->
+
+  <!-- Modal section start -->
+
+  <!-- Announcement modal start -->
+  <div class="modal fade announcement-modal" id="announcement-modal" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header pb-0">
+          <h4 class="modal-title" id="staticBackdropLabel"></h4>
+          <button type="button" class="cmn-btn-close" data-bs-dismiss="modal" aria-label="Close">
+            <i class="fa-light fa-xmark"></i>
+          </button>
+        </div>
+        <div class="modal-body text-center">
+          <h4>Hottest rates for USDT/BTC, USDT/ETH swaps</h4>
+          <p>
+            Enjoy a cost-effective way to swap the same stablecoin
+            cross-chain, at a 1:1 exchange rate.
+          </p>
+          <p>
+            For example, you can convert <b>USDT-ERC20</b> to<b> USDT-TRC20</b>.
+          </p>
+          <p>Please note that network and service fees apply.</p>
+          <p>
+            <b>
+              Stablecoins participating in the promotion: USDT, USDC, TUSD.</b>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Announcement modal end -->
+
+  <!-- Calculator modal start -->
+  <div class="modal fade calculator-modal" id="calculator-modal" data-bs-backdrop="static" data-bs-keyboard="false"
+    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header flex-column">
+          <div class="d-flex justify-content-between align-items-center">
+            <h3 class="modal-title" id="staticBackdropLabel">Select a currency</h3>
+            <button type="button" class="cmn-btn-close" data-bs-dismiss="modal" aria-label="Close">
+              <i class="fa-light fa-xmark"></i>
+            </button>
+          </div>
+          <div class="search-box mt-10">
+            <input type="text" id="search-input" onkeyup="filterItems('search-input')" class="form-control"
+              placeholder="Search here...">
+            <button type="submit" class="search-btn"><i class="far fa-search"></i></button>
+          </div>
+        </div>
+        <div class="modal-body">
+          <div id="currency-list" class="currency-list">
+            <div class="item">
+              <div class="left-side">
+                <div class="img-area">
+                  <img class="img-flag" src="./assets/img/crypto-icon/btc.svg" alt="">
+                </div>
+                <div class="text-area">
+                  <div class="title">btc</div>
+                  <div class="sub-title">Bitcoin</div>
+                </div>
+              </div>
+              <div class="right-side">
+                <i class="fa-sharp fa-solid fa-circle-check"></i>
+              </div>
+            </div>
+            <div class="item">
+              <div class="left-side">
+                <div class="img-area">
+                  <img class="img-flag" src="./assets/img/crypto-icon/eth.svg" alt="">
+                </div>
+                <div class="text-area">
+                  <div class="title">ave</div>
+                  <div class="sub-title">Ethereum</div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="left-side">
+                <div class="img-area">
+                  <img class="img-flag" src="./assets/img/crypto-icon/usdt.svg" alt="">
+                </div>
+                <div class="text-area">
+                  <div class="title">USDT20</div>
+                  <div class="sub-title">Tether ERC20</div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="left-side">
+                <div class="img-area">
+                  <img class="img-flag" src="./assets/img/crypto-icon/sol.svg" alt="">
+                </div>
+                <div class="text-area">
+                  <div class="title">sol</div>
+                  <div class="sub-title">solana</div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="left-side">
+                <div class="img-area">
+                  <img class="img-flag" src="./assets/img/crypto-icon/1inch.svg" alt="">
+                </div>
+                <div class="text-area">
+                  <div class="title">1inch</div>
+                  <div class="sub-title">1inch (ERC20)</div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="left-side">
+                <div class="img-area">
+                  <img class="img-flag" src="./assets/img/crypto-icon/aave.svg" alt="">
+                </div>
+                <div class="text-area">
+                  <div class="title">AAVE</div>
+                  <div class="sub-title">Aave (ERC20)</div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="left-side">
+                <div class="img-area">
+                  <img class="img-flag" src="./assets/img/crypto-icon/abt.svg" alt="">
+                </div>
+                <div class="text-area">
+                  <div class="title">ABT</div>
+                  <div class="sub-title">Arcblock (ERC20)</div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="left-side">
+                <div class="img-area">
+                  <img class="img-flag" src="./assets/img/crypto-icon/act.svg" alt="">
+                </div>
+                <div class="text-area">
+                  <div class="title">act</div>
+                  <div class="sub-title">Achain</div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="left-side">
+                <div class="img-area">
+                  <img class="img-flag" src="./assets/img/crypto-icon/ada.svg" alt="">
+                </div>
+                <div class="text-area">
+                  <div class="title">ada</div>
+                  <div class="sub-title">Cardano</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade calculator-modal" id="calculator-modal2" data-bs-backdrop="static" data-bs-keyboard="false"
+    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header flex-column">
+          <div class="d-flex justify-content-between align-items-center">
+            <h3 class="modal-title" id="staticBackdropLabel">Select a currency</h3>
+            <button type="button" class="cmn-btn-close" data-bs-dismiss="modal" aria-label="Close">
+              <i class="fa-light fa-xmark"></i>
+            </button>
+          </div>
+          <div class="search-box mt-10">
+            <input type="text" id="search-input2" onkeyup="filterItems('search-input2')" class="form-control"
+              placeholder="Search here...">
+            <button type="submit" class="search-btn"><i class="far fa-search"></i></button>
+          </div>
+        </div>
+        <div class="modal-body">
+          <div id="currency-list" class="currency-list">
+            <div class="item">
+              <div class="left-side">
+                <div class="img-area">
+                  <img class="img-flag" src="./assets/img/crypto-icon/aave.svg" alt="">
+                </div>
+                <div class="text-area">
+                  <div class="title">AAVE</div>
+                  <div class="sub-title">Aave (ERC20)</div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="left-side">
+                <div class="img-area">
+                  <img class="img-flag" src="./assets/img/crypto-icon/abt.svg" alt="">
+                </div>
+                <div class="text-area">
+                  <div class="title">ABT</div>
+                  <div class="sub-title">Arcblock (ERC20)</div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="left-side">
+                <div class="img-area">
+                  <img class="img-flag" src="./assets/img/crypto-icon/act.svg" alt="">
+                </div>
+                <div class="text-area">
+                  <div class="title">act</div>
+                  <div class="sub-title">Achain</div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="left-side">
+                <div class="img-area">
+                  <img class="img-flag" src="./assets/img/crypto-icon/ada.svg" alt="">
+                </div>
+                <div class="text-area">
+                  <div class="title">ada</div>
+                  <div class="sub-title">Cardano</div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="left-side">
+                <div class="img-area">
+                  <img class="img-flag" src="./assets/img/crypto-icon/btc.svg" alt="">
+                </div>
+                <div class="text-area">
+                  <div class="title">btc</div>
+                  <div class="sub-title">Bitcoin</div>
+                </div>
+              </div>
+              <div class="right-side">
+                <i class="fa-sharp fa-solid fa-circle-check"></i>
+              </div>
+            </div>
+            <div class="item">
+              <div class="left-side">
+                <div class="img-area">
+                  <img class="img-flag" src="./assets/img/crypto-icon/eth.svg" alt="">
+                </div>
+                <div class="text-area">
+                  <div class="title">ave</div>
+                  <div class="sub-title">Ethereum</div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="left-side">
+                <div class="img-area">
+                  <img class="img-flag" src="./assets/img/crypto-icon/usdt.svg" alt="">
+                </div>
+                <div class="text-area">
+                  <div class="title">USDT20</div>
+                  <div class="sub-title">Tether ERC20</div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="left-side">
+                <div class="img-area">
+                  <img class="img-flag" src="./assets/img/crypto-icon/sol.svg" alt="">
+                </div>
+                <div class="text-area">
+                  <div class="title">sol</div>
+                  <div class="sub-title">solana</div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="left-side">
+                <div class="img-area">
+                  <img class="img-flag" src="./assets/img/crypto-icon/1inch.svg" alt="">
+                </div>
+                <div class="text-area">
+                  <div class="title">1inch</div>
+                  <div class="sub-title">1inch (ERC20)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Calculator modal end -->
+  <!-- Modal section end -->
+
+
+  <!-- Jquery Js link -->
+  <script src="assets/js/jquery-3.7.1.min.js"></script>
+  <!-- Bootstrap Js link -->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <!-- Owl carausel Js link -->
+  <script src="assets/js/owl.carousel.min.js"></script>
+  <!-- select2 Js link -->
+  <script src="assets/js/select2.min.js"></script>
+  <!-- nice-select Js link -->
+  <script src="assets/js/jquery.nice-select.min.js"></script>
+  <!-- Slick slider js link -->
+  <script src="assets/js/slick.min.js"></script>
+  <!-- Main Js link -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
