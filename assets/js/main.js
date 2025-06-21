@@ -19,17 +19,60 @@ if ($("nav").length) {
 }
 
 $(document).ready(function () {
-  // category carousel start
-  $(".category-carousel").owlCarousel({
+  // testimonial carousel start
+  $(".testimonial-carousel").owlCarousel({
+    loop: true,
+    autoplay: true,
+    margin: 30,
+    autoplayTimeout: 2000,
+    // rtl: true,
+    navText: [
+      "<i class='fa-regular fa-arrow-left-long'></i>",
+      "<i class='fa-regular fa-arrow-right-long'></i>",
+    ],
+    // rtl: true,
+    responsive: {
+      0: {
+        items: 1,
+        nav: true,
+        dots: false,
+        dotsEach: 3,
+      },
+      375: {
+        items: 1,
+        nav: true,
+        dots: false,
+        dotsEach: 2,
+      },
+      768: {
+        items: 2,
+        nav: true,
+        dots: false,
+        margin: 15,
+      },
+      992: {
+        items: 2,
+        nav: true,
+        dots: false,
+      },
+      1400: {
+        items: 3,
+        nav: true,
+        dots: false,
+      },
+    },
+  });
+  // testimonial carousel end
+  // Why choose carousel start
+  $(".why-choose-carousel").owlCarousel({
     // loop: true,
     // autoplay: true,
     margin: 20,
     autoplayTimeout: 2000,
-    // nav: false,
     // rtl: true,
     navText: [
-      "<i class='fa-regular fa-angle-left'></i>",
-      "<i class='fa-regular fa-angle-right'></i>",
+      "<i class='fa-regular fa-arrow-left-long'></i>",
+      "<i class='fa-regular fa-arrow-right-long'></i>",
     ],
     // rtl: true,
     responsive: {
@@ -62,13 +105,13 @@ $(document).ready(function () {
         dots: false,
       },
       1400: {
-        items: 6,
+        items: 3,
         nav: true,
         dots: false,
       },
     },
   });
-  // category carousel end
+  // Why choose carousel end
 
   // Banner sllider start
   if ($(".banner-slider").length) {
@@ -485,3 +528,26 @@ document.addEventListener("DOMContentLoaded", function () {
   handleInput(inputAmountBox2, inputAmountBoxInner2);
 });
 // Modal select to input focus end
+
+// Filter section start
+function filterItems(inputId) {
+  var input, filter, items, title, subtitle, i, txtValue;
+  input = document.getElementById(inputId);
+  filter = input.value.toUpperCase();
+  items = document.querySelectorAll("#currency-list .item");
+
+  items.forEach(function (item) {
+    title = item.querySelector(".title");
+    subtitle = item.querySelector(".sub-title");
+
+    txtValue = title.textContent || title.innerText;
+    txtValue += " " + (subtitle.textContent || subtitle.innerText);
+
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      item.style.display = "";
+    } else {
+      item.style.display = "none";
+    }
+  });
+}
+// Filter section end

@@ -118,7 +118,7 @@
 
   <!-- Calculator section start -->
   <section class="calculator-section">
-    <div class="container">
+    <div class="container custom-container">
       <div class="notice-bar">
         <div class="left-side">
           <i class="fa-regular fa-circle-question"></i>
@@ -296,120 +296,194 @@
 
                 </div>
                 <div class="tab-pane fade" id="pills-Buy" role="tabpanel" aria-labelledby="pills-Buy-tab" tabindex="0">
-                  <div class="row">
-                    <div class="col-12">
-                      <label for="send" class="form-label">You send</label>
-                      <div class="input-box">
-                        <input type="text" class="form-control" id="send" value="10"
-                          onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')" />
-                        <select class="cmn-select2-image" name="state" id="sendCurrency">
-                          <option value="btc">Bitcoin</option>
-                          <option value="eth">Ethirium</option>
-                          <option value="xrp">xrp</option>
-                          <option value="aave">aave</option>
-                          <option value="abt">abt</option>
-                          <option value="bab">bab</option>
-                          <option value="bal">bal</option>
-                          <option value="band">band</option>
-                          <option value="call">call</option>
-                          <option value="cc">cc</option>
-                          <option value="cdn">cnd</option>
-                          <option value="d">d</option>
-                          <option value="dai">dai</option>
-                        </select>
-                      </div>
-                      <div class="swap-area">
-                        <label for="receive" class="form-label">You get</label>
-                        <div class="swap-icon" id="swapBtn">
-                          <i class="fa-regular fa-arrow-up-arrow-down"></i>
+                  <div class="input-amount-box" id="inputAmountBox">
+                    <span class="linear-gradient"></span>
+                    <div class="input-amount-wrapper">
+                      <label class="form-label mb-1">You send</label>
+                      <div class="input-amount-box-inner" id="inputAmountBoxInner">
+                        <a href="#" class="icon-area" data-bs-toggle="modal" data-bs-target="#calculator-modal">
+                          <img class="img-flag" src="./assets/img/crypto-icon/btc.svg" alt="">
+                        </a>
+                        <div class="text-area w-100">
+                          <div class="d-flex gap-3 justify-content-between">
+                            <a href="#" class="currency-name d-flex align-items-center gap-1" data-bs-toggle="modal"
+                              data-bs-target="#calculator-modal">
+                              <div class="title">BTC</div>
+                              <i class="fa-regular fa-angle-down"></i>
+                            </a>
+                            <input type="text" name="" id="" placeholder="You send" value="321"
+                              onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
+                          </div>
+                          <div class="d-flex justify-content-between">
+                            <div class="sub-title">Bitcoin</div>
+                            <div class="fw-500">Max is 2.98 BTC</div>
+                          </div>
                         </div>
                       </div>
-
                     </div>
-                    <div class="col-12">
-                      <!-- <label for="receive" class="form-label">You get</label> -->
-                      <div class="input-box">
-                        <input type="text" class="form-control" id="receive" value="30"
-                          onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')" />
-                        <select class="cmn-select2-image" name="state" id="reciveCurrency">
-                          <option value="eth">Ethirium</option>
-                          <option value="btc">Bitcoin</option>
-                          <option value="aave">aave</option>
-                          <option value="xrp">xrp</option>
-                          <option value="bab">bab</option>
-                          <option value="abt">abt</option>
-                          <option value="band">band</option>
-                          <option value="bal">bal</option>
-                          <option value="cc">cc</option>
-                          <option value="call">call</option>
-                          <option value="dai">dai</option>
-                          <option value="d">d</option>
-                          <option value="cdn">cnd</option>
-                        </select>
+                  </div>
+
+                  <div class="swap-area">
+                    <div class="swap-icon" id="swapBtn">
+                      <i class="fa-regular fa-arrow-up-arrow-down"></i>
+                    </div>
+                  </div>
+
+                  <div class="input-amount-box" id="inputAmountBox2">
+                    <span class="linear-gradient"></span>
+                    <div class="input-amount-wrapper">
+                      <label class="form-label mb-1">You send</label>
+                      <div class="input-amount-box-inner" id="inputAmountBoxInner2">
+                        <a href="#" class="icon-area" data-bs-toggle="modal" data-bs-target="#calculator-modal2">
+                          <img class="img-flag" src="./assets/img/crypto-icon/act.svg" alt="">
+                        </a>
+                        <div class="text-area w-100">
+                          <div class="d-flex gap-3 justify-content-between">
+                            <a href="#" class="currency-name d-flex align-items-center gap-1" data-bs-toggle="modal"
+                              data-bs-target="#calculator-modal2">
+                              <div class="title">BTC</div>
+                              <i class="fa-regular fa-angle-down"></i>
+                            </a>
+                            <input type="text" name="" id="" placeholder="You send" value="500"
+                              onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
+                          </div>
+                          <div class="d-flex justify-content-between">
+                            <div>Bitcoin</div>
+                            <div class="fw-500">Max is 2.98 BTC</div>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                    <div class="btn-area">
-                      <a href="" class="cmn-btn w-100">Exchange now</a>
+                  </div>
+
+                  <div class="transaction-summery mt-20">
+                    <h6 class="mb-10 fs-6 highlight">You get 113058.70552259 XRP</h6>
+                    <div class="cmn-list">
+                      <div class="item">
+                        <span>You send</span>
+                        <span>1.00000000 BTC</span>
+                      </div>
+                      <div class="item">
+                        <span>Exchange rate</span>
+                        <span>1 BTC ~ 113060.96774194 XRP</span>
+                      </div>
+                      <div class="item">
+                        <span>Service fee</span>
+                        <span>0.00100000 XRP</span>
+                      </div>
+                      <div class="item">
+                        <span>Network fee 0.002%</span>
+                        <span>2.26121935 XRP</span>
+                      </div>
                     </div>
+                  </div>
+                  <div class="mt-20">
+                    <a class="cmn-btn w-100" href="login.html">
+                      <div class="btn-wrapper">
+                        <div class="main-text btn-single">
+                          proceed <i class="fa-regular fa-arrow-right-long"></i>
+                        </div>
+                        <div class="hover-text btn-single">
+                          proceed <i class="fa-regular fa-arrow-right-long"></i>
+                        </div>
+                      </div>
+                    </a>
                   </div>
                 </div>
                 <div class="tab-pane fade" id="pills-Sell" role="tabpanel" aria-labelledby="pills-Sell-tab"
                   tabindex="0">
-                  <div class="row">
-                    <div class="col-12">
-                      <label for="send" class="form-label">You send</label>
-                      <div class="input-box">
-                        <input type="text" class="form-control" id="send" value="10"
-                          onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')" />
-                        <select class="cmn-select2-image" name="state" id="sendCurrency">
-                          <option value="btc">Bitcoin</option>
-                          <option value="eth">Ethirium</option>
-                          <option value="xrp">xrp</option>
-                          <option value="aave">aave</option>
-                          <option value="abt">abt</option>
-                          <option value="bab">bab</option>
-                          <option value="bal">bal</option>
-                          <option value="band">band</option>
-                          <option value="call">call</option>
-                          <option value="cc">cc</option>
-                          <option value="cdn">cnd</option>
-                          <option value="d">d</option>
-                          <option value="dai">dai</option>
-                        </select>
-                      </div>
-                      <div class="swap-area">
-                        <label for="receive" class="form-label">You get</label>
-                        <div class="swap-icon" id="swapBtn">
-                          <i class="fa-regular fa-arrow-up-arrow-down"></i>
+                  <div class="input-amount-box" id="inputAmountBox">
+                    <span class="linear-gradient"></span>
+                    <div class="input-amount-wrapper">
+                      <label class="form-label mb-1">You send</label>
+                      <div class="input-amount-box-inner" id="inputAmountBoxInner">
+                        <a href="#" class="icon-area" data-bs-toggle="modal" data-bs-target="#calculator-modal">
+                          <img class="img-flag" src="./assets/img/crypto-icon/btc.svg" alt="">
+                        </a>
+                        <div class="text-area w-100">
+                          <div class="d-flex gap-3 justify-content-between">
+                            <a href="#" class="currency-name d-flex align-items-center gap-1" data-bs-toggle="modal"
+                              data-bs-target="#calculator-modal">
+                              <div class="title">BTC</div>
+                              <i class="fa-regular fa-angle-down"></i>
+                            </a>
+                            <input type="text" name="" id="" placeholder="You send" value="321"
+                              onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
+                          </div>
+                          <div class="d-flex justify-content-between">
+                            <div class="sub-title">Bitcoin</div>
+                            <div class="fw-500">Max is 2.98 BTC</div>
+                          </div>
                         </div>
                       </div>
-
                     </div>
-                    <div class="col-12">
-                      <!-- <label for="receive" class="form-label">You get</label> -->
-                      <div class="input-box">
-                        <input type="text" class="form-control" id="receive" value="30"
-                          onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')" />
-                        <select class="cmn-select2-image" name="state" id="reciveCurrency">
-                          <option value="eth">Ethirium</option>
-                          <option value="btc">Bitcoin</option>
-                          <option value="aave">aave</option>
-                          <option value="xrp">xrp</option>
-                          <option value="bab">bab</option>
-                          <option value="abt">abt</option>
-                          <option value="band">band</option>
-                          <option value="bal">bal</option>
-                          <option value="cc">cc</option>
-                          <option value="call">call</option>
-                          <option value="dai">dai</option>
-                          <option value="d">d</option>
-                          <option value="cdn">cnd</option>
-                        </select>
+                  </div>
+
+                  <div class="swap-area">
+                    <div class="swap-icon" id="swapBtn">
+                      <i class="fa-regular fa-arrow-up-arrow-down"></i>
+                    </div>
+                  </div>
+
+                  <div class="input-amount-box" id="inputAmountBox2">
+                    <span class="linear-gradient"></span>
+                    <div class="input-amount-wrapper">
+                      <label class="form-label mb-1">You send</label>
+                      <div class="input-amount-box-inner" id="inputAmountBoxInner2">
+                        <a href="#" class="icon-area" data-bs-toggle="modal" data-bs-target="#calculator-modal2">
+                          <img class="img-flag" src="./assets/img/crypto-icon/act.svg" alt="">
+                        </a>
+                        <div class="text-area w-100">
+                          <div class="d-flex gap-3 justify-content-between">
+                            <a href="#" class="currency-name d-flex align-items-center gap-1" data-bs-toggle="modal"
+                              data-bs-target="#calculator-modal2">
+                              <div class="title">BTC</div>
+                              <i class="fa-regular fa-angle-down"></i>
+                            </a>
+                            <input type="text" name="" id="" placeholder="You send" value="500"
+                              onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
+                          </div>
+                          <div class="d-flex justify-content-between">
+                            <div>Bitcoin</div>
+                            <div class="fw-500">Max is 2.98 BTC</div>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                    <div class="btn-area">
-                      <a href="" class="cmn-btn w-100">Exchange now</a>
+                  </div>
+
+                  <div class="transaction-summery mt-20">
+                    <h6 class="mb-10 fs-6 highlight">You get 113058.70552259 XRP</h6>
+                    <div class="cmn-list">
+                      <div class="item">
+                        <span>You send</span>
+                        <span>1.00000000 BTC</span>
+                      </div>
+                      <div class="item">
+                        <span>Exchange rate</span>
+                        <span>1 BTC ~ 113060.96774194 XRP</span>
+                      </div>
+                      <div class="item">
+                        <span>Service fee</span>
+                        <span>0.00100000 XRP</span>
+                      </div>
+                      <div class="item">
+                        <span>Network fee 0.002%</span>
+                        <span>2.26121935 XRP</span>
+                      </div>
                     </div>
+                  </div>
+                  <div class="mt-20">
+                    <a class="cmn-btn w-100" href="login.html">
+                      <div class="btn-wrapper">
+                        <div class="main-text btn-single">
+                          proceed <i class="fa-regular fa-arrow-right-long"></i>
+                        </div>
+                        <div class="hover-text btn-single">
+                          proceed <i class="fa-regular fa-arrow-right-long"></i>
+                        </div>
+                      </div>
+                    </a>
                   </div>
                 </div>
 
@@ -418,12 +492,1085 @@
           </form>
         </div>
         <div class="col-lg-6">
-
+          <div class="calculator-promotional-box">
+            <div class="top-box">
+              <h1>Exchange Any Crypto Securely And Easily</h1>
+              <p>Empower Your Financial Future with Crypto: Buy, Sell, and Exchange Your Way to Success! Get Started
+              </p>
+              <img class="mt-10" src="./assets/img/calculator/payment-options.svg" alt="">
+            </div>
+            <div class="bottom-box">
+              <h3>How does it work!</h3>
+              <p>Learn how SwapsCenter works, step by step.</p>
+              <a class="cmn-btn2 mt-10" href="login.html">
+                <div class="btn-wrapper">
+                  <div class="main-text btn-single">
+                    See more
+                  </div>
+                  <div class="hover-text btn-single">
+                    See more
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
   <!-- Calculator section end -->
+
+  <!-- Why choose us section start -->
+  <section class="why-choose-us-section">
+    <div class="container">
+      <div class="section-header">
+        <h3>Why choose us</h3>
+      </div>
+      <div class="owl-carousel owl-theme why-choose-carousel">
+        <div class="item">
+          <div class="why-choose-box">
+            <div class="icon-box">
+              <i class="fa-regular fa-shield-check"></i>
+            </div>
+            <div class="text-box">
+              <h4 class="mb-10">Security First</h4>
+              <p>We prioritize the security of your cryptocurrency holdings above all else.</p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="why-choose-box">
+            <div class="icon-box">
+              <i class="fa-sharp fa-regular fa-earth-americas"></i>
+            </div>
+            <div class="text-box">
+              <h4 class="mb-10">Global Reach</h4>
+              <p>CoinEctra serves a global community of cryptocurrency enthusiasts.</p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="why-choose-box">
+            <div class="icon-box">
+              <i class="fa-regular fa-user-group"></i>
+            </div>
+            <div class="text-box">
+              <h4 class="mb-10">User-Friendly Interface</h4>
+              <p>Whether you're a beginner or a seasoned trader, our intuitive platform makes buying, selling, and
+                exchanging cryptocurrencies a breeze.</p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="why-choose-box">
+            <div class="icon-box">
+              <i class="fa-regular fa-handshake"></i>
+            </div>
+            <div class="text-box">
+              <h5 class="mb-10">Compliance and Trust</h5>
+              <p>
+                Compliance and Trust
+                CoinEctra adheres to strict regulatory standards, giving you peace of mind.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Why choose us section end -->
+
+  <!-- Trade section start -->
+  <section class="trade-section">
+    <div class="container">
+      <div class="section-header">
+        <h3>latest trade</h3>
+      </div>
+      <div class="card">
+        <div class="card-header border-0 pb-0">
+          <div class="cmn-tabs">
+            <ul class="nav nav-pills" id="pills-tab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="pills-trade-exchange-tab" data-bs-toggle="pill"
+                  data-bs-target="#pills-trade-exchange" type="button" role="tab" aria-controls="pills-trade-exchange"
+                  aria-selected="true">exchange</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-trade-buy-tab" data-bs-toggle="pill"
+                  data-bs-target="#pills-trade-buy" type="button" role="tab" aria-controls="pills-trade-buy"
+                  aria-selected="false">Buy</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-trade-sell-tab" data-bs-toggle="pill"
+                  data-bs-target="#pills-trade-sell" type="button" role="tab" aria-controls="pills-trade-sell"
+                  aria-selected="false">Sell</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-trade-exchange" role="tabpanel"
+              aria-labelledby="pills-trade-exchange-tab" tabindex="0">
+              <!-- Cmn table start -->
+              <div class="cmn-table">
+                <div class="table-responsive">
+                  <table class="table align-middle">
+                    <thead>
+                      <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Trx ID</th>
+                        <th scope="col">Send Amount</th>
+                        <th scope="col">Get Amount</th>
+                        <th scope="col">Rate</th>
+                        <th scope="col">Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td data-label="Name">
+                          <div class="profile-box3">
+                            <div class="img-box">
+                              <img src="./assets/img/person/1.jpg" alt="">
+                            </div>
+                            <div class="text-box">
+                              <h6 class="fs-6">Fazle Rabbi</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-label="Trx ID">
+                          <div> B6819deed141e0</div>
+                        </td>
+                        <td data-label="Send Amount">
+                          <div class="coin-box">
+                            <div class="img-box">
+                              <img src="./assets/img/mini-flag/us.svg" alt="">
+                            </div>
+                            <div class="text-box">
+                              <h6 class="title">250,002.50 USD</h6>
+                              <small>USD - US Dollar</small>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-label="Get Amount">
+                          <div class="coin-box">
+                            <div class="img-box">
+                              <img src="./assets/img/crypto-icon/btc.svg" alt="">
+                            </div>
+                            <div class="text-box">
+                              <h6 class="title">3.56614286 BTC</h6>
+                              <small>BTC - Bitcoin</small>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-label="Rate">1 BTC ~ 70,077.08 USD</td>
+                        <td data-label="Status">
+                          <span class="badge text-bg-primary">Awaiting</span>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td data-label="Name">
+                          <div class="profile-box3">
+                            <div class="img-box">
+                              <img src="./assets/img/person/2.jpg" alt="">
+                            </div>
+                            <div class="text-box">
+                              <h6 class="fs-6">Sobahan</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-label="Trx ID">
+                          <div> B68165147ba7f1</div>
+                        </td>
+                        <td data-label="Send Amount">
+                          <div class="coin-box">
+                            <div class="img-box">
+                              <img src="./assets/img/mini-flag/ng.svg" alt="">
+                            </div>
+                            <div class="text-box">
+                              <h6 class="title">250,002.50 NGN</h6>
+                              <small>NGN - Nigerian Naira</small>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-label="Get Amount">
+                          <div class="coin-box">
+                            <div class="img-box">
+                              <img src="./assets/img/crypto-icon/btc.svg" alt="">
+                            </div>
+                            <div class="text-box">
+                              <h6 class="title">0.00239051 BTC</h6>
+                              <small>BTC - Bitcoin</small>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-label="Rate">1 BTC ~ 100,000,000.00 NGN</td>
+                        <td data-label="Status">
+                          <span class="badge text-bg-primary">Awaiting</span>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td data-label="Name">
+                          <div class="profile-box3">
+                            <div class="img-box">
+                              <img src="./assets/img/person/3.jpg" alt="">
+                            </div>
+                            <div class="text-box">
+                              <h6 class="fs-6">Asadullah</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-label="Trx ID">
+                          <div> B678c91de50aba</div>
+                        </td>
+                        <td data-label="Send Amount">
+                          <div class="coin-box">
+                            <div class="img-box">
+                              <img src="./assets/img/mini-flag/us.svg" alt="">
+                            </div>
+                            <div class="text-box">
+                              <h6 class="title">10,000.00 USD</h6>
+                              <small>USD - US Dollar</small>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-label="Get Amount">
+                          <div class="coin-box">
+                            <div class="img-box">
+                              <img src="./assets/img/crypto-icon/tnc.svg" alt="">
+                            </div>
+                            <div class="text-box">
+                              <h6 class="title">1908.3718626 TON</h6>
+                              <small>TON - Toncoin</small>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-label="Rate">1 TON ~ 5.24 USD</td>
+                        <td data-label="Status">
+                          <span class="badge text-bg-primary">Awaiting</span>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td data-label="Name">
+                          <div class="profile-box3">
+                            <div class="img-box">
+                              <img src="./assets/img/person/4.jpg" alt="">
+                            </div>
+                            <div class="text-box">
+                              <h6 class="fs-6">Jubayer</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-label="Trx ID">
+                          <div> B66090cca1af27</div>
+                        </td>
+                        <td data-label="Send Amount">
+                          <div class="coin-box">
+                            <div class="img-box">
+                              <img src="./assets/img/mini-flag/br.svg" alt="">
+                            </div>
+                            <div class="text-box">
+                              <h6 class="title">500.00 BRL</h6>
+                              <small>BRL - Brazilian Real</small>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-label="Get Amount">
+                          <div class="coin-box">
+                            <div class="img-box">
+                              <img src="./assets/img/crypto-icon/sol.svg" alt="">
+                            </div>
+                            <div class="text-box">
+                              <h6 class="title">366.2962963 SOL</h6>
+                              <small>SOL - Solana</small>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-label="Rate">1 SOL ~ 1.35 BRL</td>
+                        <td data-label="Status">
+                          <span class="badge text-bg-success"> Completed</span>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td data-label="Name">
+                          <div class="profile-box3">
+                            <div class="img-box">
+                              <img src="./assets/img/person/5.jpg" alt="">
+                            </div>
+                            <div class="text-box">
+                              <h6 class="fs-6">Anike Dey</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-label="Trx ID">
+                          <div> B66090c3e882ee</div>
+                        </td>
+                        <td data-label="Send Amount">
+                          <div class="coin-box">
+                            <div class="img-box">
+                              <img src="./assets/img/mini-flag/qa.svg" alt="">
+                            </div>
+                            <div class="text-box">
+                              <h6 class="title">100.00 QAR</h6>
+                              <small>QAR - Qatari Rial</small>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-label="Get Amount">
+                          <div class="coin-box">
+                            <div class="img-box">
+                              <img src="./assets/img/crypto-icon/eth.svg" alt="">
+                            </div>
+                            <div class="text-box">
+                              <h6 class="title">0.80400983 ETC</h6>
+                              <small>ETC - Ethereum Classic</small>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-label="Rate">1 ETC ~ 124.37 QAR</td>
+                        <td data-label="Status">
+                          <span class="badge text-bg-warning">Refunded</span>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td data-label="Name">
+                          <div class="profile-box3">
+                            <div class="img-box">
+                              <img src="./assets/img/person/6.jpg" alt="">
+                            </div>
+                            <div class="text-box">
+                              <h6 class="fs-6">Maria</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-label="Trx ID">
+                          <div> B660906ccaf97a</div>
+                        </td>
+                        <td data-label="Send Amount">
+                          <div class="coin-box">
+                            <div class="img-box">
+                              <img src="./assets/img/mini-flag/cn.svg" alt="">
+                            </div>
+                            <div class="text-box">
+                              <h6 class="title">5,000.00 CNY</h6>
+                              <small>CNY - Chinese Yuan</small>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-label="Get Amount">
+                          <div class="coin-box">
+                            <div class="img-box">
+                              <img src="./assets/img/crypto-icon/ltc.svg" alt="">
+                            </div>
+                            <div class="text-box">
+                              <h6 class="title">6.80320151 LTC</h6>
+                              <small>LTC - Litecoin</small>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-label="Rate">1 LTC ~ 734.64 CNY</td>
+                        <td data-label="Status">
+                          <span class="badge text-bg-success">Completed</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <!-- Cmn table end -->
+            </div>
+            <div class="tab-pane fade" id="pills-trade-buy" role="tabpanel" aria-labelledby="pills-trade-buy-tab"
+              tabindex="0">
+              <!-- Cmn table start -->
+              <div class="cmn-table">
+                <div class="table-responsive">
+                  <table class="table align-middle">
+                    <thead>
+                      <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Trx ID</th>
+                        <th scope="col">Send Amount</th>
+                        <th scope="col">Get Amount</th>
+                        <th scope="col">Rate</th>
+                        <th scope="col">Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td data-label="Name">
+                          <div class="profile-box3">
+                            <div class="img-box">
+                              <img src="./assets/img/person/1.jpg" alt="">
+                            </div>
+                            <div class="text-box">
+                              <h6 class="fs-6">Fazle Rabbi</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-label="Trx ID">
+                          <div> B6819deed141e0</div>
+                        </td>
+                        <td data-label="Send Amount">
+                          <div class="coin-box">
+                            <div class="img-box">
+                              <img src="./assets/img/mini-flag/us.svg" alt="">
+                            </div>
+                            <div class="text-box">
+                              <h6 class="title">250,002.50 USD</h6>
+                              <small>USD - US Dollar</small>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-label="Get Amount">
+                          <div class="coin-box">
+                            <div class="img-box">
+                              <img src="./assets/img/crypto-icon/btc.svg" alt="">
+                            </div>
+                            <div class="text-box">
+                              <h6 class="title">3.56614286 BTC</h6>
+                              <small>BTC - Bitcoin</small>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-label="Rate">1 BTC ~ 70,077.08 USD</td>
+                        <td data-label="Status">
+                          <span class="badge text-bg-primary">Awaiting</span>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td data-label="Name">
+                          <div class="profile-box3">
+                            <div class="img-box">
+                              <img src="./assets/img/person/2.jpg" alt="">
+                            </div>
+                            <div class="text-box">
+                              <h6 class="fs-6">Sobahan</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-label="Trx ID">
+                          <div> B68165147ba7f1</div>
+                        </td>
+                        <td data-label="Send Amount">
+                          <div class="coin-box">
+                            <div class="img-box">
+                              <img src="./assets/img/mini-flag/ng.svg" alt="">
+                            </div>
+                            <div class="text-box">
+                              <h6 class="title">250,002.50 NGN</h6>
+                              <small>NGN - Nigerian Naira</small>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-label="Get Amount">
+                          <div class="coin-box">
+                            <div class="img-box">
+                              <img src="./assets/img/crypto-icon/btc.svg" alt="">
+                            </div>
+                            <div class="text-box">
+                              <h6 class="title">0.00239051 BTC</h6>
+                              <small>BTC - Bitcoin</small>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-label="Rate">1 BTC ~ 100,000,000.00 NGN</td>
+                        <td data-label="Status">
+                          <span class="badge text-bg-primary">Awaiting</span>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td data-label="Name">
+                          <div class="profile-box3">
+                            <div class="img-box">
+                              <img src="./assets/img/person/3.jpg" alt="">
+                            </div>
+                            <div class="text-box">
+                              <h6 class="fs-6">Asadullah</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-label="Trx ID">
+                          <div> B678c91de50aba</div>
+                        </td>
+                        <td data-label="Send Amount">
+                          <div class="coin-box">
+                            <div class="img-box">
+                              <img src="./assets/img/mini-flag/us.svg" alt="">
+                            </div>
+                            <div class="text-box">
+                              <h6 class="title">10,000.00 USD</h6>
+                              <small>USD - US Dollar</small>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-label="Get Amount">
+                          <div class="coin-box">
+                            <div class="img-box">
+                              <img src="./assets/img/crypto-icon/tnc.svg" alt="">
+                            </div>
+                            <div class="text-box">
+                              <h6 class="title">1908.3718626 TON</h6>
+                              <small>TON - Toncoin</small>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-label="Rate">1 TON ~ 5.24 USD</td>
+                        <td data-label="Status">
+                          <span class="badge text-bg-primary">Awaiting</span>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td data-label="Name">
+                          <div class="profile-box3">
+                            <div class="img-box">
+                              <img src="./assets/img/person/4.jpg" alt="">
+                            </div>
+                            <div class="text-box">
+                              <h6 class="fs-6">Jubayer</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-label="Trx ID">
+                          <div> B66090cca1af27</div>
+                        </td>
+                        <td data-label="Send Amount">
+                          <div class="coin-box">
+                            <div class="img-box">
+                              <img src="./assets/img/mini-flag/br.svg" alt="">
+                            </div>
+                            <div class="text-box">
+                              <h6 class="title">500.00 BRL</h6>
+                              <small>BRL - Brazilian Real</small>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-label="Get Amount">
+                          <div class="coin-box">
+                            <div class="img-box">
+                              <img src="./assets/img/crypto-icon/sol.svg" alt="">
+                            </div>
+                            <div class="text-box">
+                              <h6 class="title">366.2962963 SOL</h6>
+                              <small>SOL - Solana</small>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-label="Rate">1 SOL ~ 1.35 BRL</td>
+                        <td data-label="Status">
+                          <span class="badge text-bg-success"> Completed</span>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td data-label="Name">
+                          <div class="profile-box3">
+                            <div class="img-box">
+                              <img src="./assets/img/person/5.jpg" alt="">
+                            </div>
+                            <div class="text-box">
+                              <h6 class="fs-6">Anike Dey</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-label="Trx ID">
+                          <div> B66090c3e882ee</div>
+                        </td>
+                        <td data-label="Send Amount">
+                          <div class="coin-box">
+                            <div class="img-box">
+                              <img src="./assets/img/mini-flag/qa.svg" alt="">
+                            </div>
+                            <div class="text-box">
+                              <h6 class="title">100.00 QAR</h6>
+                              <small>QAR - Qatari Rial</small>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-label="Get Amount">
+                          <div class="coin-box">
+                            <div class="img-box">
+                              <img src="./assets/img/crypto-icon/eth.svg" alt="">
+                            </div>
+                            <div class="text-box">
+                              <h6 class="title">0.80400983 ETC</h6>
+                              <small>ETC - Ethereum Classic</small>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-label="Rate">1 ETC ~ 124.37 QAR</td>
+                        <td data-label="Status">
+                          <span class="badge text-bg-warning">Refunded</span>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td data-label="Name">
+                          <div class="profile-box3">
+                            <div class="img-box">
+                              <img src="./assets/img/person/6.jpg" alt="">
+                            </div>
+                            <div class="text-box">
+                              <h6 class="fs-6">Maria</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-label="Trx ID">
+                          <div> B660906ccaf97a</div>
+                        </td>
+                        <td data-label="Send Amount">
+                          <div class="coin-box">
+                            <div class="img-box">
+                              <img src="./assets/img/mini-flag/cn.svg" alt="">
+                            </div>
+                            <div class="text-box">
+                              <h6 class="title">5,000.00 CNY</h6>
+                              <small>CNY - Chinese Yuan</small>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-label="Get Amount">
+                          <div class="coin-box">
+                            <div class="img-box">
+                              <img src="./assets/img/crypto-icon/ltc.svg" alt="">
+                            </div>
+                            <div class="text-box">
+                              <h6 class="title">6.80320151 LTC</h6>
+                              <small>LTC - Litecoin</small>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-label="Rate">1 LTC ~ 734.64 CNY</td>
+                        <td data-label="Status">
+                          <span class="badge text-bg-success">Completed</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <!-- Cmn table end -->
+            </div>
+            <div class="tab-pane fade" id="pills-trade-sell" role="tabpanel" aria-labelledby="pills-trade-sell-tab"
+              tabindex="0">
+              <!-- Cmn table start -->
+              <div class="cmn-table">
+                <div class="table-responsive">
+                  <table class="table align-middle">
+                    <thead>
+                      <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Trx ID</th>
+                        <th scope="col">Send Amount</th>
+                        <th scope="col">Get Amount</th>
+                        <th scope="col">Rate</th>
+                        <th scope="col">Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td data-label="Name">
+                          <div class="profile-box3">
+                            <div class="img-box">
+                              <img src="./assets/img/person/1.jpg" alt="">
+                            </div>
+                            <div class="text-box">
+                              <h6 class="fs-6">Fazle Rabbi</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-label="Trx ID">
+                          <div> B6819deed141e0</div>
+                        </td>
+                        <td data-label="Send Amount">
+                          <div class="coin-box">
+                            <div class="img-box">
+                              <img src="./assets/img/mini-flag/us.svg" alt="">
+                            </div>
+                            <div class="text-box">
+                              <h6 class="title">250,002.50 USD</h6>
+                              <small>USD - US Dollar</small>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-label="Get Amount">
+                          <div class="coin-box">
+                            <div class="img-box">
+                              <img src="./assets/img/crypto-icon/btc.svg" alt="">
+                            </div>
+                            <div class="text-box">
+                              <h6 class="title">3.56614286 BTC</h6>
+                              <small>BTC - Bitcoin</small>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-label="Rate">1 BTC ~ 70,077.08 USD</td>
+                        <td data-label="Status">
+                          <span class="badge text-bg-primary">Awaiting</span>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td data-label="Name">
+                          <div class="profile-box3">
+                            <div class="img-box">
+                              <img src="./assets/img/person/2.jpg" alt="">
+                            </div>
+                            <div class="text-box">
+                              <h6 class="fs-6">Sobahan</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-label="Trx ID">
+                          <div> B68165147ba7f1</div>
+                        </td>
+                        <td data-label="Send Amount">
+                          <div class="coin-box">
+                            <div class="img-box">
+                              <img src="./assets/img/mini-flag/ng.svg" alt="">
+                            </div>
+                            <div class="text-box">
+                              <h6 class="title">250,002.50 NGN</h6>
+                              <small>NGN - Nigerian Naira</small>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-label="Get Amount">
+                          <div class="coin-box">
+                            <div class="img-box">
+                              <img src="./assets/img/crypto-icon/btc.svg" alt="">
+                            </div>
+                            <div class="text-box">
+                              <h6 class="title">0.00239051 BTC</h6>
+                              <small>BTC - Bitcoin</small>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-label="Rate">1 BTC ~ 100,000,000.00 NGN</td>
+                        <td data-label="Status">
+                          <span class="badge text-bg-primary">Awaiting</span>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td data-label="Name">
+                          <div class="profile-box3">
+                            <div class="img-box">
+                              <img src="./assets/img/person/3.jpg" alt="">
+                            </div>
+                            <div class="text-box">
+                              <h6 class="fs-6">Asadullah</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-label="Trx ID">
+                          <div> B678c91de50aba</div>
+                        </td>
+                        <td data-label="Send Amount">
+                          <div class="coin-box">
+                            <div class="img-box">
+                              <img src="./assets/img/mini-flag/us.svg" alt="">
+                            </div>
+                            <div class="text-box">
+                              <h6 class="title">10,000.00 USD</h6>
+                              <small>USD - US Dollar</small>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-label="Get Amount">
+                          <div class="coin-box">
+                            <div class="img-box">
+                              <img src="./assets/img/crypto-icon/tnc.svg" alt="">
+                            </div>
+                            <div class="text-box">
+                              <h6 class="title">1908.3718626 TON</h6>
+                              <small>TON - Toncoin</small>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-label="Rate">1 TON ~ 5.24 USD</td>
+                        <td data-label="Status">
+                          <span class="badge text-bg-primary">Awaiting</span>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td data-label="Name">
+                          <div class="profile-box3">
+                            <div class="img-box">
+                              <img src="./assets/img/person/4.jpg" alt="">
+                            </div>
+                            <div class="text-box">
+                              <h6 class="fs-6">Jubayer</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-label="Trx ID">
+                          <div> B66090cca1af27</div>
+                        </td>
+                        <td data-label="Send Amount">
+                          <div class="coin-box">
+                            <div class="img-box">
+                              <img src="./assets/img/mini-flag/br.svg" alt="">
+                            </div>
+                            <div class="text-box">
+                              <h6 class="title">500.00 BRL</h6>
+                              <small>BRL - Brazilian Real</small>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-label="Get Amount">
+                          <div class="coin-box">
+                            <div class="img-box">
+                              <img src="./assets/img/crypto-icon/sol.svg" alt="">
+                            </div>
+                            <div class="text-box">
+                              <h6 class="title">366.2962963 SOL</h6>
+                              <small>SOL - Solana</small>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-label="Rate">1 SOL ~ 1.35 BRL</td>
+                        <td data-label="Status">
+                          <span class="badge text-bg-success"> Completed</span>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td data-label="Name">
+                          <div class="profile-box3">
+                            <div class="img-box">
+                              <img src="./assets/img/person/5.jpg" alt="">
+                            </div>
+                            <div class="text-box">
+                              <h6 class="fs-6">Anike Dey</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-label="Trx ID">
+                          <div> B66090c3e882ee</div>
+                        </td>
+                        <td data-label="Send Amount">
+                          <div class="coin-box">
+                            <div class="img-box">
+                              <img src="./assets/img/mini-flag/qa.svg" alt="">
+                            </div>
+                            <div class="text-box">
+                              <h6 class="title">100.00 QAR</h6>
+                              <small>QAR - Qatari Rial</small>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-label="Get Amount">
+                          <div class="coin-box">
+                            <div class="img-box">
+                              <img src="./assets/img/crypto-icon/eth.svg" alt="">
+                            </div>
+                            <div class="text-box">
+                              <h6 class="title">0.80400983 ETC</h6>
+                              <small>ETC - Ethereum Classic</small>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-label="Rate">1 ETC ~ 124.37 QAR</td>
+                        <td data-label="Status">
+                          <span class="badge text-bg-warning">Refunded</span>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td data-label="Name">
+                          <div class="profile-box3">
+                            <div class="img-box">
+                              <img src="./assets/img/person/6.jpg" alt="">
+                            </div>
+                            <div class="text-box">
+                              <h6 class="fs-6">Maria</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-label="Trx ID">
+                          <div> B660906ccaf97a</div>
+                        </td>
+                        <td data-label="Send Amount">
+                          <div class="coin-box">
+                            <div class="img-box">
+                              <img src="./assets/img/mini-flag/cn.svg" alt="">
+                            </div>
+                            <div class="text-box">
+                              <h6 class="title">5,000.00 CNY</h6>
+                              <small>CNY - Chinese Yuan</small>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-label="Get Amount">
+                          <div class="coin-box">
+                            <div class="img-box">
+                              <img src="./assets/img/crypto-icon/ltc.svg" alt="">
+                            </div>
+                            <div class="text-box">
+                              <h6 class="title">6.80320151 LTC</h6>
+                              <small>LTC - Litecoin</small>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-label="Rate">1 LTC ~ 734.64 CNY</td>
+                        <td data-label="Status">
+                          <span class="badge text-bg-success">Completed</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <!-- Cmn table end -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Trade section end -->
+
+  <!-- Testimonial section start -->
+  <section class="testimonial-section">
+    <div class="container">
+      <div class="section-header">
+        <h3>Our Client Say</h3>
+      </div>
+      <div class="owl-carousel owl-theme testimonial-carousel">
+        <div class="item">
+          <div class="testimonial-box">
+            <div class="quote-icon">
+              <i class="fa-solid fa-quote-right"></i>
+            </div>
+            <ul class="reviews">
+              <li>
+                <i class="active fa-solid fa-star"></i>
+                <i class="active fa-solid fa-star"></i>
+                <i class="active fa-solid fa-star"></i>
+                <i class="active fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </li>
+            </ul>
+            <div class="quote-area">
+              <p>"This organization has been a beacon of hope. Their support has truly transformed my life, giving me
+                the tools and opportunities to thrive."
+              </p>
+            </div>
+            <div class="profile-box">
+              <div class="profile-thumbs">
+                <img src="assets/img/person/1.jpg" alt="" />
+              </div>
+              <div class="profile-title">
+                <h6 class="mb-1">Sarah Mitchell</h6>
+                <p class="mb-0">Community Outreach</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="testimonial-box">
+            <div class="quote-icon">
+              <i class="fa-solid fa-quote-right"></i>
+            </div>
+            <ul class="reviews">
+              <li>
+                <i class="active fa-solid fa-star"></i>
+                <i class="active fa-solid fa-star"></i>
+                <i class="active fa-solid fa-star"></i>
+                <i class="active fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </li>
+            </ul>
+            <div class="quote-area">
+              <p>"Thanks to their incredible work, I now have a roof over my head and a chance for a better future.
+                Their help has been life-changing."
+              </p>
+            </div>
+            <div class="profile-box">
+              <div class="profile-thumbs">
+                <img src="assets/img/person/2.jpg" alt="" />
+              </div>
+              <div class="profile-title">
+                <h6 class="mb-1">James Carter</h6>
+                <p class="mb-0">Shelter Resident</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="testimonial-box">
+            <div class="quote-icon">
+              <i class="fa-solid fa-quote-right"></i>
+            </div>
+            <ul class="reviews">
+              <li>
+                <i class="active fa-solid fa-star"></i>
+                <i class="active fa-solid fa-star"></i>
+                <i class="active fa-solid fa-star"></i>
+                <i class="active fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </li>
+            </ul>
+            <div class="quote-area">
+              <p>"The education program opened doors for me that I never thought possible. I’m now pursuing my dreams,
+                all thanks to their support."
+              </p>
+            </div>
+            <div class="profile-box">
+              <div class="profile-thumbs">
+                <img src="assets/img/person/3.jpg" alt="" />
+              </div>
+              <div class="profile-title">
+                <h6 class="mb-1">Maria Lopez</h6>
+                <p class="mb-0">Education Program</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="testimonial-box">
+            <div class="quote-icon">
+              <i class="fa-solid fa-quote-right"></i>
+            </div>
+            <ul class="reviews">
+              <li>
+                <i class="active fa-solid fa-star"></i>
+                <i class="active fa-solid fa-star"></i>
+                <i class="active fa-solid fa-star"></i>
+                <i class="active fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </li>
+            </ul>
+            <div class="quote-area">
+              <p>"This organization has been a beacon of hope. Their support has truly transformed my life, giving me
+                the tools and opportunities to thrive."
+              </p>
+            </div>
+            <div class="profile-box">
+              <div class="profile-thumbs">
+                <img src="assets/img/person/4.jpg" alt="" />
+              </div>
+              <div class="profile-title">
+                <h6 class="mb-1">JSarah Mitchell</h6>
+                <p class="mb-0">Community Outreach</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- Testimonial section end -->
 
   <!-- Footer Section start -->
   <!-- <section class="footer-section">
@@ -514,7 +1661,7 @@
     aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
-        <div class="modal-header pb-0">
+        <div class="modal-header pb-0 border-0">
           <h4 class="modal-title" id="staticBackdropLabel"></h4>
           <button type="button" class="cmn-btn-close" data-bs-dismiss="modal" aria-label="Close">
             <i class="fa-light fa-xmark"></i>
@@ -541,8 +1688,8 @@
   <!-- Announcement modal end -->
 
   <!-- Calculator modal start -->
-  <div class="modal fade calculator-modal" id="calculator-modal" data-bs-backdrop="static" data-bs-keyboard="false"
-    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal calculator-modal" id="calculator-modal" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header flex-column">
@@ -667,8 +1814,8 @@
       </div>
     </div>
   </div>
-  <div class="modal fade calculator-modal" id="calculator-modal2" data-bs-backdrop="static" data-bs-keyboard="false"
-    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal calculator-modal" id="calculator-modal2" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header flex-column">

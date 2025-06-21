@@ -33,14 +33,14 @@
   <!-- Nav section start -->
   <nav class="navbar navbar-expand-lg sticky-top">
     <div class="container">
-      <a class="navbar-brand logo" href="index.html"><img src="assets/img/logo/logo.png" alt="digiGoods" /></a>
+      <a class="navbar-brand logo" href="index.html"><img src="assets/img/logo/logo-white.png" alt="digiGoods" /></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
         aria-controls="offcanvasNavbar">
         <i class="fa-light fa-list"></i>
       </button>
       <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbar">
         <div class="offcanvas-header">
-          <a class="navbar-brand" href="index.html"><img class="logo" src="assets/img/logo/logo.png"
+          <a class="navbar-brand" href="index.html"><img class="logo" src="assets/img/logo/logo-white.png"
               alt="digiGoods" /></a>
 
           <button type="button" class="cmn-btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
@@ -48,12 +48,12 @@
           </button>
         </div>
         <div class="offcanvas-body align-items-center justify-content-between">
-          <ul class="navbar-nav ms-auto">
+          <ul class="navbar-nav m-auto">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">home</a>
+              <a class="nav-link" href="about.html">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="products.html">all services</a>
+              <a class="nav-link" href="about.html">AML/KYC</a>
             </li>
           </ul>
         </div>
@@ -61,13 +61,25 @@
       <div class="nav-right">
         <ul class="custom-nav">
           <li class="nav-item">
-            <a class="nav-link cmn-btn" href="login.html">
-              <div class="btn-wrapper h-45">
-                <div class="main-text btn-single h-45">
-                  login
+            <select class="nice-select language-select" aria-label="Default select example">
+              <option selected>English</option>
+              <option value="2">Bengali</option>
+              <option value="3">Arabic</option>
+            </select>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link login-btn" href="login.html">
+              login
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link cmn-btn2" href="login.html">
+              <div class="btn-wrapper">
+                <div class="main-text btn-single">
+                  Register
                 </div>
-                <div class="hover-text btn-single h-45">
-                  login
+                <div class="hover-text btn-single">
+                  Register
                 </div>
               </div>
             </a>
