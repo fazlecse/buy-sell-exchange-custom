@@ -17,6 +17,8 @@
   <link rel="stylesheet" href="assets/css/owl.theme.default.min.css" />
   <!-- select2 Css link -->
   <link rel="stylesheet" href="assets/css/select2.min.css" />
+  <!-- nice-select Css link -->
+  <link rel="stylesheet" href="assets/css/nice-select.css" />
   <!-- Style Css link -->
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
@@ -32,14 +34,14 @@
   <!-- Nav section start -->
   <nav class="navbar navbar-expand-lg sticky-top">
     <div class="container">
-      <a class="navbar-brand logo" href="index.html"><img src="assets/img/logo/logo.png" alt="digiGoods" /></a>
+      <a class="navbar-brand logo" href="index.html"><img src="assets/img/logo/logo-white.png" alt="digiGoods" /></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
         aria-controls="offcanvasNavbar">
         <i class="fa-light fa-list"></i>
       </button>
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbar">
         <div class="offcanvas-header">
-          <a class="navbar-brand" href="index.html"><img class="logo" src="assets/img/logo/logo.png"
+          <a class="navbar-brand" href="index.html"><img class="logo" src="assets/img/logo/logo-white.png"
               alt="digiGoods" /></a>
 
           <button type="button" class="cmn-btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
@@ -47,12 +49,12 @@
           </button>
         </div>
         <div class="offcanvas-body align-items-center justify-content-between">
-          <ul class="navbar-nav ms-auto">
+          <ul class="navbar-nav m-auto">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">home</a>
+              <a class="nav-link" href="about.html">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="products.html">all services</a>
+              <a class="nav-link" href="aml-kyc.html">AML/KYC</a>
             </li>
           </ul>
         </div>
@@ -60,13 +62,25 @@
       <div class="nav-right">
         <ul class="custom-nav">
           <li class="nav-item">
-            <a class="nav-link cmn-btn" href="login.html">
-              <div class="btn-wrapper h-45">
-                <div class="main-text btn-single h-45">
-                  login
+            <select class="nice-select language-select" aria-label="Default select example">
+              <option selected>English</option>
+              <option value="2">Bengali</option>
+              <option value="3">Arabic</option>
+            </select>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link login-btn" href="login.html">
+              login
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link cmn-btn2" href="register.html">
+              <div class="btn-wrapper">
+                <div class="main-text btn-single">
+                  Register
                 </div>
-                <div class="hover-text btn-single h-45">
-                  login
+                <div class="hover-text btn-single">
+                  Register
                 </div>
               </div>
             </a>
@@ -98,6 +112,57 @@
   </ul>
   <!-- Bottom Mobile Tab nav section end -->
 
+  <!-- About section start -->
+  <section class="about-section">
+    <div class="container">
+      <div class="col-lg-10 mx-auto">
+        <div class="section-header text-center mt-30">
+          <h2 class="section-title">Safety, Simplicity, and Market Excellence</h2>
+          <p>At CoinEctra, we're on a mission to make cryptocurrency trading and investment accessible, secure, and
+            user-friendly for everyone. Founded by a team of passionate crypto enthusiasts, our platform was created
+            with
+            the vision of empowering individuals to explore the exciting world of digital currencies.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- About section end -->
+
+  <!-- Mission Vission section start -->
+  <section class="mission-vission-section">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="mission-vission-box">
+            <div class="icon-box">
+              <i class="fa-regular fa-bullseye-arrow"></i>
+            </div>
+            <div class="text-box">
+              <h4 class="mb-10">Our mission</h4>
+              <p>Our mission is to be every exchanger’s gateway for seamless crypto-to-crypto converts and fiat swaps.
+                We're constantly expanding our offerings as well as embracing the latest advancements in blockchain and
+                Web 3.0. Exchange with peace of mind knowing your funds are in your complete control.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="mission-vission-box">
+            <div class="icon-box">
+              <i class="fa-regular fa-eye"></i>
+            </div>
+            <div class="text-box">
+              <h4 class="mb-10">Our vision</h4>
+              <p>Our vision is a seamless crypto landscape where our platform serves as the nexus for enthusiasts. Not
+                only a platform; we're a catalyst for change, a crypto ecosystem where everyone can connect, innovate,
+                and shape the future of finance through technology.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Mission Vission section end -->
+
   <!-- Faq section start -->
   <section class="faq-section">
     <div class="container">
@@ -105,7 +170,6 @@
       <div class="row g-4 g-xl-5">
         <div class="col-lg-5">
           <div class="left-side">
-            <div class="section-subtitle">FAQs</div>
             <h3>Got Questions? We’ve Got <br> Answers.</h3>
           </div>
         </div>
@@ -116,14 +180,16 @@
                 <h2 class="accordion-header">
                   <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
                     aria-expanded="true" aria-controls="collapseOne">
-                    How do I book a service?
+                    How does the exchange service work?
                   </button>
                 </h2>
                 <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample3">
                   <div class="accordion-body">
                     <p class="mb-0">
-                      Simply sign up, browse or search for the service you need, choose a provider, set your preferred
-                      time, and confirm the booking. It’s quick and secure.
+                      An exchange service facilitates swapping one item or currency for another. Users submit what they
+                      want to exchange and what they desire in return. The service matches these requests, enabling the
+                      trade to occur. Whether it's cryptocurrencies, goods, or services, exchanges provide a platform
+                      for seamless transactions between parties.
                     </p>
                   </div>
                 </div>
@@ -132,14 +198,15 @@
                 <h2 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                    Are the service providers verified?
+                    How long does it take for a exchange to be processed?
                   </button>
                 </h2>
                 <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample3">
                   <div class="accordion-body">
                     <p class="mb-0">
-                      Yes, we thoroughly verify all professionals through ID checks, experience validation, and customer
-                      reviews to ensure safety and quality.
+                      The processing time for an exchange varies depending on factors like the platform used,
+                      transaction volume, and network speed. It can range from a few minutes to several hours, sometimes
+                      longer for complex transactions.
                     </p>
                   </div>
                 </div>
@@ -148,14 +215,14 @@
                 <h2 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-                    How do I pay for a service?
+                    Can I track the status of my exchange?
                   </button>
                 </h2>
                 <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample3">
                   <div class="accordion-body">
                     <p class="mb-0">
-                      Payments are made securely through our platform using credit/debit cards, digital wallets, or
-                      other available methods. Providers receive payment only after service completion.
+                      Yes, you can track the status of your crypto exchange through our tracking. We also provide email
+                      notifications for important updates during the exchange process.
                     </p>
                   </div>
                 </div>
@@ -164,14 +231,15 @@
                 <h2 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-                    What happens if I’m not satisfied with the service?
+                    Is my personal and financial information safe on your website?
                   </button>
                 </h2>
                 <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample3">
                   <div class="accordion-body">
                     <p class="mb-0">
-                      If you're unhappy with a service, you can contact our support team within 24 hours of the job. We
-                      offer dispute resolution and, if necessary, refunds or reassignments.
+                      Yes, we take the security of your personal and financial information seriously. Our website
+                      employs robust encryption protocols and follows industry best practices to safeguard your data
+                      from unauthorized access or misuse.
                     </p>
                   </div>
                 </div>
@@ -180,14 +248,14 @@
                 <h2 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
-                    Can I cancel or reschedule a booking?
+                    What payment methods do you support for sell crypto?
                   </button>
                 </h2>
                 <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample3">
                   <div class="accordion-body">
                     <p class="mb-0">
-                      Yes, you can cancel or reschedule up to [X] hours before the service time. Check our cancellation
-                      policy for more details.
+                      We offer nearly 32 fiat gateway methods and ensure fiat transfers are completed within 10 minutes,
+                      guaranteeing swift and convenient transactions for our users.
                     </p>
                   </div>
                 </div>
@@ -196,80 +264,14 @@
                 <h2 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
-                    How can I join as a service provider?
+                    Are there any fees associated with sending or receiving crypto?
                   </button>
                 </h2>
                 <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample3">
                   <div class="accordion-body">
                     <p class="mb-0">
-                      Click on “Become a Provider,” complete the application form, upload the required documents, and
-                      once approved, you can start receiving job requests.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
-                    Do I have to pay any charge if I don’t take any service?
-                  </button>
-                </h2>
-                <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionExample3">
-                  <div class="accordion-body">
-                    <p class="mb-0">
-                      If you don’t avail any services for your AC after our Service Provider send a technician at your
-                      doorstep then you only have to pay the visiting charge which is BDT 200.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseEight" aria-expanded="true" aria-controls="collapseEight">
-                    Do I have to pay advance money before availing your service?
-                  </button>
-                </h2>
-                <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionExample3">
-                  <div class="accordion-body">
-                    <p class="mb-0">
-                      Of course not! After service completion you will receive a text on your mobile from Sheba.xyz then
-                      you have to pay through Online or Cash on Delivery.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseNine" aria-expanded="true" aria-controls="collapseNine">
-                    Is this only for household AC?
-                  </button>
-                </h2>
-                <div id="collapseNine" class="accordion-collapse collapse" data-bs-parent="#accordionExample3">
-                  <div class="accordion-body">
-                    <p>
-                      Definitely not! As long as you want to avail this service for your AC then you can order for your
-                      office Air Conditioners too.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseTen" aria-expanded="true" aria-controls="collapseTen">
-                    What if they damage my AC?
-                  </button>
-                </h2>
-                <div id="collapseTen" class="accordion-collapse collapse" data-bs-parent="#accordionExample3">
-                  <div class="accordion-body">
-                    <p>
-                      Our professional Service Providers have expert and skilled AC technicians. If they occur any
-                      damages
-                      to your AC during repairing you will get proper compensation after proper investigation. However,
-                      your complaint for any pre-damaged problems will not be considered.
+                      Yes, there might be fees associated with crypto exchange. The applicable fees will be displayed
+                      before you confirm the trade.
                     </p>
                   </div>
                 </div>
@@ -366,7 +368,8 @@
   <script src="assets/js/owl.carousel.min.js"></script>
   <!-- select2 Js link -->
   <script src="assets/js/select2.min.js"></script>
-
+  <!-- nice-select Js link -->
+  <script src="assets/js/jquery.nice-select.min.js"></script>
   <!-- Main Js link -->
   <script src="assets/js/main.js"></script>
 </body>

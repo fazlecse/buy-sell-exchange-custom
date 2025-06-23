@@ -14,7 +14,7 @@ const toggleSideMenu = () => {
 if ($("nav").length) {
   const header = document.querySelector("nav");
   window.addEventListener("scroll", () => {
-    header.classList.toggle("active", window.scrollY >= 100);
+    header.classList.toggle("active", window.scrollY >= 10);
   });
 }
 

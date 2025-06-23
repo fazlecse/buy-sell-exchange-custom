@@ -366,9 +366,9 @@ option {
 
 .form-control,
 .form-select {
-  border-radius: 5px;
+  border-radius: 8px;
   background-color: var(--input-color);
-  border: 1px solid var(--border-color2);
+  border: 1px solid var(--border-color1);
   height: 50px;
   color: rgb(var(--heading-color));
   font-weight: 300;
@@ -457,6 +457,7 @@ intlTelInput section start
   box-shadow: var(--shadow1);
   border: 1px solid var(--border-color2);
   border-radius: 5px;
+  background-color: var(--bg-color3);
 }
 
 .iti-mobile .iti__country-list {
@@ -868,6 +869,7 @@ body::-webkit-scrollbar-thumb {
   border-radius: 10px;
   border: none;
   color: rgb(var(--heading-color));
+  background-color: transparent;
 }
 
 .accordion-button {
@@ -877,7 +879,7 @@ body::-webkit-scrollbar-thumb {
   border-radius: 10px !important;
   text-transform: capitalize;
   padding: 0 0 15px;
-
+  background-color: transparent;
   &:focus {
     box-shadow: none;
   }
@@ -2056,7 +2058,7 @@ Offcanvas end
 // Cmn-btn-start
 .cmn-btn {
   background-color: rgb(var(--primary-color));
-  color: rgb(var(--very-dark-gray2));
+  color: rgb(var(--very-dark));
   padding: 0 20px;
   transition: var(--transition);
   font-size: 14px;
@@ -2068,7 +2070,7 @@ Offcanvas end
   border-radius: 12px;
 
   &:hover {
-    color: rgb(var(--very-dark-gray2));
+    color: rgb(var(--very-dark));
 
     .btn-wrapper {
       .main-text {
@@ -2340,9 +2342,9 @@ Offcanvas end
 }
 
 .social-btn {
-  background: rgb(var(--bg-color1));
+  background: var(--bg-color2);
   padding: 14px 20px;
-  border: 1px solid var(--border-color1);
+  border: 1px solid var(--border-color2);
   transition: var(--transition);
   font-size: 16px;
   display: inline-flex;
@@ -2999,19 +3001,30 @@ Cmn tab2 section start
   background-color: var(--bg-color6);
 
   .nav-pills {
+    gap: 10px;
+    background-color: var(--bg-color1);
+    padding: 8px;
+    border-radius: 16px;
+
+    .nav-item {
+      flex-grow: 1;
+    }
+
     .nav-link {
       color: rgb(var(--white));
-      opacity: 0.5;
-      font-size: 13px;
+      opacity: 0.9;
+      font-size: 16px;
       transition: var(--transition);
-      border-radius: 0;
+      border-radius: 8px;
       border-bottom: 1px solid transparent;
+      padding: 12px;
+      text-transform: capitalize;
+      width: 100%;
 
       &.active,
       &:hover {
         opacity: 1;
-        background-color: transparent;
-        border-bottom: 1px solid rgb(var(--primary-color));
+        background-color: var(--bg-color2);
       }
     }
   }
@@ -3548,16 +3561,15 @@ hr.divider:after {
 .cmn-list2 {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 32px;
 
   .cmn-list2-item {
     display: flex;
-    justify-content: space-between;
     gap: 15px;
 
-    &:not(:last-child) {
-      border-bottom: 1px dashed var(--border-color2);
-      padding-bottom: 10px;
+    .number {
+      font-size: 24px;
+      color: rgb(var(--heading-color));
     }
 
     h6 {
@@ -7077,7 +7089,7 @@ Bottom Mobile, Tab nav end
   }
 
   .form-control {
-    height: 55px;
+    background-color: var(--bg-color1);
   }
 
 
@@ -7563,13 +7575,66 @@ Trade section section end
 ----------------------------------------------*/
 
 /*----------------------------------------------
+05. Partner section start
+----------------------------------------------*/
+.partner-section {
+  background-color: var(--bg-color1);
+}
+
+.brand-item {
+  border-radius: 5px;
+  width: 112px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.marquee-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow: hidden;
+}
+
+.marquee {
+  display: flex;
+  gap: 50px;
+
+  &:hover {
+    .marquee-item-wrapper {
+      animation-play-state: paused;
+    }
+  }
+}
+
+
+.marquee-left {
+  .marquee-item-wrapper {
+    display: inline-block;
+    animation: marquee-left 40s infinite linear;
+  }
+}
+
+.marquee-item-box {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/*----------------------------------------------
+Partner section end
+----------------------------------------------*/
+
+/*----------------------------------------------
 00. Testimonial section start
 ----------------------------------------------*/
 .testimonial-section {
   position: relative;
 
 }
-
 
 .testimonial-box {
   position: relative;
@@ -7599,7 +7664,7 @@ Trade section section end
   }
 
   .quote-icon {
-    font-size: 45px;
+    font-size: 40px;
     color: rgb(var(--primary-color));
     position: absolute;
     right: 10px;
@@ -7625,441 +7690,86 @@ Testimonial section end
 ----------------------------------------------*/
 
 /*----------------------------------------------
-Category section start
+How it works section start
 ----------------------------------------------*/
-.category-section-inner {
-  background-color: var(--bg-color1);
-  box-shadow: var(--shadow2);
-  border-radius: 8px;
-  padding: 8px 20px;
-  margin-top: -120px;
-  z-index: 1;
-  position: relative;
+
+.how-it-works-section-inner {
+  padding: 32px;
+  background-color: var(--bg-color2);
+  border-radius: 48px;
 }
 
-.category-box {
-  text-align: center;
-  padding: 20px 5px;
-  border-radius: 8px;
-  display: block;
-
-  &:hover {
-    background-color: rgb(var(--light-grayish-blue));
+@media(min-width: 992px) {
+  .how-it-works-section-inner {
+    padding: 64px;
   }
-
-  .img-box {
-    margin: 0 auto;
-    width: 45px;
-    height: 45px;
-  }
-
-  .text-box {
-    margin-top: 15px;
-
-    .title {
-      font-weight: 600;
-      font-family: var(--heading-font);
-    }
-  }
-}
-
-.category-carousel {
-  padding: 0;
-
-  .owl-nav {
-
-    .owl-prev {
-      left: -37px;
-    }
-
-    .owl-next {
-      right: -37px;
-    }
-  }
-
 }
 
 /*----------------------------------------------
-Category section end
+How it works section end
 ----------------------------------------------*/
 
 /*----------------------------------------------
-00. Products section section start
+Feature section start
 ----------------------------------------------*/
-.products-section {
-  .top-bar {
-    margin-bottom: 50px;
+.feature-box {
+  padding: 32px;
+  border-radius: 16px;
+  background-color: var(--bg-color2);
+  height: 100%;
+
+  .icon-box {
+    font-size: 36px;
+    color: rgb(var(--primary-color));
+    margin-bottom: 16px;
   }
 }
 
-.product-box {
-  display: block;
+/*----------------------------------------------
+Feature section end
+----------------------------------------------*/
 
-  &:hover {
-    .img-box {
-      img {
-        transform: scale(1.05) rotate(2deg);
-      }
-    }
-  }
-
-  .img-box {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-    aspect-ratio: 3/2;
-    box-shadow: var(--shadow2);
-    display: block;
-
-    img {
-      transition: var(--transition);
-      object-fit: cover;
-      width: 100%;
-      height: 100%;
-      border-radius: 10px;
-    }
-  }
-
-  .text-box {
-    margin-top: 10px;
-    color: rgb(var(--body-color));
-    padding: 5px;
-    font-size: 14px;
-
-    .author {
-      font-weight: 500;
-      color: rgb(var(--primary-color));
-    }
-
-    .title {
-      font-size: 18px;
-      font-family: var(--heading-font);
-      font-weight: 600;
-      color: rgb(var(--heading-color));
-      text-transform: capitalize;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      -webkit-box-orient: vertical;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      line-clamp: 2;
-    }
-
-    .location {
-      text-transform: capitalize;
-      display: flex;
-      align-items: center;
-      gap: 7px;
-    }
-
-    .price {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-top: 6px;
-      font-size: 16px;
-    }
-
-    .price-title {
-      color: rgb(var(--primary-color));
-      font-size: 20px;
-      font-weight: 700;
-      font-family: var(--heading-font);
-    }
-  }
-
-  .description {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    -webkit-box-orient: vertical;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    line-clamp: 3;
-
-  }
-
-  .reviews {
-    position: absolute;
-    background-color: rgb(var(--black));
-    color: rgb(var(--white));
-    padding: 4px 8px;
-    border-radius: 5px;
-    top: 10px;
-    left: 10px;
-    font-size: 13px;
-  }
-
-}
-
-.service-category-section {
-  &:not(:last-child) {
-    margin-bottom: 60px;
+/*----------------------------------------------
+About section start
+----------------------------------------------*/
+.about-section {
+  .section-title {
+    max-width: 700px;
+    margin: 0 auto 30px;
   }
 }
 
-.sidebar {
-  position: sticky;
-  top: 90px;
-  transition: var(--transition);
-  background-color: rgb(var(--white));
-  border-right: 1px solid var(--border-color2);
+/*----------------------------------------------
+About section end
+----------------------------------------------*/
 
-  .sidebar-close-btn {
-    position: absolute;
-    width: 40px;
-    height: 40px;
+/*----------------------------------------------
+Mission Vission section start
+----------------------------------------------*/
+
+.mission-vission-box {
+  padding: 32px;
+  border-radius: 16px;
+  background-color: var(--bg-color2);
+  height: 100%;
+
+  .icon-box {
+    font-size: 42px;
+    color: rgb(var(--primary-color));
+    margin-bottom: 24px;
+    width: 72px;
+    height: 72px;
+    border-radius: 16px;
     background-color: rgb(var(--primary-color));
-    color: rgb(var(--white));
-    font-size: 20px;
-    border-radius: 50%;
-    display: none;
+    color: rgb(var(--very-dark));
+    display: flex;
+    align-items: center;
     justify-content: center;
-    align-items: center;
-    right: -45px;
-    top: 15px;
-  }
-}
-
-.sidebar-nav {
-  .nav-item {
-    margin-bottom: 2px;
-  }
-
-  .nav-link {
-    padding: 15px 10px;
-    border-right: 5px solid transparent;
-    font-size: 16px;
-    color: rgb(var(--heading-color));
-    font-family: var(--heading-font);
-    line-height: 1.3;
-    font-weight: 600;
-    display: block;
-    transition: var(--transition);
-
-    &.active {
-      border-right: 5px solid rgb(var(--primary-color));
-    }
-
-    &.active,
-    &:hover {
-      background-color: rgb(var(--primary-color), 0.1);
-    }
-  }
-}
-
-.toggle-sidebar-btn {
-  background-color: rgb(var(--primary-color));
-  color: rgb(var(--white));
-  width: 40px;
-  height: 40px;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  font-size: 18px;
-  border-radius: 6px;
-  position: sticky;
-  top: 100px;
-  z-index: 1;
-
-}
-
-@media(max-width: 991px) {
-  .products-section {
-    .top-bar {
-      margin-bottom: 0;
-    }
-  }
-
-  .sidebar {
-    position: fixed;
-    z-index: 9999;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    background-color: rgb(var(--white));
-    width: 280px;
-    transform: translate(calc(-100% - 45px));
-
-    &.show {
-      transform: none;
-    }
-
-    .sidebar-close-btn {
-      display: flex;
-    }
-  }
-
-  .sidebar-nav .nav-link {
-    padding: 14px 25px;
-  }
-
-  .sidebar-nav {
-    height: 100%;
-    overflow: auto;
-  }
-
-  .toggle-sidebar-btn {
-    display: flex;
-  }
-
-  .sidebar-overlay {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    content: "";
-    left: 0;
-    top: 0;
-    background-color: rgb(var(--black), 0.5);
-    z-index: 99;
-    transition: 0.2s linear;
-    visibility: hidden;
-    opacity: 0;
-
-    &.show {
-      visibility: visible;
-      opacity: 1;
-      z-index: 1024;
-    }
-  }
-}
-
-.rtl {
-  .sidebar-nav .nav-link {
-    border-right: 0;
-    border-left: 5px solid transparent;
-
-    &.active {
-      border-right: 0;
-      border-left: 5px solid rgb(var(--primary-color));
-    }
   }
 }
 
 /*----------------------------------------------
-Products section end
-----------------------------------------------*/
-
-/*----------------------------------------------
-00. Product details section start
-----------------------------------------------*/
-.product-details-section {
-  padding: 60px 0;
-
-  .side-box {
-    margin-top: -200px;
-    z-index: 1;
-
-  }
-}
-
-.side-box {
-  padding: 20px;
-  background-color: rgb(var(--white));
-  box-shadow: var(--shadow1);
-  border-radius: 15px;
-  border: 1px solid var(--border-color1);
-  position: sticky;
-  top: 85px;
-
-  .action-btn {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    border: 1px solid var(--border-color1);
-    padding: 8px 10px;
-    border-radius: 9999px;
-    width: 100%;
-    transition: var(--transition);
-    text-align: initial;
-    height: auto;
-    justify-content: start;
-
-    .img-box {
-      img {
-        width: 30px;
-      }
-    }
-
-    &:hover {
-      background-color: rgb(var(--light-grayish-blue));
-    }
-
-    h6 {
-      font-size: 16px;
-    }
-  }
-
-  .sefety-box {
-    margin-top: 20px;
-    border: 1px solid var(--border-color1);
-    padding: 10px;
-    border-radius: 10px;
-
-    .title {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    img {
-      width: 35px;
-    }
-  }
-}
-
-
-.author-profile {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-
-  .img-box {
-    img {
-      width: 60px;
-      min-width: 60px;
-      height: 60px;
-      border-radius: 10px;
-    }
-  }
-}
-
-.review-item {
-  border: 1px solid var(--border-color1);
-  padding: 20px 15px;
-  border-radius: 10px;
-
-  &:not(:last-child) {
-    margin-bottom: 20px;
-  }
-}
-
-@media(min-width: 1440px) {
-  .product-details-section {
-    .side-box {
-      margin-right: -75px;
-    }
-  }
-}
-
-@media(max-width: 991px) {
-  .product-details-section .side-box {
-    margin-top: 0;
-  }
-}
-
-.rtl {
-  @media(min-width: 1440px) {
-    .product-details-section {
-      .side-box {
-        margin-right: 0;
-        margin-left: -75px;
-      }
-    }
-  }
-}
-
-/*----------------------------------------------
-Product details section end
+Mission Vission section end
 ----------------------------------------------*/
 
 /*----------------------------------------------
@@ -8511,6 +8221,70 @@ Blog details end
 ----------------------------------------------*/
 
 /*----------------------------------------------
+19. Newsletter section start
+----------------------------------------------*/
+.newsletter-form {
+  margin-top: 30px;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  .form-control {
+    border-radius: 50px;
+    height: 50px;
+    padding: 10px 50px 10px 10px;
+    border-color: var(--border-color1);
+    box-shadow: var(--shadow1);
+
+    &:focus {
+      border-color: rgb(var(--primary-color));
+    }
+  }
+
+  .subscribe-btn {
+    transition: var(--transition);
+    position: absolute;
+    right: 5px;
+    background-color: rgb(var(--primary-color));
+    height: calc(100% - 10px);
+    width: 40px;
+    border-radius: 50%;
+    color: rgb(var(--white));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      background-color: rgb(var(--primary-color), 0.8);
+      color: rgb(var(--white));
+    }
+  }
+}
+
+// Rtl newsletter section start
+.rtl {
+  .newsletter-form {
+    .form-control {
+      padding: 10px 10px 10px 50px;
+    }
+
+    .subscribe-btn {
+      left: 5px;
+      right: auto;
+
+      i {
+        transform: rotatey(180deg);
+      }
+    }
+  }
+}
+
+// Rtl newsletter section end
+/*----------------------------------------------
+Newsletter end
+----------------------------------------------*/
+
+/*----------------------------------------------
 20. Footer section start
 ----------------------------------------------*/
 .footer-section {
@@ -8864,18 +8638,22 @@ Contact section end
   z-index: 1;
   position: relative;
   background-color: rgb(var(--bg-color1));
-  border-radius: 20px;
-  border: 1px solid var(--border-color1);
-  box-shadow: var(--shadow1);
 
   .logo-area {
     margin-bottom: 20px;
     display: inline-flex;
   }
 
-  .cmn-btn2 {
-    height: 45px;
-    border-radius: 5px;
+  .cmn-btn {
+    height: 50px;
+
+    .btn-wrapper {
+      height: 50px;
+
+      .btn-single {
+        height: 50px;
+      }
+    }
   }
 
   .cmn-btn-group {
@@ -9046,6 +8824,11 @@ Policy section start
   .shape3 {
     top: 150px;
   }
+}
+
+.policy-section-inner {
+  max-width: 1140px;
+  margin: auto;
 }
 
 // Rtl policy section start
