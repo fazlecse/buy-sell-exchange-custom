@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Exchanger</title>
+  <title>Coinectra</title>
   <!-- Favicon link -->
   <link rel="shortcut icon" href="./assets/img/logo/favicon.png" type="image/x-icon" />
   <!-- Fontawesome6 Css link -->
@@ -15,6 +15,8 @@
   <!-- Owl carousel Css link -->
   <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
   <link rel="stylesheet" href="assets/css/owl.theme.default.min.css" />
+  <!-- nice-select Css link -->
+  <link rel="stylesheet" href="assets/css/nice-select.css" />
   <!-- select2 Css link -->
   <link rel="stylesheet" href="assets/css/select2.min.css" />
   <!-- Style Css link -->
@@ -22,10 +24,9 @@
 </head>
 
 <body onload="preloaderFunction()" class="">
-
   <!-- Preloader section start -->
   <div id="preloader">
-    <img src="./assets/img/preloader/buy.png" alt="preloader-img" />
+    <img class="preloader-image" src="./assets/img/preloader/buy.png" alt="" />
   </div>
   <!-- Preloader section end -->
 
@@ -89,7 +90,6 @@
   </nav>
   <!-- Nav section end -->
 
-
   <!-- Bottom Mobile Tab nav section start -->
   <ul class="nav bottom-nav fixed-bottom d-lg-none">
     <li class="nav-item">
@@ -100,7 +100,7 @@
       <a class="nav-link" href="#"><i class="fa-light fa-planet-ringed"></i></a>
     </li>
     <li class="nav-item">
-      <a class="nav-link active"><i class="fa-regular fa-house"></i></a>
+      <a class="nav-link active"><i class="fa-light fa-house"></i></a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="#"><i class="fa-light fa-address-book"></i></a>
@@ -111,191 +111,151 @@
   </ul>
   <!-- Bottom Mobile Tab nav section end -->
 
-  <!-- Blog details section start -->
-  <section class="blog-details-section">
+  <!-- Calculate details section start -->
+  <section class="calculator-details-section">
     <div class="container">
-      <div class="row g-4 g-sm-5">
-        <div class="col-lg-7">
-          <div class="blog-box-large">
-            <div class="thumbs-area">
-              <img src="./assets/img/blog/blog-img-big.jpg" alt="Exchanger">
+      <div class="row g-xl-5 g-4 justify-content-center">
+        <div class="col-lg-3 order-2 order-lg-1">
+          <div class="progress-section">
+            <h6>Provide address information to create a transaction</h6>
+            <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="25"
+              aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-bar" style="width: 25%"></div>
             </div>
-            <div class="content-area mt-20">
-              <ul class="meta mb-30">
-                <div class="left-side">
-                  <a href="" class="item">
-                    <span class="icon"><i class="fa-regular fa-user"></i></span>
-                    <span>by Admin</span>
-                  </a>
-                  <div class="item">
-                    <span class="icon"><i class="fa-regular fa-messages"></i></span>
-                    <span>25</span>
-                  </div>
+            <div class="progress-step-area">
+              <div class="item">
+                <div class="icon-area checkmark">
+                  <i class="fa-light fa-check"></i>
                 </div>
-                <div class="right-side">
-                  <div class="item">
-                    <span class="icon">
-                      <i class="fa-regular fa-calendar-days"></i>
-                    </span>
-                    <span>
-                      April 22, 2024
-                    </span>
-                  </div>
+                <div class="content-area">
+                  <h6>Exchange pair</h6>
+                  <span>Set the preferred exchange pair</span>
                 </div>
-              </ul>
-              <h3 class="blog-title">How On-Demand Marketplaces Are Changing the Game </h3>
-
-              <div class="para-text">
-                <p>
-                  Share data on the carbon footprint of travel, eco-friendly destinations, and
-                  sustainable
-                  travel practices. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione,
-                  eligendi sapiente eveniet sequi consectetur quidem corporis
-                  quaerat repellendus aliquam fuga minus modi dolorum dolore, natus nihil molestias
-                  eius
-                  ad est.
-                </p>
-                <p>
-                  Share data on the carbon footprint of travel, eco-friendly destinations, and
-                  sustainable
-                  travel practices. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione,
-                  eligendi sapiente eveniet sequi consectetur quidem corporis
-                  quaerat repellendus aliquam fuga minus modi dolorum dolore, natus nihil molestias
-                  eius
-                  ad est.
-                </p>
               </div>
-              <div class="blog-quote-box">
+              <div class="item">
                 <div class="icon-area">
-                  <i class="fa-solid fa-quote-right"></i>
+                  <i class="fa-light fa-arrow-right"></i>
                 </div>
-                <div class="content">
-                  <h6>What I find remarkable is that this next has been the industry's standard dummy
-                    text ever since some printer in the 1500s took a gallery</h6>
-                  <h5 class="title">Douglas lyphe</h5>
+                <div class="content-area">
+                  <h6>Wallet address</h6>
+                  <span>Fill in the crypto wallet address details</span>
                 </div>
               </div>
-              <div class="para-text">
-                <p>
-                  Share data on the carbon footprint of travel, eco-friendly destinations, and
-                  sustainable
-                  travel practices. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione,
-                  eligendi sapiente eveniet sequi consectetur quidem corporis
-                  quaerat repellendus aliquam fuga minus modi dolorum dolore, natus nihil molestias
-                  eius
-                  ad est.
-                </p>
-                <p>
-                  Share data on the carbon footprint of travel, eco-friendly destinations, and
-                  sustainable
-                  travel practices. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione,
-                  eligendi sapiente eveniet sequi consectetur quidem corporis
-                  quaerat repellendus aliquam fuga minus modi dolorum dolore, natus nihil molestias
-                  eius
-                  ad est.
-                </p>
+              <div class="item">
+                <div class="number">3</div>
+                <div class="content-area">
+                  <h6>Payment</h6>
+                  <span>Deposit the amount required for the exchange</span>
+                </div>
               </div>
-
+              <div class="item">
+                <div class="number">4</div>
+                <div class="content-area">
+                  <h6>Exchange</h6>
+                  <span>Wait for your transaction to be completed</span>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="social-share-box">
-            <h4 class="title">social share :</h4>
-            <div id="shareBlock"></div>
-
           </div>
         </div>
-        <div class="col-lg-5">
-          <div class="blog-sidebar">
-            <div class="sidebar-widget-area">
-              <div class="widget-title">
-                <h4>Search</h4>
+        <div class="col-xl-5 col-lg-6 order-1 order-lg-2">
+          <div class="transaction-card">
+            <h4 class="title">Send funds to the address below</h4>
+            <div class="transaction-table">
+              <div class="table-row">
+                <div class="item"><span>Amount</span></div>
+                <div class="item">
+                  <h6>0.1 BTC<i class="fa-regular fa-pen"></i></h6>
+                </div>
               </div>
-              <div class="search-box">
-                <input type="text" class="form-control" placeholder="Search here...">
-                <button type="submit" class="search-btn"><i class="far fa-search"></i></button>
-              </div>
-            </div>
-
-            <div class="sidebar-widget-area">
-              <div class="sidebar-categories-area">
-                <div class="categories-header">
-                  <div class="widget-title">
-                    <h4>Categories</h4>
+              <div class="table-row">
+                <div class="item"><span>Changelly address (BTC)</span></div>
+                <div class="item">
+                  <h6>GUBGMHVpwcTsPFvNNVdG5DKtpv6UwksAfzw5aULcGzgG</h6>
+                  <small class="highlight">blockchain: bitcoin</small>
+                  <div class="btn-area">
+                    <a class="cmn-btn" href="transaction.html">
+                      <div class="btn-wrapper">
+                        <div class="main-text btn-single">
+                          Copy address <i class="fa-regular fa-copy"></i>
+                        </div>
+                        <div class="hover-text btn-single">
+                          Copy address <i class="fa-regular fa-copy"></i>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="cmn-btn2" href="transaction.html">
+                      <div class="btn-wrapper">
+                        <div class="main-text btn-single">
+                          <i class="fa-regular fa-barcode-read"></i>
+                        </div>
+                        <div class="hover-text btn-single">
+                          <i class="fa-regular fa-barcode-read"></i>
+                        </div>
+                      </div>
+                    </a>
                   </div>
                 </div>
-                <ul class="categories-list">
-                  <li>
-                    <a href=""><span>Industry Updates</span> <span class="highlight">(20)</span></a>
-                  </li>
-                  <li>
-                    <a href=""><span>Case Studies and Success Stories</span> <span class="highlight">(18)</span></a>
-                  </li>
-                  <li>
-                    <a href=""><span>Email Design and Optimization</span> <span class="highlight">(12)</span></a>
-                  </li>
-                  <li>
-                    <a href=""><span>Data Privacy and Compliance</span> <span class="highlight">(10)</span></a>
-                  </li>
-                  <li>
-                    <a href=""><span>Email Automation and Personalization</span> <span class="highlight">(15)</span></a>
-                  </li>
-                  <li>
-                    <a href=""><span>Metrics and Analytics</span> <span class="highlight">(11)</span></a>
-                  </li>
-                </ul>
               </div>
             </div>
-            <div class="sidebar-widget-area">
-              <div class="widget-title">
-                <h4>Recent Post</h4>
+            <div class="alert-message mt-20">
+              <i class="fa-solid fa-circle-info fa-rotate-180"></i>
+              <span>Please note that you can send funds to the address above only
+                once.</span>
+            </div>
+            <form class="request-found-form">
+              <h6>or request funds with FIO</h6>
+              <div class="form-floating my-3">
+                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" />
+                <label for="floatingInput">FIO address</label>
               </div>
-
-              <a href="" class="sidebar-widget-item">
-                <div class="image-area">
-                  <img src="assets/img/blog/blog-img-2.jpg" alt="Exchanger">
-                </div>
-                <div class="content-area">
-                  <div class="title">These Are The Voyages of The Starship</div>
-                  <div class="widget-date">
-                    <i class="fa-regular fa-calendar-days"></i> 01 November 2022
+              <a class="cmn-btn w-100" href="transaction.html">
+                <div class="btn-wrapper h-55">
+                  <div class="main-text btn-single h-55">
+                    request <i class="fa-regular fa-angle-right"></i>
+                  </div>
+                  <div class="hover-text btn-single h-55">
+                    request <i class="fa-regular fa-angle-right"></i>
                   </div>
                 </div>
               </a>
-              <a href="" class="sidebar-widget-item">
-                <div class="image-area">
-                  <img src="assets/img/blog/blog-img-3.jpg" alt="Exchanger">
-                </div>
-                <div class="content-area">
-                  <div class="title">Our Home Entertainment has Evolved Significantly</div>
-                  <div class="widget-date">
-                    <i class="fa-regular fa-calendar-days"></i> 01 November 2022
-                  </div>
-                </div>
-              </a>
-              <a href="" class="sidebar-widget-item">
-                <div class="image-area">
-                  <img src="assets/img/blog/blog-img-4.jpg" alt="Exchanger">
-                </div>
-                <div class="content-area">
-                  <div class="title">Our Home Entertainment has Evolved Significantly</div>
-                  <div class="widget-date">
-                    <i class="fa-regular fa-calendar-days"></i> 01 November 2022
-                  </div>
-                </div>
-              </a>
-
+            </form>
+          </div>
+        </div>
+        <div class="col-lg-3 order-3 order-lg-3">
+          <div class="deadline-timer-section">
+            <div class="countdown-area">
+              <h6><i class="fa-regular fa-clock"></i></h6>
+              <h6 id="countdown1"></h6>
             </div>
-            <div class="sidebar-widget-area">
-              <div class="widget-title">
-                <h4>Tags</h4>
+            <span>Time left to send 0.1 BTC</span>
+            <hr />
+            <h6>vsgmh1a2xq6pn0vx <i class="fa-regular fa-copy"></i></h6>
+            <span>Transaction ID</span>
+          </div>
+          <div class="transaction-summery">
+            <h5 class="title">Transaction details</h5>
+            <div class="transaction-item-container">
+              <div class="item">
+                <span>You send</span>
+                <h6>1 BTC</h6>
               </div>
-              <div class="tag-list">
-                <a href="" class="item">On Demand Services </a>
-                <a href="" class="item"> Service Marketplace</a>
-                <a href="" class="item">Hire Professionals</a>
-                <a href="" class="item">Freelance Platform</a>
-                <a href="" class="item">Book Services Online</a>
-                <a href="" class="item">Digital Marketplace</a>
+              <div class="item">
+                <span>Exchange rate</span>
+                <h6>1 BTC ~ 16.45093894 ETH</h6>
+              </div>
+              <div class="item">
+                <span>Service fee 0.25%</span>
+                <h6>0.04112735 ETH</h6>
+              </div>
+              <div class="item">
+                <span>Network fee</span>
+                <h6>0.00189 ETH</h6>
+              </div>
+
+              <div class="item">
+                <span>You get</span>
+                <h6>~ 16.388904 ETH</h6>
               </div>
             </div>
           </div>
@@ -303,7 +263,8 @@
       </div>
     </div>
   </section>
-  <!-- Blog details Section End -->
+
+  <!-- Calculate details section end -->
 
   <!-- Footer Section start -->
   <section class="footer-section">
@@ -382,6 +343,53 @@
   </section>
   <!-- Footer Section end -->
 
+  <!-- Modal section start -->
+  <div class="modal fade" id="lang-currency-modal" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="staticBackdropLabel">
+            Select Language and Currency
+          </h4>
+          <button type="button" class="cmn-btn-close" data-bs-dismiss="modal" aria-label="Close">
+            <i class="fa-light fa-xmark"></i>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row g-4">
+            <div class="col-12">
+              <div id="formModal">
+                <label class="form-label">Select language</label>
+                <select class="modal-select2-image" name="state">
+                  <option value="us">English</option>
+                  <option value="es">Spanish</option>
+                  <option value="bd">bangla</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-12">
+              <div id="formModal">
+                <label class="form-label">Select currency</label>
+                <select class="modal-select2-image" name="state">
+                  <option value="es">EUR</option>
+                  <option value="us">USD</option>
+                  <option value="bd">BDT</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer mt-10">
+          <!-- <button type="button" class="cmn-btn2" data-bs-dismiss="modal">Close</button> -->
+          <a href="" class="cmn-btn w-100 mt-10">save</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal section end -->
+
   <!-- Jquery Js link -->
   <script src="assets/js/jquery-3.7.1.min.js"></script>
   <!-- Bootstrap Js link -->
@@ -390,6 +398,10 @@
   <script src="assets/js/owl.carousel.min.js"></script>
   <!-- select2 Js link -->
   <script src="assets/js/select2.min.js"></script>
+  <!-- nice-select Js link -->
+  <script src="assets/js/jquery.nice-select.min.js"></script>
+  <!-- countdown Js link -->
+  <script src="assets/js/jquery.countdown.min.js"></script>
   <!-- Social share Js link -->
   <script src="assets/js/socialSharing.js"></script>
   <!-- Main Js link -->

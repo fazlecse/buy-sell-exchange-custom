@@ -269,38 +269,6 @@ $(document).ready(function () {
     });
   }
   // Isotope ends
-
-  // Progressbar animation start
-  if ($(".progress-bar").length) {
-    const progressItem = document.getElementsByClassName("progress-item")[0];
-    const progressBars = document.querySelectorAll(".progress-bar");
-
-    function showProgress() {
-      progressBars.forEach((progressBar) => {
-        const value = progressBar.dataset.progress;
-        progressBar.style.opacity = 1;
-        progressBar.style.width = `${value}%`;
-      });
-    }
-
-    function hideProgress() {
-      progressBars.forEach((p) => {
-        p.style.opacity = 0;
-        p.style.width = 0;
-      });
-    }
-
-    window.addEventListener("scroll", () => {
-      const sectionPos = progressItem.getBoundingClientRect().top;
-      const screenPos = window.innerHeight;
-      if (sectionPos < screenPos) {
-        showProgress();
-      } else {
-        hideProgress();
-      }
-    });
-  }
-  // Progressbar animation end
 });
 // Fancybox carousel section start
 if ($(".fancybox-carousel-section").length) {
@@ -551,3 +519,13 @@ function filterItems(inputId) {
   });
 }
 // Filter section end
+// countdown
+if ($("#countdown1").length) {
+  $("#countdown1").countdown("2026/11/05", function (event) {
+    $(this).html(
+      event.strftime(
+        '<div class="single-coundown"><h5>%H :</h5></div><div class="single-coundown"><h5>%M :</h5></div><div class="single-coundown"><h5>%S</h5></div>'
+      )
+    );
+  });
+}

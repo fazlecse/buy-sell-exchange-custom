@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coinectra</title>
+  <!-- Favicon link -->
+  <link rel="shortcut icon" href="./assets/img/logo/favicon.png" type="image/x-icon" />
+  <!-- Fontawesome6 Css link -->
+  <link rel="stylesheet" href="assets/css/all.min.css" />
+  <!-- Bootstrap5 Css link -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <!-- Owl carousel Css link -->
+  <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
+  <link rel="stylesheet" href="assets/css/owl.theme.default.min.css" />
+  <!-- nice-select Css link -->
+  <link rel="stylesheet" href="assets/css/nice-select.css" />
+  <!-- select2 Css link -->
+  <link rel="stylesheet" href="assets/css/select2.min.css" />
+  <!-- Slick-slider-Css-link -->
+  <link rel="stylesheet" href="assets/css/slick.css" />
+  <link rel="stylesheet" href="assets/css/slick-theme.css" />
+  <!-- Style Css link -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body onload="preloaderFunction()" class="">
+  <!-- Preloader section start -->
+  <div id="preloader">
+    <img class="preloader-image" src="./assets/img/preloader/buy.png" alt="" />
+  </div>
+  <!-- Preloader section end -->
+
+  <!-- Nav section start -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand logo" href="index.html"><img src="assets/img/logo/logo-white.png" alt="digiGoods" /></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar">
+        <i class="fa-light fa-list"></i>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbar">
+        <div class="offcanvas-header">
+          <a class="navbar-brand" href="index.html"><img class="logo" src="assets/img/logo/logo-white.png"
+              alt="digiGoods" /></a>
+
+          <button type="button" class="cmn-btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+            <i class="fa-light fa-arrow-right"></i>
+          </button>
+        </div>
+        <div class="offcanvas-body align-items-center justify-content-between">
+          <ul class="navbar-nav m-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="aml-kyc.html">AML/KYC</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="nav-right">
+        <ul class="custom-nav">
+          <li class="nav-item">
+            <select class="nice-select language-select" aria-label="Default select example">
+              <option selected>English</option>
+              <option value="2">Bengali</option>
+              <option value="3">Arabic</option>
+            </select>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link login-btn" href="login.html">
+              login
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link cmn-btn2" href="register.html">
+              <div class="btn-wrapper">
+                <div class="main-text btn-single">
+                  Register
+                </div>
+                <div class="hover-text btn-single">
+                  Register
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Nav section end -->
+
+  <!-- Bottom Mobile Tab nav section start -->
+  <ul class="nav bottom-nav fixed-bottom d-lg-none">
+    <li class="nav-item">
+      <a class="nav-link" data-bs-toggle="offcanvas" role="button" aria-controls="offcanvasNavbar"
+        href="#offcanvasNavbar" aria-current="page"><i class="fa-light fa-list"></i></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#"><i class="fa-light fa-planet-ringed"></i></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active"><i class="fa-light fa-house"></i></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#"><i class="fa-light fa-address-book"></i></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#"><i class="fa-light fa-user"></i></a>
+    </li>
+  </ul>
+  <!-- Bottom Mobile Tab nav section end -->
+
+  <!-- Calculate details section start -->
+  <section class="calculator-details-section">
+    <div class="container">
+      <div class="row g-xl-5 g-4 justify-content-center">
+        <div class="col-lg-3 order-2 order-lg-1">
+          <div class="progress-section">
+            <h6>Provide address information to create a transaction</h6>
+            <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="25"
+              aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-bar" style="width: 25%"></div>
+            </div>
+            <div class="progress-step-area">
+              <div class="item">
+                <div class="icon-area checkmark">
+                  <i class="fa-light fa-check"></i>
+                </div>
+                <div class="content-area">
+                  <h6>Exchange pair</h6>
+                  <span>Set the preferred exchange pair</span>
+                </div>
+              </div>
+              <div class="item">
+                <div class="icon-area">
+                  <i class="fa-light fa-arrow-right"></i>
+                </div>
+                <div class="content-area">
+                  <h6>Wallet address</h6>
+                  <span>Fill in the crypto wallet address details</span>
+                </div>
+              </div>
+              <div class="item">
+                <div class="number">3</div>
+                <div class="content-area">
+                  <h6>Payment</h6>
+                  <span>Deposit the amount required for the exchange</span>
+                </div>
+              </div>
+              <div class="item">
+                <div class="number">4</div>
+                <div class="content-area">
+                  <h6>Exchange</h6>
+                  <span>Wait for your transaction to be completed</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-5 col-lg-6 order-1 order-lg-2">
+          <form class="calculator mw-100">
+            <div class="banner-slider" data-bs-toggle="modal" data-bs-target="#announcement-modal">
+              <div class="calculator-banner">
+                <div class="calculator-banner-wrapper">
+                  <div class="left-side">
+                    <div class="image-area">
+                      <img src="./assets/img/calculator/popularPairBanner.png" alt="" />
+                    </div>
+                    <div class="text-area">
+                      <p class="mb-0">
+                        Hottest rates for
+                        <strong> USDT/BTC, USDT/ETH</strong> swaps
+                      </p>
+                    </div>
+                  </div>
+                  <div class="right-side">
+                    <i class="fa-regular fa-angle-right"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="calculator-banner">
+                <div class="calculator-banner-wrapper">
+                  <div class="left-side">
+                    <div class="image-area">
+                      <img src="./assets/img/calculator/stablecoinRateBanner.png" alt="" />
+                    </div>
+                    <div class="text-area">
+                      <p class="mb-0">
+                        Rate for stablecoin swaps:
+                        <strong> same coin, any chain</strong>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="right-side">
+                    <i class="fa-regular fa-angle-right"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cmn-tabs mt-15 mb-15">
+              <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="pills-exchange-tab" data-bs-toggle="pill"
+                    data-bs-target="#pills-exchange" type="button" role="tab" aria-controls="pills-exchange"
+                    aria-selected="true">exchange</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="pills-Buy-tab" data-bs-toggle="pill" data-bs-target="#pills-Buy"
+                    type="button" role="tab" aria-controls="pills-Buy" aria-selected="false">Buy</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="pills-Sell-tab" data-bs-toggle="pill" data-bs-target="#pills-Sell"
+                    type="button" role="tab" aria-controls="pills-Sell" aria-selected="false">Sell</button>
+                </li>
+              </ul>
+            </div>
+            <div class="calculator-body">
+              <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-exchange" role="tabpanel"
+                  aria-labelledby="pills-exchange-tab" tabindex="0">
+
+                  <div class="input-amount-box" id="inputAmountBox">
+                    <span class="linear-gradient"></span>
+                    <div class="input-amount-wrapper">
+                      <label class="form-label mb-1">You send</label>
+                      <div class="input-amount-box-inner" id="inputAmountBoxInner">
+                        <a href="#" class="icon-area" data-bs-toggle="modal" data-bs-target="#calculator-modal">
+                          <img class="img-flag" src="./assets/img/crypto-icon/btc.svg" alt="">
+                        </a>
+                        <div class="text-area w-100">
+                          <div class="d-flex gap-3 justify-content-between">
+                            <a href="#" class="currency-name d-flex align-items-center gap-1" data-bs-toggle="modal"
+                              data-bs-target="#calculator-modal">
+                              <div class="title">BTC</div>
+                              <i class="fa-regular fa-angle-down"></i>
+                            </a>
+                            <input type="text" name="" id="" placeholder="You send" value="321"
+                              onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
+                          </div>
+                          <div class="d-flex justify-content-between">
+                            <div class="sub-title">Bitcoin</div>
+                            <div class="fw-500">Max is 2.98 BTC</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swap-area">
+                    <div class="swap-icon" id="swapBtn">
+                      <i class="fa-regular fa-arrow-up-arrow-down"></i>
+                    </div>
+                  </div>
+
+                  <div class="input-amount-box" id="inputAmountBox2">
+                    <span class="linear-gradient"></span>
+                    <div class="input-amount-wrapper">
+                      <label class="form-label mb-1">You send</label>
+                      <div class="input-amount-box-inner" id="inputAmountBoxInner2">
+                        <a href="#" class="icon-area" data-bs-toggle="modal" data-bs-target="#calculator-modal2">
+                          <img class="img-flag" src="./assets/img/crypto-icon/act.svg" alt="">
+                        </a>
+                        <div class="text-area w-100">
+                          <div class="d-flex gap-3 justify-content-between">
+                            <a href="#" class="currency-name d-flex align-items-center gap-1" data-bs-toggle="modal"
+                              data-bs-target="#calculator-modal2">
+                              <div class="title">BTC</div>
+                              <i class="fa-regular fa-angle-down"></i>
+                            </a>
+                            <input type="text" name="" id="" placeholder="You send" value="500"
+                              onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
+                          </div>
+                          <div class="d-flex justify-content-between">
+                            <div>Bitcoin</div>
+                            <div class="fw-500">Max is 2.98 BTC</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mt-20">
+                    <label for="exampleFormControlInput1" class="form-label">Your Contact Email (Required)
+                    </label>
+                    <input type="email" class="form-control" name="" id="exampleFormControlInput1" placeholder="Email">
+                  </div>
+                  <div class="mt-20">
+                    <a class="cmn-btn w-100" href="exchange.html">
+                      <div class="btn-wrapper">
+                        <div class="main-text btn-single">
+                          proceed <i class="fa-regular fa-arrow-right-long"></i>
+                        </div>
+                        <div class="hover-text btn-single">
+                          proceed <i class="fa-regular fa-arrow-right-long"></i>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                </div>
+                <div class="tab-pane fade" id="pills-Buy" role="tabpanel" aria-labelledby="pills-Buy-tab" tabindex="0">
+                  <div class="input-amount-box" id="inputAmountBox">
+                    <span class="linear-gradient"></span>
+                    <div class="input-amount-wrapper">
+                      <label class="form-label mb-1">You send</label>
+                      <div class="input-amount-box-inner" id="inputAmountBoxInner">
+                        <a href="#" class="icon-area" data-bs-toggle="modal" data-bs-target="#calculator-modal">
+                          <img class="img-flag" src="./assets/img/crypto-icon/btc.svg" alt="">
+                        </a>
+                        <div class="text-area w-100">
+                          <div class="d-flex gap-3 justify-content-between">
+                            <a href="#" class="currency-name d-flex align-items-center gap-1" data-bs-toggle="modal"
+                              data-bs-target="#calculator-modal">
+                              <div class="title">BTC</div>
+                              <i class="fa-regular fa-angle-down"></i>
+                            </a>
+                            <input type="text" name="" id="" placeholder="You send" value="321"
+                              onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
+                          </div>
+                          <div class="d-flex justify-content-between">
+                            <div class="sub-title">Bitcoin</div>
+                            <div class="fw-500">Max is 2.98 BTC</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swap-area">
+                    <div class="swap-icon" id="swapBtn">
+                      <i class="fa-regular fa-arrow-up-arrow-down"></i>
+                    </div>
+                  </div>
+
+                  <div class="input-amount-box" id="inputAmountBox2">
+                    <span class="linear-gradient"></span>
+                    <div class="input-amount-wrapper">
+                      <label class="form-label mb-1">You send</label>
+                      <div class="input-amount-box-inner" id="inputAmountBoxInner2">
+                        <a href="#" class="icon-area" data-bs-toggle="modal" data-bs-target="#calculator-modal2">
+                          <img class="img-flag" src="./assets/img/crypto-icon/act.svg" alt="">
+                        </a>
+                        <div class="text-area w-100">
+                          <div class="d-flex gap-3 justify-content-between">
+                            <a href="#" class="currency-name d-flex align-items-center gap-1" data-bs-toggle="modal"
+                              data-bs-target="#calculator-modal2">
+                              <div class="title">BTC</div>
+                              <i class="fa-regular fa-angle-down"></i>
+                            </a>
+                            <input type="text" name="" id="" placeholder="You send" value="500"
+                              onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
+                          </div>
+                          <div class="d-flex justify-content-between">
+                            <div>Bitcoin</div>
+                            <div class="fw-500">Max is 2.98 BTC</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mt-20">
+                    <label for="exampleFormControlInput1" class="form-label">Your Contact Email (Required)
+                    </label>
+                    <input type="email" class="form-control" name="" id="exampleFormControlInput1" placeholder="Email">
+                  </div>
+                  <div class="mt-20">
+                    <a class="cmn-btn w-100" href="login.html">
+                      <div class="btn-wrapper">
+                        <div class="main-text btn-single">
+                          proceed <i class="fa-regular fa-arrow-right-long"></i>
+                        </div>
+                        <div class="hover-text btn-single">
+                          proceed <i class="fa-regular fa-arrow-right-long"></i>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="pills-Sell" role="tabpanel" aria-labelledby="pills-Sell-tab"
+                  tabindex="0">
+                  <div class="input-amount-box" id="inputAmountBox">
+                    <span class="linear-gradient"></span>
+                    <div class="input-amount-wrapper">
+                      <label class="form-label mb-1">You send</label>
+                      <div class="input-amount-box-inner" id="inputAmountBoxInner">
+                        <a href="#" class="icon-area" data-bs-toggle="modal" data-bs-target="#calculator-modal">
+                          <img class="img-flag" src="./assets/img/crypto-icon/btc.svg" alt="">
+                        </a>
+                        <div class="text-area w-100">
+                          <div class="d-flex gap-3 justify-content-between">
+                            <a href="#" class="currency-name d-flex align-items-center gap-1" data-bs-toggle="modal"
+                              data-bs-target="#calculator-modal">
+                              <div class="title">BTC</div>
+                              <i class="fa-regular fa-angle-down"></i>
+                            </a>
+                            <input type="text" name="" id="" placeholder="You send" value="321"
+                              onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
+                          </div>
+                          <div class="d-flex justify-content-between">
+                            <div class="sub-title">Bitcoin</div>
+                            <div class="fw-500">Max is 2.98 BTC</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swap-area">
+                    <div class="swap-icon" id="swapBtn">
+                      <i class="fa-regular fa-arrow-up-arrow-down"></i>
+                    </div>
+                  </div>
+
+                  <div class="input-amount-box" id="inputAmountBox2">
+                    <span class="linear-gradient"></span>
+                    <div class="input-amount-wrapper">
+                      <label class="form-label mb-1">You send</label>
+                      <div class="input-amount-box-inner" id="inputAmountBoxInner2">
+                        <a href="#" class="icon-area" data-bs-toggle="modal" data-bs-target="#calculator-modal2">
+                          <img class="img-flag" src="./assets/img/crypto-icon/act.svg" alt="">
+                        </a>
+                        <div class="text-area w-100">
+                          <div class="d-flex gap-3 justify-content-between">
+                            <a href="#" class="currency-name d-flex align-items-center gap-1" data-bs-toggle="modal"
+                              data-bs-target="#calculator-modal2">
+                              <div class="title">BTC</div>
+                              <i class="fa-regular fa-angle-down"></i>
+                            </a>
+                            <input type="text" name="" id="" placeholder="You send" value="500"
+                              onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
+                          </div>
+                          <div class="d-flex justify-content-between">
+                            <div>Bitcoin</div>
+                            <div class="fw-500">Max is 2.98 BTC</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mt-20">
+                    <label for="exampleFormControlInput1" class="form-label">Your Contact Email (Required)
+                    </label>
+                    <input type="email" class="form-control" name="" id="exampleFormControlInput1" placeholder="Email">
+                  </div>
+                  <div class="mt-20">
+                    <a class="cmn-btn w-100" href="login.html">
+                      <div class="btn-wrapper">
+                        <div class="main-text btn-single">
+                          proceed <i class="fa-regular fa-arrow-right-long"></i>
+                        </div>
+                        <div class="hover-text btn-single">
+                          proceed <i class="fa-regular fa-arrow-right-long"></i>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </form>
+          <div class="rate-btn-area">
+            <div>
+              <input type="radio" name="rate" class="btn-check" id="Floating-rate" autocomplete="off" checked />
+              <label class="btn rate-btn" for="Floating-rate">
+                <span><i class="fa-regular fa-lock"></i>Floating rate</span>
+                <span>~16.40247385</span>
+              </label>
+            </div>
+            <div>
+              <input type="radio" name="rate" class="btn-check" id="Fixed-rate" autocomplete="off" />
+              <label class="btn rate-btn" for="Fixed-rate">
+                <span><i class="fa-regular fa-lock"></i>Fixed rate</span>
+                <span>16.2848103</span>
+              </label>
+            </div>
+          </div>
+          <div class="notice-area">
+            <div class="icon-area">
+              <i class="fa-solid fa-circle-info"></i>
+            </div>
+            <small class="content-area">With the fixed rate, you will receive the exact amount of
+              crypto you see on this screen.</small>
+          </div>
+          <div class="wallet-address-section">
+            <div class="item">
+              <h5 class="mb-2">Destination wallet address</h5>
+              <form class="form-floating">
+                <input type="email" class="form-control" id="floatingInputValue" placeholder="name@example.com" />
+                <label for="floatingInputValue">Enter your ETH recipient address</label>
+              </form>
+              <div class="tag-area">
+                <small>FIO protocol and Unstoppable Domains are supported</small>
+              </div>
+            </div>
+            <div class="item">
+              <h5 class="mb-2">Refund wallet address</h5>
+              <form class="form-floating">
+                <input type="email" class="form-control" id="floatingInputValue" placeholder="name@example.com" />
+                <label for="floatingInputValue">
+                  Enter your BTC recipient address
+                </label>
+              </form>
+              <div class="tag-area">
+                <small>
+                  FIO protocol and Unstoppable Domains are supported
+                </small>
+              </div>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+              <label class="form-check-label" for="exampleCheck1">
+                I agree with <a href="">Terms of Use</a>,
+                <a href="">Privacy Policy</a> and
+                <a href="
+                              ">
+                  AML/KYC
+                </a>
+              </label>
+            </div>
+            <div class="btn-area">
+              <a class="cmn-btn w-100" href="checkout.html">
+                <div class="btn-wrapper h-55">
+                  <div class="main-text btn-single h-55">
+                    Next step <i class="fa-regular fa-angle-right"></i>
+                  </div>
+                  <div class="hover-text btn-single h-55">
+                    Next step <i class="fa-regular fa-angle-right"></i>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 order-3 order-lg-3">
+          <div class="transaction-summery">
+            <h5 class="title">Transaction details</h5>
+            <div class="transaction-item-container">
+              <div class="item">
+                <span>You send</span>
+                <h6>1 BTC</h6>
+              </div>
+              <div class="item">
+                <span>Exchange rate</span>
+                <h6>1 BTC ~ 16.45093894 ETH</h6>
+              </div>
+              <div class="item">
+                <span>Service fee 0.25%</span>
+                <h6>0.04112735 ETH</h6>
+              </div>
+              <div class="item">
+                <span>Network fee</span>
+                <h6>0.00189 ETH</h6>
+              </div>
+
+              <div class="item">
+                <span>You get</span>
+                <h6>~ 16.388904 ETH</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Calculate details section end -->
+
+  <!-- Footer Section start -->
+  <section class="footer-section">
+    <div class="container">
+      <div class="row gy-4 g-sm-5">
+        <div class="col-lg-4 col-sm-6">
+          <div class="footer-widget">
+            <div class="widget-logo">
+              <a href="#nav_area"><img class="footer-logo" src="assets/img/logo/logo-white.png" alt="TrueCraft" /></a>
+            </div>
+            <p>
+              Experience the Exchanger Advantage - Empowering Social Success
+              with Advanced, Data-Driven Solutions and Innovative Strategies.
+            </p>
+
+            <ul class="social-box mt-30">
+              <li>
+                <a href="https://facebook.com" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              </li>
+              <li>
+                <a href="https://twitter.com" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com" aria-label="Linkedin"><i class="fab fa-linkedin"></i></a>
+              </li>
+              <li>
+                <a href="https://instagram.com" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-2 col-sm-6">
+          <div class="footer-widget">
+            <h5 class="widget-title">Quick Links</h5>
+            <ul>
+              <li><a class="widget-link" href="about.html">About</a></li>
+              <li><a class="widget-link" href="blog.html">Blogs</a></li>
+              <li><a class="widget-link" href="faq.html">FAQs</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 pt-sm-0 pt-3 ps-lg-5">
+          <div class="footer-widget">
+            <h5 class="widget-title">Support</h5>
+            <ul>
+              <li>
+                <a class="widget-link" href="policy.html">Privacy Policy</a>
+              </li>
+              <li><a class="widget-link" href="">Terms of use</a></li>
+              <li><a class="widget-link" href="aml-kyc.html">AML/KYC</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 pt-sm-0 pt-3">
+          <div class="footer-widget">
+            <h5 class="widget-title">Newsletter</h5>
+            <p>Subscribe To Our Mailing List And Stay Up To Date</p>
+            <form class="newsletter-form">
+              <input type="text" class="form-control" placeholder="Your email" name="newsletter-form">
+              <button type="button" class="subscribe-btn">
+                <i class="fa-regular fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <hr class="cmn-hr" />
+      <div class="copyright-area">
+        <p class="mb-0 text-center">
+          Copyright ©2025
+          <a class="highlight" href="index.html">Exchanger</a> All Rights
+          Reserved
+        </p>
+      </div>
+    </div>
+  </section>
+  <!-- Footer Section end -->
+
+  <!-- Modal section start -->
+
+  <!-- Announcement modal start -->
+  <div class="modal fade announcement-modal" id="announcement-modal" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header pb-0 border-0">
+          <h4 class="modal-title" id="staticBackdropLabel"></h4>
+          <button type="button" class="cmn-btn-close" data-bs-dismiss="modal" aria-label="Close">
+            <i class="fa-light fa-xmark"></i>
+          </button>
+        </div>
+        <div class="modal-body text-center">
+          <h4>Hottest rates for USDT/BTC, USDT/ETH swaps</h4>
+          <p>
+            Enjoy a cost-effective way to swap the same stablecoin
+            cross-chain, at a 1:1 exchange rate.
+          </p>
+          <p>
+            For example, you can convert <b>USDT-ERC20</b> to<b> USDT-TRC20</b>.
+          </p>
+          <p>Please note that network and service fees apply.</p>
+          <p>
+            <b>
+              Stablecoins participating in the promotion: USDT, USDC, TUSD.</b>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Announcement modal end -->
+
+  <!-- Calculator modal start -->
+  <div class="modal calculator-modal" id="calculator-modal" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header flex-column">
+          <div class="d-flex justify-content-between align-items-center">
+            <h3 class="modal-title" id="staticBackdropLabel">Select a currency</h3>
+            <button type="button" class="cmn-btn-close" data-bs-dismiss="modal" aria-label="Close">
+              <i class="fa-light fa-xmark"></i>
+            </button>
+          </div>
+          <div class="search-box mt-10">
+            <input type="text" id="search-input" onkeyup="filterItems('search-input')" class="form-control"
+              placeholder="Search here...">
+            <button type="submit" class="search-btn"><i class="far fa-search"></i></button>
+          </div>
+        </div>
+        <div class="modal-body">
+          <div id="currency-list" class="currency-list">
+            <div class="item">
+              <div class="left-side">
+                <div class="img-area">
+                  <img class="img-flag" src="./assets/img/crypto-icon/btc.svg" alt="">
+                </div>
+                <div class="text-area">
+                  <div class="title">btc</div>
+                  <div class="sub-title">Bitcoin</div>
+                </div>
+              </div>
+              <div class="right-side">
+                <i class="fa-sharp fa-solid fa-circle-check"></i>
+              </div>
+            </div>
+            <div class="item">
+              <div class="left-side">
+                <div class="img-area">
+                  <img class="img-flag" src="./assets/img/crypto-icon/eth.svg" alt="">
+                </div>
+                <div class="text-area">
+                  <div class="title">ave</div>
+                  <div class="sub-title">Ethereum</div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="left-side">
+                <div class="img-area">
+                  <img class="img-flag" src="./assets/img/crypto-icon/usdt.svg" alt="">
+                </div>
+                <div class="text-area">
+                  <div class="title">USDT20</div>
+                  <div class="sub-title">Tether ERC20</div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="left-side">
+                <div class="img-area">
+                  <img class="img-flag" src="./assets/img/crypto-icon/sol.svg" alt="">
+                </div>
+                <div class="text-area">
+                  <div class="title">sol</div>
+                  <div class="sub-title">solana</div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="left-side">
+                <div class="img-area">
+                  <img class="img-flag" src="./assets/img/crypto-icon/1inch.svg" alt="">
+                </div>
+                <div class="text-area">
+                  <div class="title">1inch</div>
+                  <div class="sub-title">1inch (ERC20)</div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="left-side">
+                <div class="img-area">
+                  <img class="img-flag" src="./assets/img/crypto-icon/aave.svg" alt="">
+                </div>
+                <div class="text-area">
+                  <div class="title">AAVE</div>
+                  <div class="sub-title">Aave (ERC20)</div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="left-side">
+                <div class="img-area">
+                  <img class="img-flag" src="./assets/img/crypto-icon/abt.svg" alt="">
+                </div>
+                <div class="text-area">
+                  <div class="title">ABT</div>
+                  <div class="sub-title">Arcblock (ERC20)</div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="left-side">
+                <div class="img-area">
+                  <img class="img-flag" src="./assets/img/crypto-icon/act.svg" alt="">
+                </div>
+                <div class="text-area">
+                  <div class="title">act</div>
+                  <div class="sub-title">Achain</div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="left-side">
+                <div class="img-area">
+                  <img class="img-flag" src="./assets/img/crypto-icon/ada.svg" alt="">
+                </div>
+                <div class="text-area">
+                  <div class="title">ada</div>
+                  <div class="sub-title">Cardano</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal calculator-modal" id="calculator-modal2" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header flex-column">
+          <div class="d-flex justify-content-between align-items-center">
+            <h3 class="modal-title" id="staticBackdropLabel">Select a currency</h3>
+            <button type="button" class="cmn-btn-close" data-bs-dismiss="modal" aria-label="Close">
+              <i class="fa-light fa-xmark"></i>
+            </button>
+          </div>
+          <div class="search-box mt-10">
+            <input type="text" id="search-input2" onkeyup="filterItems('search-input2')" class="form-control"
+              placeholder="Search here...">
+            <button type="submit" class="search-btn"><i class="far fa-search"></i></button>
+          </div>
+        </div>
+        <div class="modal-body">
+          <div id="currency-list" class="currency-list">
+            <div class="item">
+              <div class="left-side">
+                <div class="img-area">
+                  <img class="img-flag" src="./assets/img/crypto-icon/aave.svg" alt="">
+                </div>
+                <div class="text-area">
+                  <div class="title">AAVE</div>
+                  <div class="sub-title">Aave (ERC20)</div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="left-side">
+                <div class="img-area">
+                  <img class="img-flag" src="./assets/img/crypto-icon/abt.svg" alt="">
+                </div>
+                <div class="text-area">
+                  <div class="title">ABT</div>
+                  <div class="sub-title">Arcblock (ERC20)</div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="left-side">
+                <div class="img-area">
+                  <img class="img-flag" src="./assets/img/crypto-icon/act.svg" alt="">
+                </div>
+                <div class="text-area">
+                  <div class="title">act</div>
+                  <div class="sub-title">Achain</div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="left-side">
+                <div class="img-area">
+                  <img class="img-flag" src="./assets/img/crypto-icon/ada.svg" alt="">
+                </div>
+                <div class="text-area">
+                  <div class="title">ada</div>
+                  <div class="sub-title">Cardano</div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="left-side">
+                <div class="img-area">
+                  <img class="img-flag" src="./assets/img/crypto-icon/btc.svg" alt="">
+                </div>
+                <div class="text-area">
+                  <div class="title">btc</div>
+                  <div class="sub-title">Bitcoin</div>
+                </div>
+              </div>
+              <div class="right-side">
+                <i class="fa-sharp fa-solid fa-circle-check"></i>
+              </div>
+            </div>
+            <div class="item">
+              <div class="left-side">
+                <div class="img-area">
+                  <img class="img-flag" src="./assets/img/crypto-icon/eth.svg" alt="">
+                </div>
+                <div class="text-area">
+                  <div class="title">ave</div>
+                  <div class="sub-title">Ethereum</div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="left-side">
+                <div class="img-area">
+                  <img class="img-flag" src="./assets/img/crypto-icon/usdt.svg" alt="">
+                </div>
+                <div class="text-area">
+                  <div class="title">USDT20</div>
+                  <div class="sub-title">Tether ERC20</div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="left-side">
+                <div class="img-area">
+                  <img class="img-flag" src="./assets/img/crypto-icon/sol.svg" alt="">
+                </div>
+                <div class="text-area">
+                  <div class="title">sol</div>
+                  <div class="sub-title">solana</div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="left-side">
+                <div class="img-area">
+                  <img class="img-flag" src="./assets/img/crypto-icon/1inch.svg" alt="">
+                </div>
+                <div class="text-area">
+                  <div class="title">1inch</div>
+                  <div class="sub-title">1inch (ERC20)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Calculator modal end -->
+
+  <!-- Modal section end -->
+
+  <!-- Jquery Js link -->
+  <script src="assets/js/jquery-3.7.1.min.js"></script>
+  <!-- Bootstrap Js link -->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <!-- Owl carausel Js link -->
+  <script src="assets/js/owl.carousel.min.js"></script>
+  <!-- select2 Js link -->
+  <script src="assets/js/select2.min.js"></script>
+  <!-- nice-select Js link -->
+  <script src="assets/js/jquery.nice-select.min.js"></script>
+  <!-- Social share Js link -->
+  <script src="assets/js/socialSharing.js"></script>
+  <!-- Slick slider js link -->
+  <script src="assets/js/slick.min.js"></script>
+  <!-- Main Js link -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
