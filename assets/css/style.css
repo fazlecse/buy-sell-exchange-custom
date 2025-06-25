@@ -714,6 +714,13 @@ body::-webkit-scrollbar-thumb:hover {
   transition: all 0.5s ease-in-out;
 }
 
+.rtl .owl-theme .owl-nav .owl-prev i {
+  transform: rotate(180deg);
+}
+.rtl .owl-theme .owl-nav .owl-next i {
+  transform: rotate(180deg);
+}
+
 .modal {
   -webkit-backdrop-filter: blur(3px);
           backdrop-filter: blur(3px);
@@ -789,6 +796,7 @@ body::-webkit-scrollbar-thumb:hover {
   text-transform: capitalize;
   padding: 0 0 15px;
   background-color: transparent;
+  gap: 10px;
 }
 .accordion-button:focus {
   box-shadow: none;
@@ -3955,6 +3963,7 @@ user nav Profile end
 }
 .profile-box3 .img-box img {
   width: 40px;
+  min-width: 40px;
   height: 40px;
   border-radius: 50%;
 }
@@ -4563,6 +4572,16 @@ Cmn table start
   }
 }
 @media (max-width: 767px) {
+  tr td:first-child {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0;
+  }
+  tr td:last-child {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
   .table-striped > tbody > tr:nth-of-type(odd) > * {
     --bs-table-accent-bg: rgb(var(--bg-color1));
   }
@@ -4575,7 +4594,7 @@ Cmn table start
   .table-responsive .table tbody tr {
     display: block;
     border: 1px solid var(--border-color2);
-    border-radius: 5px;
+    border-radius: 10px;
   }
   .table-responsive .table tbody tr:not(:last-child) {
     margin-bottom: 5px;
@@ -4642,7 +4661,7 @@ Cmn table end
     transform: translateX(-100%);
   }
   100% {
-    transform: translateX(0%);
+    transform: translateX(0);
   }
 }
 @keyframes marquee-left {
@@ -5755,7 +5774,10 @@ Bottom Mobile, Tab nav end
   color: rgb(var(--primary-color));
   display: flex;
   align-items: center;
-  gap: 8px;
+  row-gap: 16px;
+  -moz-column-gap: 8px;
+       column-gap: 8px;
+  flex-wrap: wrap;
 }
 .notice-bar .left-side {
   display: flex;
@@ -5806,69 +5828,17 @@ Bottom Mobile, Tab nav end
   border: 1px solid var(--border-color1);
   padding: 8px;
   border-radius: 24px;
-  max-width: 560px;
 }
 .calculator .calculator-body {
   padding: 16px;
   background-color: var(--bg-color2);
   border-radius: 16px;
 }
-.calculator .calculator-header {
-  margin-bottom: 20px;
+.calculator .body-bottom {
+  margin-top: 100px;
 }
 .calculator .form-control {
   background-color: var(--bg-color1);
-}
-.calculator .form-description {
-  margin: 15px 0;
-  font-size: 14px;
-}
-.calculator .form-description .single-description i {
-  margin-right: 5px;
-}
-.calculator .form-description .single-description:not(:last-child) {
-  margin-right: 15px;
-}
-.calculator .cmn-btn {
-  color: rgb(var(--very-dark));
-  font-weight: 400;
-  font-size: 18px;
-}
-.calculator .cmn-btn .btn-wrapper {
-  height: 56px;
-}
-.calculator .cmn-btn .btn-single {
-  height: 56px;
-}
-
-.input-box {
-  position: relative;
-}
-.input-box .form-control {
-  padding-right: 205px;
-}
-.input-box span.select2.select2-container.select2-container--default {
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 100%;
-  max-width: 200px;
-}
-.input-box .select2-container--default .select2-selection--single {
-  height: calc(100% - 8px);
-  position: absolute;
-  width: 200px;
-  right: 4px;
-  top: 50%;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  text-transform: uppercase;
-  transform: translateY(-50%);
-  box-shadow: var(--shadow2);
-}
-.input-box .select2-container--default .select2-selection--single .select2-selection__arrow {
-  top: 10px;
 }
 
 .input-amount-box {
@@ -6050,36 +6020,27 @@ Bottom Mobile, Tab nav end
   background-color: black;
 }
 
-@media (max-width: 1399px) {
-  .input-box .form-control {
-    padding-right: 155px;
-  }
-  .input-box span.select2.select2-container.select2-container--default {
-    max-width: 150px;
-  }
-  .input-box span.select2.select2-container.select2-container--default .select2-selection--single {
-    max-width: 150px;
+@media (min-width: 992px) {
+  .calculator {
+    max-width: 560px;
   }
 }
 @media (max-width: 1199px) {
-  .calculator .form-description .single-description {
-    display: block;
+  .calculator .body-bottom {
+    margin-top: 20px;
   }
 }
-@media (max-width: 991px) {
-  .input-box .form-control {
-    padding-right: 155px;
-  }
-  .input-box span.select2.select2-container.select2-container--default {
-    max-width: 150px;
-  }
-  .input-box span.select2.select2-container.select2-container--default .select2-selection--single {
-    max-width: 150px;
+@media (max-width: 767px) {
+  .calculator-banner-wrapper .left-side p {
+    font-size: 12px;
   }
 }
 @media (max-width: 575px) {
   .calculator .calculator-body {
-    padding: 15px;
+    padding: 10px;
+  }
+  .calculator-promotional-box {
+    padding: 20px;
   }
 }
 @media (max-width: 425px) {
@@ -6087,45 +6048,12 @@ Bottom Mobile, Tab nav end
     display: none;
   }
 }
-.rtl .input-box .form-control {
-  padding-right: 0.75rem;
-  padding-left: 205px;
-}
-.rtl .input-box span.select2.select2-container.select2-container--default {
-  left: 6px;
-  right: auto;
-}
-.rtl .input-box span.select2.select2-container.select2-container--default .select2-selection--single {
-  justify-content: end;
-}
-.rtl .swap-area {
-  margin: 20px 0 20px 85px;
-}
-.rtl .input-box span.select2.select2-container.select2-container--default {
-  left: 6px;
-  right: auto;
-}
-.rtl .input-box span.select2.select2-container.select2-container--default .select2-selection--single {
-  justify-content: end;
-}
-.rtl .calculator .form-description .single-description:not(:first-child) {
+.rtl .calculator-banner-wrapper .right-side {
   margin-right: 0;
   margin-left: 15px;
 }
-.rtl .calculator .form-description .single-description:not(:last-child) {
-  margin-right: 0;
-}
-.rtl .calculator .form-description .single-description i {
-  margin-right: 0;
-  margin-left: 5px;
-}
-@media (max-width: 1399px) {
-  .rtl .input-box .form-control {
-    padding-left: 155px;
-  }
-  .rtl .swap-area {
-    margin: 20px 0 20px 60px;
-  }
+.rtl .calculator-banner-wrapper .right-side i {
+  transform: rotate(180deg);
 }
 
 /*----------------------------------------------
@@ -6513,6 +6441,7 @@ Trade section section start
 }
 .coin-box .img-box {
   width: 36px;
+  min-width: 36px;
   height: 36px;
 }
 .coin-box .img-box img {
@@ -6574,6 +6503,10 @@ Trade section section end
   gap: 20px;
 }
 
+.rtl .marquee-section {
+  direction: ltr;
+}
+
 /*----------------------------------------------
 Partner section end
 ----------------------------------------------*/
@@ -6625,6 +6558,12 @@ Partner section end
   padding-top: 14px;
 }
 
+.rtl .testimonial-box .quote-icon {
+  right: auto;
+  left: 10px;
+  transform: rotateY(180deg);
+}
+
 /*----------------------------------------------
 Testimonial section end
 ----------------------------------------------*/
@@ -6640,6 +6579,12 @@ How it works section start
 @media (min-width: 992px) {
   .how-it-works-section-inner {
     padding: 64px;
+  }
+}
+@media (max-width: 575px) {
+  .how-it-works-section-inner {
+    padding: 16px;
+    border-radius: 30px;
   }
 }
 /*----------------------------------------------

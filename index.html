@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="">
 
 <head>
   <meta charset="UTF-8" />
@@ -197,248 +197,262 @@
             </div>
             <div class="calculator-body">
               <div class="tab-content" id="pills-tabContent">
+
                 <div class="tab-pane fade show active" id="pills-exchange" role="tabpanel"
                   aria-labelledby="pills-exchange-tab" tabindex="0">
 
-                  <div class="input-amount-box" id="inputAmountBox">
-                    <span class="linear-gradient"></span>
-                    <div class="input-amount-wrapper">
-                      <label class="form-label mb-1">You send</label>
-                      <div class="input-amount-box-inner" id="inputAmountBoxInner">
-                        <a href="#" class="icon-area" data-bs-toggle="modal" data-bs-target="#calculator-modal">
-                          <img class="img-flag" src="./assets/img/crypto-icon/btc.svg" alt="">
-                        </a>
-                        <div class="text-area w-100">
-                          <div class="d-flex gap-3 justify-content-between">
-                            <a href="#" class="currency-name d-flex align-items-center gap-1" data-bs-toggle="modal"
-                              data-bs-target="#calculator-modal">
-                              <div class="title">BTC</div>
-                              <i class="fa-regular fa-angle-down"></i>
-                            </a>
-                            <input type="text" name="" id="" placeholder="You send" value="321"
-                              onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
+                  <div class="body-top">
+                    <div class="input-amount-box" id="inputAmountBox">
+                      <span class="linear-gradient"></span>
+                      <div class="input-amount-wrapper">
+                        <label class="form-label mb-1">You send</label>
+                        <div class="input-amount-box-inner" id="inputAmountBoxInner">
+                          <a href="#" class="icon-area" data-bs-toggle="modal" data-bs-target="#calculator-modal">
+                            <img class="img-flag" src="./assets/img/crypto-icon/btc.svg" alt="">
+                          </a>
+                          <div class="text-area w-100">
+                            <div class="d-flex gap-3 justify-content-between">
+                              <a href="#" class="currency-name d-flex align-items-center gap-1" data-bs-toggle="modal"
+                                data-bs-target="#calculator-modal">
+                                <div class="title">BTC</div>
+                                <i class="fa-regular fa-angle-down"></i>
+                              </a>
+                              <input type="text" name="" id="" placeholder="You send" value="321"
+                                onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
+                            </div>
+                            <div class="d-flex justify-content-between">
+                              <div class="sub-title">Bitcoin</div>
+                              <div class="fw-500">Max is 2.98 BTC</div>
+                            </div>
                           </div>
-                          <div class="d-flex justify-content-between">
-                            <div class="sub-title">Bitcoin</div>
-                            <div class="fw-500">Max is 2.98 BTC</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="swap-area">
+                      <div class="swap-icon" id="swapBtn">
+                        <i class="fa-regular fa-arrow-up-arrow-down"></i>
+                      </div>
+                    </div>
+
+                    <div class="input-amount-box" id="inputAmountBox2">
+                      <span class="linear-gradient"></span>
+                      <div class="input-amount-wrapper">
+                        <label class="form-label mb-1">You send</label>
+                        <div class="input-amount-box-inner" id="inputAmountBoxInner2">
+                          <a href="#" class="icon-area" data-bs-toggle="modal" data-bs-target="#calculator-modal2">
+                            <img class="img-flag" src="./assets/img/crypto-icon/act.svg" alt="">
+                          </a>
+                          <div class="text-area w-100">
+                            <div class="d-flex gap-3 justify-content-between">
+                              <a href="#" class="currency-name d-flex align-items-center gap-1" data-bs-toggle="modal"
+                                data-bs-target="#calculator-modal2">
+                                <div class="title">BTC</div>
+                                <i class="fa-regular fa-angle-down"></i>
+                              </a>
+                              <input type="text" name="" id="" placeholder="You send" value="500"
+                                onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
+                            </div>
+                            <div class="d-flex justify-content-between">
+                              <div>Bitcoin</div>
+                              <div class="fw-500">Max is 2.98 BTC</div>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-
-                  <div class="swap-area">
-                    <div class="swap-icon" id="swapBtn">
-                      <i class="fa-regular fa-arrow-up-arrow-down"></i>
+                  <div class="body-bottom">
+                    <div>
+                      <label for="exampleFormControlInput1" class="form-label">Your Contact Email (Required)
+                      </label>
+                      <input type="email" class="form-control" name="" id="exampleFormControlInput1"
+                        placeholder="Email">
                     </div>
-                  </div>
-
-                  <div class="input-amount-box" id="inputAmountBox2">
-                    <span class="linear-gradient"></span>
-                    <div class="input-amount-wrapper">
-                      <label class="form-label mb-1">You send</label>
-                      <div class="input-amount-box-inner" id="inputAmountBoxInner2">
-                        <a href="#" class="icon-area" data-bs-toggle="modal" data-bs-target="#calculator-modal2">
-                          <img class="img-flag" src="./assets/img/crypto-icon/act.svg" alt="">
-                        </a>
-                        <div class="text-area w-100">
-                          <div class="d-flex gap-3 justify-content-between">
-                            <a href="#" class="currency-name d-flex align-items-center gap-1" data-bs-toggle="modal"
-                              data-bs-target="#calculator-modal2">
-                              <div class="title">BTC</div>
-                              <i class="fa-regular fa-angle-down"></i>
-                            </a>
-                            <input type="text" name="" id="" placeholder="You send" value="500"
-                              onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
+                    <div class="mt-20">
+                      <a class="cmn-btn w-100" href="exchange.html">
+                        <div class="btn-wrapper h-55">
+                          <div class="main-text btn-single h-55">
+                            proceed <i class="fa-regular fa-arrow-right-long"></i>
                           </div>
-                          <div class="d-flex justify-content-between">
-                            <div>Bitcoin</div>
-                            <div class="fw-500">Max is 2.98 BTC</div>
+                          <div class="hover-text btn-single">
+                            proceed <i class="fa-regular fa-arrow-right-long"></i>
                           </div>
                         </div>
-                      </div>
+                      </a>
                     </div>
-                  </div>
-
-                  <div class="mt-100">
-                    <label for="exampleFormControlInput1" class="form-label">Your Contact Email (Required)
-                    </label>
-                    <input type="email" class="form-control" name="" id="exampleFormControlInput1" placeholder="Email">
-                  </div>
-                  <div class="mt-20">
-                    <a class="cmn-btn w-100" href="exchange.html">
-                      <div class="btn-wrapper">
-                        <div class="main-text btn-single">
-                          proceed <i class="fa-regular fa-arrow-right-long"></i>
-                        </div>
-                        <div class="hover-text btn-single">
-                          proceed <i class="fa-regular fa-arrow-right-long"></i>
-                        </div>
-                      </div>
-                    </a>
                   </div>
 
                 </div>
                 <div class="tab-pane fade" id="pills-Buy" role="tabpanel" aria-labelledby="pills-Buy-tab" tabindex="0">
-                  <div class="input-amount-box" id="inputAmountBox">
-                    <span class="linear-gradient"></span>
-                    <div class="input-amount-wrapper">
-                      <label class="form-label mb-1">You send</label>
-                      <div class="input-amount-box-inner" id="inputAmountBoxInner">
-                        <a href="#" class="icon-area" data-bs-toggle="modal" data-bs-target="#calculator-modal">
-                          <img class="img-flag" src="./assets/img/crypto-icon/btc.svg" alt="">
-                        </a>
-                        <div class="text-area w-100">
-                          <div class="d-flex gap-3 justify-content-between">
-                            <a href="#" class="currency-name d-flex align-items-center gap-1" data-bs-toggle="modal"
-                              data-bs-target="#calculator-modal">
-                              <div class="title">BTC</div>
-                              <i class="fa-regular fa-angle-down"></i>
-                            </a>
-                            <input type="text" name="" id="" placeholder="You send" value="321"
-                              onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
+
+                  <div class="body-top">
+                    <div class="input-amount-box" id="inputAmountBox">
+                      <span class="linear-gradient"></span>
+                      <div class="input-amount-wrapper">
+                        <label class="form-label mb-1">You send</label>
+                        <div class="input-amount-box-inner" id="inputAmountBoxInner">
+                          <a href="#" class="icon-area" data-bs-toggle="modal" data-bs-target="#calculator-modal">
+                            <img class="img-flag" src="./assets/img/crypto-icon/btc.svg" alt="">
+                          </a>
+                          <div class="text-area w-100">
+                            <div class="d-flex gap-3 justify-content-between">
+                              <a href="#" class="currency-name d-flex align-items-center gap-1" data-bs-toggle="modal"
+                                data-bs-target="#calculator-modal">
+                                <div class="title">BTC</div>
+                                <i class="fa-regular fa-angle-down"></i>
+                              </a>
+                              <input type="text" name="" id="" placeholder="You send" value="321"
+                                onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
+                            </div>
+                            <div class="d-flex justify-content-between">
+                              <div class="sub-title">Bitcoin</div>
+                              <div class="fw-500">Max is 2.98 BTC</div>
+                            </div>
                           </div>
-                          <div class="d-flex justify-content-between">
-                            <div class="sub-title">Bitcoin</div>
-                            <div class="fw-500">Max is 2.98 BTC</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="swap-area">
+                      <div class="swap-icon" id="swapBtn">
+                        <i class="fa-regular fa-arrow-up-arrow-down"></i>
+                      </div>
+                    </div>
+
+                    <div class="input-amount-box" id="inputAmountBox2">
+                      <span class="linear-gradient"></span>
+                      <div class="input-amount-wrapper">
+                        <label class="form-label mb-1">You send</label>
+                        <div class="input-amount-box-inner" id="inputAmountBoxInner2">
+                          <a href="#" class="icon-area" data-bs-toggle="modal" data-bs-target="#calculator-modal2">
+                            <img class="img-flag" src="./assets/img/crypto-icon/act.svg" alt="">
+                          </a>
+                          <div class="text-area w-100">
+                            <div class="d-flex gap-3 justify-content-between">
+                              <a href="#" class="currency-name d-flex align-items-center gap-1" data-bs-toggle="modal"
+                                data-bs-target="#calculator-modal2">
+                                <div class="title">BTC</div>
+                                <i class="fa-regular fa-angle-down"></i>
+                              </a>
+                              <input type="text" name="" id="" placeholder="You send" value="500"
+                                onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
+                            </div>
+                            <div class="d-flex justify-content-between">
+                              <div>Bitcoin</div>
+                              <div class="fw-500">Max is 2.98 BTC</div>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-
-                  <div class="swap-area">
-                    <div class="swap-icon" id="swapBtn">
-                      <i class="fa-regular fa-arrow-up-arrow-down"></i>
+                  <div class="body-bottom">
+                    <div>
+                      <label for="exampleFormControlInput1" class="form-label">Your Contact Email (Required)
+                      </label>
+                      <input type="email" class="form-control" name="" id="exampleFormControlInput1"
+                        placeholder="Email">
                     </div>
-                  </div>
-
-                  <div class="input-amount-box" id="inputAmountBox2">
-                    <span class="linear-gradient"></span>
-                    <div class="input-amount-wrapper">
-                      <label class="form-label mb-1">You send</label>
-                      <div class="input-amount-box-inner" id="inputAmountBoxInner2">
-                        <a href="#" class="icon-area" data-bs-toggle="modal" data-bs-target="#calculator-modal2">
-                          <img class="img-flag" src="./assets/img/crypto-icon/act.svg" alt="">
-                        </a>
-                        <div class="text-area w-100">
-                          <div class="d-flex gap-3 justify-content-between">
-                            <a href="#" class="currency-name d-flex align-items-center gap-1" data-bs-toggle="modal"
-                              data-bs-target="#calculator-modal2">
-                              <div class="title">BTC</div>
-                              <i class="fa-regular fa-angle-down"></i>
-                            </a>
-                            <input type="text" name="" id="" placeholder="You send" value="500"
-                              onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
+                    <div class="mt-20">
+                      <a class="cmn-btn w-100" href="login.html">
+                        <div class="btn-wrapper h-55">
+                          <div class="main-text btn-single h-55">
+                            proceed <i class="fa-regular fa-arrow-right-long"></i>
                           </div>
-                          <div class="d-flex justify-content-between">
-                            <div>Bitcoin</div>
-                            <div class="fw-500">Max is 2.98 BTC</div>
+                          <div class="hover-text btn-single">
+                            proceed <i class="fa-regular fa-arrow-right-long"></i>
                           </div>
                         </div>
-                      </div>
+                      </a>
                     </div>
-                  </div>
-
-                  <div class="mt-100">
-                    <label for="exampleFormControlInput1" class="form-label">Your Contact Email (Required)
-                    </label>
-                    <input type="email" class="form-control" name="" id="exampleFormControlInput1" placeholder="Email">
-                  </div>
-                  <div class="mt-20">
-                    <a class="cmn-btn w-100" href="login.html">
-                      <div class="btn-wrapper">
-                        <div class="main-text btn-single">
-                          proceed <i class="fa-regular fa-arrow-right-long"></i>
-                        </div>
-                        <div class="hover-text btn-single">
-                          proceed <i class="fa-regular fa-arrow-right-long"></i>
-                        </div>
-                      </div>
-                    </a>
                   </div>
                 </div>
                 <div class="tab-pane fade" id="pills-Sell" role="tabpanel" aria-labelledby="pills-Sell-tab"
                   tabindex="0">
-                  <div class="input-amount-box" id="inputAmountBox">
-                    <span class="linear-gradient"></span>
-                    <div class="input-amount-wrapper">
-                      <label class="form-label mb-1">You send</label>
-                      <div class="input-amount-box-inner" id="inputAmountBoxInner">
-                        <a href="#" class="icon-area" data-bs-toggle="modal" data-bs-target="#calculator-modal">
-                          <img class="img-flag" src="./assets/img/crypto-icon/btc.svg" alt="">
-                        </a>
-                        <div class="text-area w-100">
-                          <div class="d-flex gap-3 justify-content-between">
-                            <a href="#" class="currency-name d-flex align-items-center gap-1" data-bs-toggle="modal"
-                              data-bs-target="#calculator-modal">
-                              <div class="title">BTC</div>
-                              <i class="fa-regular fa-angle-down"></i>
-                            </a>
-                            <input type="text" name="" id="" placeholder="You send" value="321"
-                              onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
+
+                  <div class="body-top">
+                    <div class="input-amount-box" id="inputAmountBox">
+                      <span class="linear-gradient"></span>
+                      <div class="input-amount-wrapper">
+                        <label class="form-label mb-1">You send</label>
+                        <div class="input-amount-box-inner" id="inputAmountBoxInner">
+                          <a href="#" class="icon-area" data-bs-toggle="modal" data-bs-target="#calculator-modal">
+                            <img class="img-flag" src="./assets/img/crypto-icon/btc.svg" alt="">
+                          </a>
+                          <div class="text-area w-100">
+                            <div class="d-flex gap-3 justify-content-between">
+                              <a href="#" class="currency-name d-flex align-items-center gap-1" data-bs-toggle="modal"
+                                data-bs-target="#calculator-modal">
+                                <div class="title">BTC</div>
+                                <i class="fa-regular fa-angle-down"></i>
+                              </a>
+                              <input type="text" name="" id="" placeholder="You send" value="321"
+                                onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
+                            </div>
+                            <div class="d-flex justify-content-between">
+                              <div class="sub-title">Bitcoin</div>
+                              <div class="fw-500">Max is 2.98 BTC</div>
+                            </div>
                           </div>
-                          <div class="d-flex justify-content-between">
-                            <div class="sub-title">Bitcoin</div>
-                            <div class="fw-500">Max is 2.98 BTC</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="swap-area">
+                      <div class="swap-icon" id="swapBtn">
+                        <i class="fa-regular fa-arrow-up-arrow-down"></i>
+                      </div>
+                    </div>
+
+                    <div class="input-amount-box" id="inputAmountBox2">
+                      <span class="linear-gradient"></span>
+                      <div class="input-amount-wrapper">
+                        <label class="form-label mb-1">You send</label>
+                        <div class="input-amount-box-inner" id="inputAmountBoxInner2">
+                          <a href="#" class="icon-area" data-bs-toggle="modal" data-bs-target="#calculator-modal2">
+                            <img class="img-flag" src="./assets/img/crypto-icon/act.svg" alt="">
+                          </a>
+                          <div class="text-area w-100">
+                            <div class="d-flex gap-3 justify-content-between">
+                              <a href="#" class="currency-name d-flex align-items-center gap-1" data-bs-toggle="modal"
+                                data-bs-target="#calculator-modal2">
+                                <div class="title">BTC</div>
+                                <i class="fa-regular fa-angle-down"></i>
+                              </a>
+                              <input type="text" name="" id="" placeholder="You send" value="500"
+                                onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
+                            </div>
+                            <div class="d-flex justify-content-between">
+                              <div>Bitcoin</div>
+                              <div class="fw-500">Max is 2.98 BTC</div>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-
-                  <div class="swap-area">
-                    <div class="swap-icon" id="swapBtn">
-                      <i class="fa-regular fa-arrow-up-arrow-down"></i>
+                  <div class="body-bottom">
+                    <div>
+                      <label for="exampleFormControlInput1" class="form-label">Your Contact Email (Required)
+                      </label>
+                      <input type="email" class="form-control" name="" id="exampleFormControlInput1"
+                        placeholder="Email">
                     </div>
-                  </div>
-
-                  <div class="input-amount-box" id="inputAmountBox2">
-                    <span class="linear-gradient"></span>
-                    <div class="input-amount-wrapper">
-                      <label class="form-label mb-1">You send</label>
-                      <div class="input-amount-box-inner" id="inputAmountBoxInner2">
-                        <a href="#" class="icon-area" data-bs-toggle="modal" data-bs-target="#calculator-modal2">
-                          <img class="img-flag" src="./assets/img/crypto-icon/act.svg" alt="">
-                        </a>
-                        <div class="text-area w-100">
-                          <div class="d-flex gap-3 justify-content-between">
-                            <a href="#" class="currency-name d-flex align-items-center gap-1" data-bs-toggle="modal"
-                              data-bs-target="#calculator-modal2">
-                              <div class="title">BTC</div>
-                              <i class="fa-regular fa-angle-down"></i>
-                            </a>
-                            <input type="text" name="" id="" placeholder="You send" value="500"
-                              onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
+                    <div class="mt-20">
+                      <a class="cmn-btn w-100" href="login.html">
+                        <div class="btn-wrapper h-55">
+                          <div class="main-text btn-single h-55">
+                            proceed <i class="fa-regular fa-arrow-right-long"></i>
                           </div>
-                          <div class="d-flex justify-content-between">
-                            <div>Bitcoin</div>
-                            <div class="fw-500">Max is 2.98 BTC</div>
+                          <div class="hover-text btn-single h-55">
+                            proceed <i class="fa-regular fa-arrow-right-long"></i>
                           </div>
                         </div>
-                      </div>
+                      </a>
                     </div>
-                  </div>
-
-                  <div class="mt-100">
-                    <label for="exampleFormControlInput1" class="form-label">Your Contact Email (Required)
-                    </label>
-                    <input type="email" class="form-control" name="" id="exampleFormControlInput1" placeholder="Email">
-                  </div>
-                  <div class="mt-20">
-                    <a class="cmn-btn w-100" href="login.html">
-                      <div class="btn-wrapper">
-                        <div class="main-text btn-single">
-                          proceed <i class="fa-regular fa-arrow-right-long"></i>
-                        </div>
-                        <div class="hover-text btn-single">
-                          proceed <i class="fa-regular fa-arrow-right-long"></i>
-                        </div>
-                      </div>
-                    </a>
                   </div>
                 </div>
-
               </div>
             </div>
           </form>
@@ -674,7 +688,7 @@
               <!-- Cmn table start -->
               <div class="cmn-table">
                 <div class="table-responsive">
-                  <table class="table align-middle">
+                  <table class="table table-striped align-middle">
                     <thead>
                       <tr>
                         <th scope="col">Name</th>
@@ -1620,7 +1634,7 @@
                 <img src="assets/img/person/4.jpg" alt="" />
               </div>
               <div class="profile-title">
-                <h6 class="mb-1">JSarah Mitchell</h6>
+                <h6 class="mb-1">Sarah Mitchell</h6>
                 <p class="mb-0">Community Outreach</p>
               </div>
             </div>

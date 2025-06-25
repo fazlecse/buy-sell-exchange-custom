@@ -76,7 +76,9 @@ Typography
   --shadow3: 0 0.6125rem 2.5rem 0.6125rem rgba(140, 152, 164, 0.175);
   --shadow4: rgba(255, 169, 139, 0.2) 0px 4px 4px 0px;
   --transition: all 0.3s ease-in-out;
+  // --rtl: html[dir="rtl"];
 }
+
 
 // primary: #32c5d2;
 // body-color: #cfcfcf;
@@ -87,6 +89,8 @@ Reset section start
 .rtl {
   direction: rtl;
 }
+
+// $rtl: 'html[dir="rtl"]';
 
 ::-moz-selection {
   color: rgb(var(--primary-color));
@@ -793,6 +797,16 @@ body::-webkit-scrollbar-thumb {
   transition: all 0.5s ease-in-out;
 }
 
+.rtl {
+  .owl-theme .owl-nav .owl-prev i {
+    transform: rotate(180deg);
+  }
+
+  .owl-theme .owl-nav .owl-next i {
+    transform: rotate(180deg);
+  }
+}
+
 // Owl carouse section start
 
 // Modal section start
@@ -880,6 +894,7 @@ body::-webkit-scrollbar-thumb {
   text-transform: capitalize;
   padding: 0 0 15px;
   background-color: transparent;
+  gap: 10px;
 
   &:focus {
     box-shadow: none;
@@ -4764,6 +4779,7 @@ user nav Profile end
   .img-box {
     img {
       width: 40px;
+      min-width: 40px;
       height: 40px;
       border-radius: 50%;
     }
@@ -5540,6 +5556,22 @@ Cmn table start
 }
 
 @media (max-width: 767px) {
+  tr {
+    td {
+      &:first-child {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0;
+      }
+
+      &:last-child {
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
+    }
+  }
+
   .table-striped>tbody>tr:nth-of-type(odd)>* {
     --bs-table-accent-bg: rgb(var(--bg-color1));
   }
@@ -5555,7 +5587,7 @@ Cmn table start
   .table-responsive .table tbody tr {
     display: block;
     border: 1px solid var(--border-color2);
-    border-radius: 5px;
+    border-radius: 10px;
   }
 
   .table-responsive .table tbody tr:not(:last-child) {
@@ -5654,7 +5686,7 @@ Cmn table end
   }
 
   100% {
-    transform: translateX(0%);
+    transform: translateX(0);
   }
 }
 
@@ -5667,6 +5699,7 @@ Cmn table end
     transform: translateX(-100%);
   }
 }
+
 
 @keyframes slideInRight {
   0% {
@@ -7017,7 +7050,9 @@ Bottom Mobile, Tab nav end
   color: rgb(var(--primary-color));
   display: flex;
   align-items: center;
-  gap: 8px;
+  row-gap: 16px;
+  column-gap: 8px;
+  flex-wrap: wrap;
 
   .left-side {
     display: flex;
@@ -7076,7 +7111,6 @@ Bottom Mobile, Tab nav end
   border: 1px solid var(--border-color1);
   padding: 8px;
   border-radius: 24px;
-  max-width: 560px;
 
   .calculator-body {
     padding: 16px;
@@ -7084,87 +7118,13 @@ Bottom Mobile, Tab nav end
     border-radius: 16px;
   }
 
-
-  .calculator-header {
-    margin-bottom: 20px;
+  .body-bottom {
+    margin-top: 100px;
   }
 
   .form-control {
     background-color: var(--bg-color1);
   }
-
-
-  .form-description {
-    margin: 15px 0;
-    font-size: 14px;
-
-    .single-description {
-
-      i {
-        margin-right: 5px;
-      }
-    }
-
-  }
-
-  .form-description .single-description {
-    &:not(:last-child) {
-      margin-right: 15px;
-    }
-
-  }
-
-  .cmn-btn {
-    color: rgb(var(--very-dark));
-    font-weight: 400;
-    font-size: 18px;
-
-    .btn-wrapper {
-      height: 56px;
-    }
-
-    .btn-single {
-      height: 56px;
-    }
-  }
-
-}
-
-.input-box {
-  position: relative;
-
-  .form-control {
-    padding-right: 205px;
-  }
-
-  span.select2.select2-container.select2-container--default {
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
-    max-width: 200px;
-  }
-
-  .select2-container--default .select2-selection--single {
-    height: calc(100% - 8px);
-    position: absolute;
-    width: 200px;
-    right: 4px;
-    top: 50%;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    text-transform: uppercase;
-    transform: translateY(-50%);
-    // border: 1px solid var(--border-color2);
-    box-shadow: var(--shadow2);
-  }
-
-
-  .select2-container--default .select2-selection--single .select2-selection__arrow {
-    top: 10px;
-  }
-
 }
 
 .input-amount-box {
@@ -7191,12 +7151,10 @@ Bottom Mobile, Tab nav end
 
   .linear-gradient {
     transition: var(--transition);
-
     content: "";
     position: absolute;
     inset: -2px;
     margin: auto;
-    // background: -webkit-gradient(linear, right top, left top, color-stop(.01%, #9fcf00), color-stop(49.48%, #00d44b), to(#009be3));
     background: linear-gradient(270deg, #a5d409 .01%, #3bc56b 49.48%, rgb(var(--primary-color)));
     border-radius: 16px;
     transform: translate(50%) scaleX(0);
@@ -7350,7 +7308,6 @@ Bottom Mobile, Tab nav end
   border-radius: 10px;
   border: 1px solid var(--border-color2);
 
-
   .title {
     padding-bottom: 10px;
     margin-bottom: 20px;
@@ -7380,52 +7337,33 @@ Bottom Mobile, Tab nav end
   }
 }
 
-
 // Responsive calculator section start 
-@media (max-width: 1399px) {
-  .input-box {
-    .form-control {
-      padding-right: 155px;
-    }
-
-    span.select2.select2-container.select2-container--default {
-      max-width: 150px;
-
-      .select2-selection--single {
-        max-width: 150px;
-      }
-    }
+@media(min-width: 992px) {
+  .calculator {
+    max-width: 560px;
   }
-
 }
 
 @media (max-width: 1199px) {
-  .calculator .form-description .single-description {
-    display: block;
+  .calculator .body-bottom {
+    margin-top: 20px;
   }
 }
 
-@media (max-width: 991px) {
-  .input-box {
-    .form-control {
-      padding-right: 155px;
-    }
-
-    span.select2.select2-container.select2-container--default {
-      max-width: 150px;
-
-      .select2-selection--single {
-        max-width: 150px;
-      }
-    }
+@media (max-width: 767px) {
+  .calculator-banner-wrapper .left-side p {
+    font-size: 12px;
   }
-
-
 }
+
 
 @media (max-width: 575px) {
   .calculator .calculator-body {
-    padding: 15px;
+    padding: 10px;
+  }
+
+  .calculator-promotional-box {
+    padding: 20px;
   }
 
 }
@@ -7437,62 +7375,25 @@ Bottom Mobile, Tab nav end
 }
 
 
+
 // Responsive calculator section end
 // Rtl calculator sectdion start 
 .rtl {
-  .input-box {
-    .form-control {
-      padding-right: .75rem;
-      padding-left: 205px;
-    }
-
-    span.select2.select2-container.select2-container--default {
-      left: 6px;
-      right: auto;
-
-      .select2-selection--single {
-        justify-content: end;
-      }
-    }
-  }
-
-  .swap-area {
-    margin: 20px 0 20px 85px;
-  }
-
-  .input-box span.select2.select2-container.select2-container--default {
-    left: 6px;
-    right: auto;
-
-    .select2-selection--single {
-      justify-content: end;
-    }
-  }
-
-  .calculator .form-description .single-description:not(:first-child) {
+  .calculator-banner-wrapper .right-side {
     margin-right: 0;
     margin-left: 15px;
-  }
 
-  .calculator .form-description .single-description:not(:last-child) {
-    margin-right: 0;
-  }
-
-  .calculator .form-description .single-description i {
-    margin-right: 0;
-    margin-left: 5px;
-  }
-
-  @media (max-width: 1399px) {
-    .input-box .form-control {
-      padding-left: 155px;
-    }
-
-    .swap-area {
-      margin: 20px 0 20px 60px;
+    i {
+      transform: rotate(180deg);
     }
   }
 }
+
+// #{$rtl} {
+//   .calculator-banner-wrapper .right-side i {
+//     transform: rotate(180deg);
+//   }
+// }
 
 // Rtl calculator sectdion end
 /*----------------------------------------------
@@ -7792,7 +7693,7 @@ Calculator details section start
 
 .deadline-timer-section {
   background-color: var(--bg-color2);
-border: 1px solid var(--border-color2);
+  border: 1px solid var(--border-color2);
   border-radius: 10px;
   padding: 20px;
   margin-bottom: 20px;
@@ -7945,6 +7846,7 @@ Trade section section start
 
   .img-box {
     width: 36px;
+    min-width: 36px;
     height: 36px;
 
 
@@ -8018,6 +7920,12 @@ Trade section section end
   gap: 20px;
 }
 
+.rtl {
+  .marquee-section {
+    direction: ltr;
+  }
+}
+
 /*----------------------------------------------
 Partner section end
 ----------------------------------------------*/
@@ -8079,6 +7987,14 @@ Partner section end
   }
 }
 
+.rtl {
+  .testimonial-box .quote-icon {
+    right: auto;
+    left: 10px;
+    transform: rotateY(180deg);
+  }
+}
+
 /*----------------------------------------------
 Testimonial section end
 ----------------------------------------------*/
@@ -8096,6 +8012,13 @@ How it works section start
 @media(min-width: 992px) {
   .how-it-works-section-inner {
     padding: 64px;
+  }
+}
+
+@media(max-width: 575px) {
+  .how-it-works-section-inner {
+    padding: 16px;
+    border-radius: 30px;
   }
 }
 

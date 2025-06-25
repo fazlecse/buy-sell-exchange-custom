@@ -25,7 +25,7 @@ $(document).ready(function () {
     autoplay: true,
     margin: 30,
     autoplayTimeout: 2000,
-    // rtl: true,
+    rtl: true,
     navText: [
       "<i class='fa-regular fa-arrow-left-long'></i>",
       "<i class='fa-regular fa-arrow-right-long'></i>",
@@ -55,7 +55,7 @@ $(document).ready(function () {
         nav: true,
         dots: false,
       },
-      1400: {
+      1200: {
         items: 3,
         nav: true,
         dots: false,
@@ -74,7 +74,7 @@ $(document).ready(function () {
       "<i class='fa-regular fa-arrow-left-long'></i>",
       "<i class='fa-regular fa-arrow-right-long'></i>",
     ],
-    // rtl: true,
+    rtl: true,
     responsive: {
       0: {
         items: 1,
@@ -82,29 +82,17 @@ $(document).ready(function () {
         dots: false,
         dotsEach: 3,
       },
-      375: {
+      768: {
         items: 2,
         nav: true,
         dots: false,
-        dotsEach: 2,
-      },
-      768: {
-        items: 3,
-        nav: true,
-        dots: false,
-        margin: 15,
       },
       992: {
-        items: 4,
+        items: 2,
         nav: true,
         dots: false,
       },
       1200: {
-        items: 5,
-        nav: true,
-        dots: false,
-      },
-      1400: {
         items: 3,
         nav: true,
         dots: false,
@@ -123,6 +111,7 @@ $(document).ready(function () {
       fade: true,
       cssEase: "linear",
       arrows: false,
+      // rtl: true,
     });
   }
   // Banner sllider end
