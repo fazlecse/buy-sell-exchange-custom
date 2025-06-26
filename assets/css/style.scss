@@ -47,9 +47,9 @@ Typography
   --heading-font: "Inter", sans-serif;
   --body-font: "Inter", sans-serif;
   --primary-color: 50, 197, 210;
-  --body-color: 207, 207, 207;
+  --body-color: 79, 79, 79;
   --heading-color: 207, 207, 207;
-  --heading-color: 239, 239, 239;
+  --heading-color: 19, 19, 19;
   --black: 0, 0, 0;
   --light-gray: #dddddd;
   --dark-gray: 163, 163, 163;
@@ -65,32 +65,44 @@ Typography
   --orange: 255, 193, 7;
   --input-color: var(--bg-color2);
   --bg-color1: #0c0d0e;
+  --bg-color1: #ffffff;
   --bg-color2: #121417;
-  --bg-color3: #171a1d;
+  --bg-color2: #f9f9f9;
+  // --bg-color2: #F9FAFC;
+  --bg-color3: #ffffff;
   --bg-color4: #020612;
-  --border-color1: rgb(39, 48, 52);
-  --border-color2: rgba(31, 41, 55, 0.502);
+  --border-color1: rgba(231, 234, 243, 0.7);
+  --border-color2: rgba(140, 152, 164, 0.25);
   --border-color3: rgba(255, 255, 255, 0.06);
   --shadow1: 0 0.375rem 0.75rem rgba(140, 152, 164, 0.075);
   --shadow2: 0 0.1875rem 0.75rem rgba(140, 152, 164, 0.25);
   --shadow3: 0 0.6125rem 2.5rem 0.6125rem rgba(140, 152, 164, 0.175);
   --shadow4: rgba(255, 169, 139, 0.2) 0px 4px 4px 0px;
   --transition: all 0.3s ease-in-out;
-  // --rtl: html[dir="rtl"];
 }
 
 
 // primary: #32c5d2;
 // body-color: #cfcfcf;
+// Dark theme start
+.dark-theme {
+  --heading-color: 239, 239, 239;
+  --body-color: 207, 207, 207;
+  --bg-color1: #0c0d0e;
+  --bg-color2: #121417;
+  --bg-color3: #171a1d;
+  --border-color1: rgba(31, 41, 55, 0.502);
+  --border-color2: rgb(39, 48, 52);
+  --input-color: var(--bg-color2);
+}
+
+// Dark theme end
 
 /*----------------------------------------------
 Reset section start
 ----------------------------------------------*/
-.rtl {
-  direction: rtl;
-}
 
-// $rtl: 'html[dir="rtl"]';
+$rtl: 'html[dir="rtl"]';
 
 ::-moz-selection {
   color: rgb(var(--primary-color));
@@ -336,6 +348,7 @@ body {
   background-color: var(--bg-color1);
 }
 
+
 @media (max-width: 991px) {
   body {
     padding-bottom: 50px;
@@ -372,7 +385,7 @@ option {
 .form-select {
   border-radius: 8px;
   background-color: var(--input-color);
-  border: 1px solid var(--border-color1);
+  border: 1px solid var(--border-color2);
   height: 50px;
   color: rgb(var(--heading-color));
   font-weight: 300;
@@ -410,7 +423,7 @@ option {
   box-shadow: none;
 }
 
-.rtl .form-check {
+#{$rtl} .form-check {
   padding-right: 1.5em;
 
   .form-check-input {
@@ -423,7 +436,7 @@ option {
   background-repeat: no-repeat;
 }
 
-.rtl {
+#{$rtl} {
   .form-select {
     background-position: left 0.75rem center;
   }
@@ -478,7 +491,7 @@ intlTelInput section start
 }
 
 // Rtl intlTelInput section start
-.rtl {
+#{$rtl} {
 
   .iti--allow-dropdown .iti__flag-container,
   .iti--separate-dial-code .iti__flag-container {
@@ -644,7 +657,7 @@ span.select2.select2-container.select2-container--default {
   border-width: 0 4px 4px 4px;
 }
 
-.rtl {
+#{$rtl} {
   .select2-container--default .select2-selection--single .select2-selection__arrow {
     left: 5px;
   }
@@ -702,7 +715,7 @@ Breadcrumb start
 }
 
 // Breadcrumb rtl start
-.rtl .breadcrumb-item+.breadcrumb-item::before {
+#{$rtl} .breadcrumb-item+.breadcrumb-item::before {
   float: right;
   padding-left: var(--bs-breadcrumb-item-padding-x);
   transform: rotate(180deg);
@@ -797,7 +810,7 @@ body::-webkit-scrollbar-thumb {
   transition: all 0.5s ease-in-out;
 }
 
-.rtl {
+#{$rtl} {
   .owl-theme .owl-nav .owl-prev i {
     transform: rotate(180deg);
   }
@@ -935,7 +948,7 @@ body::-webkit-scrollbar-thumb {
   padding-top: 0;
 }
 
-.rtl {
+#{$rtl} {
   .accordion-button::after {
     margin-left: 0;
     margin-right: auto;
@@ -1050,7 +1063,7 @@ a.ui-button:active,
   }
 }
 
-.rtl {
+#{$rtl} {
   .text-end {
     text-align: left !important;
   }
@@ -1278,7 +1291,7 @@ Reusable style section start
 }
 
 // Rtl search box section start
-.rtl {
+#{$rtl} {
   .search-box {
     .search-btn {
       left: 2px;
@@ -1469,7 +1482,7 @@ Reusable style section start
 }
 
 // Rtl search box2 start
-.rtl {
+#{$rtl} {
   .search-box2 {
     .form-control {
       padding: 10px 20px 10px 60px;
@@ -1517,7 +1530,7 @@ Reusable style section start
   }
 }
 
-.rtl {
+#{$rtl} {
   .search-box3 {
     .form-control {
       padding: 6px 12px 6px 45px;
@@ -1599,7 +1612,7 @@ Reusable style section start
 
 }
 
-.rtl {
+#{$rtl} {
   .adv-search {
     .form-control {
       padding: 6px 12px 6px 45px;
@@ -1894,7 +1907,7 @@ Reusable style section start
 
 // Responsive multiple search box end
 // Rtl multiple search box start
-.rtl {
+#{$rtl} {
   .multiple-search-box {
     .form-control {
       padding-left: 0.75rem;
@@ -1946,6 +1959,7 @@ Offcanvas section start
 ----------------------------------------------*/
 .offcanvas {
   z-index: 99999;
+  background-color: var(--bg-color3);
 
   &.custom-offcanvas {
     width: 500px !important;
@@ -2138,7 +2152,7 @@ Offcanvas end
   }
 }
 
-.rtl {
+#{$rtl} {
   .cmn-btn {
     i {
       transform: rotate(180deg);
@@ -2212,7 +2226,7 @@ Offcanvas end
   }
 }
 
-.rtl {
+#{$rtl} {
   .cmn-btn2 {
     i {
       transform: rotate(180deg);
@@ -2337,6 +2351,20 @@ Offcanvas end
   }
 }
 
+@media (max-width: 767px) {
+  .login-btn {
+    padding: 5px;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(var(--primary-color));
+    color: rgb(var(--white));
+
+  }
+}
+
 .register-btn {
   padding: 7px 20px;
   transition: var(--transition);
@@ -2360,7 +2388,7 @@ Offcanvas end
 .social-btn {
   background: var(--bg-color2);
   padding: 14px 20px;
-  border: 1px solid var(--border-color2);
+  border: 1px solid var(--border-color1);
   transition: var(--transition);
   font-size: 16px;
   display: inline-flex;
@@ -2506,7 +2534,7 @@ Offcanvas end
   }
 }
 
-.rtl {
+#{$rtl} {
   .back-btn {
     i {
       transform: rotate(180deg);
@@ -2529,7 +2557,7 @@ Offcanvas end
   }
 }
 
-.rtl {
+#{$rtl} {
   .back-btn {
     i {
       transform: rotate(180deg);
@@ -2751,7 +2779,7 @@ Offcanvas end
   }
 }
 
-.rtl {
+#{$rtl} {
   .kew-btn {
     .kew-arrow {
       transform: rotate(215deg);
@@ -2923,7 +2951,7 @@ Alerts section start
   display: flex;
   align-items: center;
   gap: 10px;
-  background-color: #423b2f;
+  background-color: #fcf2e3;
   border-radius: 4px;
   padding: 2px 8px;
   font-size: 12px;
@@ -2979,6 +3007,7 @@ Cmn tab section start
       text-transform: capitalize;
       font-family: var(--heading-font);
       color: rgb(var(--white), 0.85);
+      color: rgb(var(--heading-color));
       width: 100%;
       border-radius: 9999px;
       font-size: 14px;
@@ -2997,10 +3026,6 @@ Cmn tab section start
         &:hover {
           color: rgb(var(--primary-color));
         }
-      }
-
-      &:hover {
-        color: rgb(var(--white));
       }
     }
   }
@@ -3027,7 +3052,7 @@ Cmn tab2 section start
     }
 
     .nav-link {
-      color: rgb(var(--white));
+      color: rgb(var(--heading-color));
       opacity: 0.9;
       font-size: 16px;
       transition: var(--transition);
@@ -3196,7 +3221,7 @@ section {
   }
 }
 
-.rtl .badge {
+#{$rtl} .badge {
   margin-right: 8px;
   margin-left: 0;
 }
@@ -3532,7 +3557,7 @@ hr.divider:after {
 
 // Responsive multi step progress section end
 // Rtl multi step progress section start
-.rtl {
+#{$rtl} {
   .multi-step-list .item::before {
     left: 50%;
     right: auto;
@@ -3563,7 +3588,7 @@ hr.divider:after {
 }
 
 // Rtl cmn list section start
-.rtl {
+#{$rtl} {
   .cmn-list .item:not(:last-child)::after {
     left: 0;
     right: 12px;
@@ -3600,7 +3625,7 @@ hr.divider:after {
 }
 
 // Rtl cmn list2 section start
-.rtl {
+#{$rtl} {
   .cmn-list .item:not(:last-child)::after {
     left: 0;
     right: 12px;
@@ -3847,6 +3872,7 @@ hr.divider:after {
 
   border-radius: 20px;
   background-color: var(--bg-color2);
+  border: none;
 
   .card-header {
     padding: 20px;
@@ -3885,10 +3911,6 @@ hr.divider:after {
   font-weight: 500;
 }
 
-.nice-select .list {
-  background-color: rgb(var(--very-dark-gray));
-}
-
 .nice-select .option {
   text-transform: capitalize;
   font-weight: 500;
@@ -3909,12 +3931,19 @@ hr.divider:after {
   border-color: transparent;
 }
 
-.rtl {
+#{$rtl} {
   .nice-select.right {
     .list {
       left: 0;
       right: auto;
     }
+  }
+}
+
+.dark-theme {
+
+  .nice-select .list {
+    background-color: rgb(var(--very-dark-gray));
   }
 }
 
@@ -4022,7 +4051,7 @@ hr.divider:after {
 }
 
 // Rtl checkbox categories area start
-.rtl {
+#{$rtl} {
   .checkbox-categories-area {
     .categories-list {
       padding-right: 0;
@@ -4113,8 +4142,8 @@ hr.divider:after {
   }
 }
 
-.rtl .thumb_carousel,
-.rtl .main_carousel {
+#{$rtl} .thumb_carousel,
+#{$rtl} .main_carousel {
   direction: ltr;
 }
 
@@ -4129,7 +4158,7 @@ hr.divider:after {
 /*----------------------------------------------
 user nav Profile start
 ----------------------------------------------*/
-.nav-profile-box {
+.user-profile-box {
   position: relative;
   display: inline-block;
   width: auto;
@@ -4144,10 +4173,10 @@ user nav Profile start
     }
   }
 
-  .profile {
+  .img-box {
     cursor: pointer;
-    border: 1px solid var(--border-color1);
-    background-color: rgb(var(--white));
+    border: 1px solid var(--border-color2);
+    background-color: var(--bg-color2);
     border-radius: 50%;
     padding: 2px;
 
@@ -4160,7 +4189,7 @@ user nav Profile start
   }
 
   .user-dropdown {
-    background: rgb(var(--bg-color1));
+    background: var(--bg-color3);
     box-shadow: var(--shadow1);
     width: 200px;
     overflow: hidden;
@@ -4225,7 +4254,7 @@ user nav Profile start
 }
 
 // Rtl user nav profile start
-.rtl {
+#{$rtl} {
   .navbar-brand {
     margin-right: 0;
     margin-left: var(--bs-navbar-brand-margin-end);
@@ -4236,7 +4265,7 @@ user nav Profile start
     right: auto;
   }
 
-  .nav-profile-box .user-dropdown {
+  .user-profile-box .user-dropdown {
     left: 0;
     right: auto;
   }
@@ -4422,7 +4451,7 @@ user nav Profile end
 }
 
 // Rtl notification dropdown start
-.rtl {
+#{$rtl} {
   .notification-panel {
     .dropdown-toggle {
       .count {
@@ -4616,7 +4645,7 @@ user nav Profile end
   }
 }
 
-.rtl {
+#{$rtl} {
   .navbar {
     .dropdown {
       .dropdown-menu {
@@ -4855,7 +4884,7 @@ Chat section start
 }
 
 // Responsive single btn2 end
-.rtl {
+#{$rtl} {
   .single-btn2 {
     margin-right: 0;
     margin-left: 10px;
@@ -4881,7 +4910,7 @@ Chat section start
   }
 }
 
-.rtl {
+#{$rtl} {
   .message-send-btn {
     margin-right: 10px;
     margin-left: 0;
@@ -5205,7 +5234,7 @@ Chat section start
 
 // Responsive chat section end
 // Rtl caht seciton start
-.rtl {
+#{$rtl} {
   .message-sidebar {
     .header-section .section-title {
       margin-right: 0;
@@ -5406,7 +5435,7 @@ Payment section start
 }
 
 // Rtl payment section start
-.rtl {
+#{$rtl} {
   .payment-container-list {
     .form-check-label .content-area {
       padding-right: 0;
@@ -5616,7 +5645,7 @@ Cmn table start
 // Responsive table section end
 
 // Rtl cmn tabele start
-.rtl {
+#{$rtl} {
   .cmn-table table thead tr th {
     &:first-child {
       border-top-left-radius: 0;
@@ -5883,7 +5912,7 @@ Cmn table end
   }
 }
 
-.rtl {
+#{$rtl} {
   @media (min-width: 768px) {
     .text-md-start {
       text-align: right !important;
@@ -5960,7 +5989,7 @@ Cmn table end
   }
 }
 
-.rtl {
+#{$rtl} {
   .custom-flatpickr .calendar-icon {
     right: auto;
     left: 15px;
@@ -6014,7 +6043,7 @@ Cmn table end
 }
 
 // Rtl attach file start
-.rtl {
+#{$rtl} {
   .attach-file .prev {
     left: auto;
     right: 0;
@@ -6306,7 +6335,7 @@ Cmn table end
   }
 }
 
-.rtl {
+#{$rtl} {
   @media (min-width: 992px) {
     .custom-dropdown {
       &.right {
@@ -6357,7 +6386,7 @@ Cmn table end
   }
 }
 
-.rtl {
+#{$rtl} {
   .avater-group-box .img-box img:not(:first-child) {
     margin-left: auto;
     margin-right: -27px;
@@ -6384,7 +6413,7 @@ Cmn table end
   }
 }
 
-.rtl {
+#{$rtl} {
   .custom-select-box {
     .form-select {
       padding: 10px 92px 10px 48px;
@@ -6409,7 +6438,7 @@ Cmn table end
   }
 }
 
-.rtl {
+#{$rtl} {
   .custom-ul {
     padding-left: 0;
     padding-right: 2rem;
@@ -6428,7 +6457,7 @@ Cmn table end
   }
 }
 
-.rtl {
+#{$rtl} {
   .custom-ol {
     padding-left: 0;
     padding-right: 2rem;
@@ -6802,6 +6831,7 @@ height end
 .navbar.active {
   background-color: var(--bg-color3);
   z-index: 999;
+  box-shadow: var(--shadow1);
 
   .navbar-nav {
     .nav-link {
@@ -6895,16 +6925,16 @@ height end
       gap: 12px;
 
     }
+  }
 
-    .language-select {
-      border-radius: 12px;
-      background-color: transparent;
-      color: rgb(var(--body-color));
-      border: none;
+  .language-select {
+    border-radius: 12px;
+    background-color: transparent;
+    color: rgb(var(--body-color));
+    border: none;
 
-      &:hover {
-        background-color: rgb(var(--dark-gray), 0.2);
-      }
+    &:hover {
+      background-color: rgb(var(--dark-gray), 0.2);
     }
   }
 
@@ -6964,7 +6994,7 @@ height end
 
 // Nav responsive end
 // Rtl nav start
-.rtl {
+#{$rtl} {
   .navbar-nav.ms-auto {
     margin-right: auto;
     margin-left: 0 !important;
@@ -7067,7 +7097,7 @@ Bottom Mobile, Tab nav end
   border-radius: 15px;
   padding: 26px 16px;
   cursor: pointer;
-  background: linear-gradient(271deg, #3e661f 9.24%, rgba(238, 239, 255, 0) 49.61%, #27245e 89.2%), #55575a;
+  background: linear-gradient(271deg, #ebfedd 9.24%, rgba(238, 239, 255, 0) 49.61%, #cfccff 89.2%), #eef3ff;
 }
 
 .calculator-banner-wrapper {
@@ -7108,7 +7138,7 @@ Bottom Mobile, Tab nav end
 
 .calculator {
   background-color: var(--bg-color1);
-  border: 1px solid var(--border-color1);
+  border: 1px solid var(--border-color2);
   padding: 8px;
   border-radius: 24px;
 
@@ -7146,7 +7176,7 @@ Bottom Mobile, Tab nav end
     z-index: 1;
     position: relative;
     text-align: start;
-    border: 1px solid var(--border-color2);
+    border: 1px solid var(--border-color1);
   }
 
   .linear-gradient {
@@ -7190,7 +7220,6 @@ Bottom Mobile, Tab nav end
 
 .announcement-modal .modal-content {
   background: linear-gradient(308deg, #cef 14.16%, rgba(238, 239, 255, 0) 49.73%, #feddf5 97.86%), #eef3ff;
-  background: linear-gradient(271deg, #3e661f 9.24%, rgba(238, 239, 255, 0) 49.61%, #27245e 89.2%), #55575a;
 }
 
 .calculator-modal {
@@ -7306,7 +7335,7 @@ Bottom Mobile, Tab nav end
   background-color: var(--bg-color3);
   padding: 16px 20px;
   border-radius: 10px;
-  border: 1px solid var(--border-color2);
+  border: 1px solid var(--border-color1);
 
   .title {
     padding-bottom: 10px;
@@ -7378,7 +7407,7 @@ Bottom Mobile, Tab nav end
 
 // Responsive calculator section end
 // Rtl calculator sectdion start 
-.rtl {
+#{$rtl} {
   .calculator-banner-wrapper .right-side {
     margin-right: 0;
     margin-left: 15px;
@@ -7389,13 +7418,29 @@ Bottom Mobile, Tab nav end
   }
 }
 
-// #{$rtl} {
-//   .calculator-banner-wrapper .right-side i {
-//     transform: rotate(180deg);
-//   }
-// }
+#{$rtl} {
+  .calculator-banner-wrapper .right-side i {
+    transform: rotate(180deg);
+  }
+}
 
 // Rtl calculator sectdion end
+.dark-theme {
+  .calculator-banner {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    padding: 26px 16px;
+    cursor: pointer;
+    background: linear-gradient(271deg, #3e661f 9.24%, rgba(238, 239, 255, 0) 49.61%, #27245e 89.2%), #55575a;
+  }
+
+  .announcement-modal .modal-content {
+    background: linear-gradient(308deg, #cef 14.16%, rgba(238, 239, 255, 0) 49.73%, #feddf5 97.86%), #eef3ff;
+    background: linear-gradient(271deg, #3e661f 9.24%, rgba(238, 239, 255, 0) 49.61%, #27245e 89.2%), #55575a;
+  }
+}
+
 /*----------------------------------------------
 00. Calculator section end
 ----------------------------------------------*/
@@ -7428,7 +7473,7 @@ Calculator details section start
   background-color: var(--bg-color2);
   padding: 20px;
   border-radius: 15px;
-  border: 1px solid var(--border-color2);
+  border: 1px solid var(--border-color1);
 
   .title {
     font-weight: 500;
@@ -7600,7 +7645,7 @@ Calculator details section start
   border-radius: 15px;
   padding: 25px;
   background-color: var(--bg-color2);
-  border: 1px solid var(--border-color1);
+  border: 1px solid var(--border-color2);
   font-size: 14px;
 
   .checkout-header {
@@ -7693,7 +7738,7 @@ Calculator details section start
 
 .deadline-timer-section {
   background-color: var(--bg-color2);
-  border: 1px solid var(--border-color2);
+  border: 1px solid var(--border-color1);
   border-radius: 10px;
   padding: 20px;
   margin-bottom: 20px;
@@ -7778,7 +7823,7 @@ Calculator details section start
 
 // Responsive calculator details section end
 // Rtl calculator details section start
-.rtl {
+#{$rtl} {
   .progress-step-area {
     .item:nth-child(2) {
       .icon-area {
@@ -7873,9 +7918,11 @@ Trade section section end
 /*----------------------------------------------
 05. Partner section start
 ----------------------------------------------*/
+
 .partner-section {
-  background-color: var(--bg-color1);
+  background-color: rgb(var(--primary-color));
 }
+
 
 .brand-item {
   border-radius: 5px;
@@ -7920,9 +7967,15 @@ Trade section section end
   gap: 20px;
 }
 
-.rtl {
+#{$rtl} {
   .marquee-section {
     direction: ltr;
+  }
+}
+
+.dark-theme {
+  .partner-section {
+    background-color: var(--bg-color1);
   }
 }
 
@@ -7987,7 +8040,7 @@ Partner section end
   }
 }
 
-.rtl {
+#{$rtl} {
   .testimonial-box .quote-icon {
     right: auto;
     left: 10px;
@@ -8234,7 +8287,7 @@ Mission Vission section end
 // Responsive blog end
 
 // Rtl blog start
-.rtl .blog-box {
+#{$rtl} .blog-box {
   .blog-author {
     .author-img {
       margin-right: 0;
@@ -8484,7 +8537,7 @@ Blog section end
 }
 
 // Blog details rtl start
-.rtl {
+#{$rtl} {
   .sidebar-widget-item {
     .content-area {
       margin-left: 0;
@@ -8576,7 +8629,7 @@ Blog details end
 }
 
 // Rtl newsletter section start
-.rtl {
+#{$rtl} {
   .newsletter-form {
     .form-control {
       padding: 10px 10px 10px 50px;
@@ -8613,15 +8666,15 @@ Newsletter end
       text-transform: capitalize;
       font-size: 20px;
       font-family: var(--heading-font);
-      color: rgb(var(--white));
+      color: rgb(var(--heading-color));
       font-weight: 600;
     }
   }
 
   .social-box {
     a {
-      background-color: var(--bg-color3);
-      color: rgb(var(--white));
+      background-color: var(--bg-color2);
+      color: rgb(var(--heading-color));
 
       &:hover {
         background-color: rgb(var(--primary-color));
@@ -8687,7 +8740,7 @@ Newsletter end
 }
 
 //Rtl Footer section start
-.rtl {
+#{$rtl} {
   .footer-section .footer-widget {
     .widget-title {
 
@@ -9015,7 +9068,7 @@ Contact section end
 // Responsive login signup end
 
 // Rtl login signup page start
-.rtl {
+#{$rtl} {
   .password-box {
     .form-control {
       padding-right: 0.75rem;
@@ -9084,7 +9137,7 @@ Login Signup end
 }
 
 // Pagination rtl start
-.rtl .pagination-section nav .pagination .page-item .page-link i {
+#{$rtl} .pagination-section nav .pagination .page-item .page-link i {
   transform: rotate(180deg);
 }
 
@@ -9146,7 +9199,7 @@ Policy section start
 }
 
 // Rtl policy section start
-.rtl {
+#{$rtl} {
   .policy-section {
 
     ul,

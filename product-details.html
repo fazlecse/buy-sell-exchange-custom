@@ -59,12 +59,19 @@
             <li class="nav-item">
               <a class="nav-link" href="aml-kyc.html">AML/KYC</a>
             </li>
+            <li class="nav-item d-sm-none d-flex justify-content-center">
+              <select class="nice-select language-select" aria-label="Default select example">
+                <option selected>English</option>
+                <option value="2">Bengali</option>
+                <option value="3">Arabic</option>
+              </select>
+            </li>
           </ul>
         </div>
       </div>
       <div class="nav-right">
         <ul class="custom-nav">
-          <li class="nav-item">
+          <li class="nav-item d-none d-sm-block">
             <select class="nice-select language-select" aria-label="Default select example">
               <option selected>English</option>
               <option value="2">Bengali</option>
@@ -73,10 +80,40 @@
           </li>
           <li class="nav-item">
             <a class="nav-link login-btn" href="login.html">
-              login
+              <span class="d-none d-sm-block">login</span>
+              <span class="d-sm-none"><i class="fa-regular fa-right-to-bracket"></i></span>
             </a>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
+            <div class="user-profile-box">
+              <div class="img-box">
+                <img src="./assets/img/person/1.jpg" class="img-fluid" alt="ChainCity" />
+              </div>
+              <ul class="user-dropdown">
+                <li>
+                  <a href="user-panel.html">
+                    <i class="fal fa-user"></i> View Profile
+                  </a>
+                </li>
+                <li>
+                  <a href="support-ticket.html">
+                    <i class="fal fa-user-headset"></i> Support
+                  </a>
+                </li>
+                <li>
+                  <a href="edit-profile.html">
+                    <i class="fal fa-user-cog"></i> Account Settings
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <i class="fal fa-sign-out-alt"></i> Sign Out
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li> -->
+          <li class="nav-item d-none d-sm-block">
             <a class="nav-link cmn-btn2" href="register.html">
               <div class="btn-wrapper">
                 <div class="main-text btn-single">
@@ -86,6 +123,12 @@
                   Register
                 </div>
               </div>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a id="toggle-btn" class="nav-link d-flex toggle-btn">
+              <i class="fa-regular fa-moon" id="moon"></i>
+              <i class="fa-regular fa-sun-bright" id="sun"></i>
             </a>
           </li>
         </ul>

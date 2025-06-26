@@ -25,12 +25,11 @@ $(document).ready(function () {
     autoplay: true,
     margin: 30,
     autoplayTimeout: 2000,
-    rtl: true,
+    // rtl: true,
     navText: [
       "<i class='fa-regular fa-arrow-left-long'></i>",
       "<i class='fa-regular fa-arrow-right-long'></i>",
     ],
-    // rtl: true,
     responsive: {
       0: {
         items: 1,
@@ -74,7 +73,6 @@ $(document).ready(function () {
       "<i class='fa-regular fa-arrow-left-long'></i>",
       "<i class='fa-regular fa-arrow-right-long'></i>",
     ],
-    rtl: true,
     responsive: {
       0: {
         items: 1,
@@ -518,3 +516,32 @@ if ($("#countdown1").length) {
     );
   });
 }
+
+// Dark theme start
+const toggleBtn = document.getElementById("toggle-btn");
+const body = document.querySelector("body");
+toggleBtn.addEventListener("click", function () {
+  document.body.classList.toggle("dark-theme");
+  if (document.body.classList.contains("dark-theme")) {
+    localStorage.setItem("dark-theme", 1);
+  } else {
+    localStorage.setItem("dark-theme", 0);
+  }
+  setTheme();
+});
+
+function setTheme() {
+  const isDarkTheme = localStorage.getItem("dark-theme");
+  console.log(isDarkTheme);
+  if (isDarkTheme == 1) {
+    document.querySelector("body").classList.add("dark-theme");
+    document.getElementById("moon").style.display = "none";
+    document.getElementById("sun").style.display = "block";
+  } else {
+    document.querySelector("body").classList.remove("dark-theme");
+    document.getElementById("moon").style.display = "block";
+    document.getElementById("sun").style.display = "none";
+  }
+}
+setTheme();
+// Dark theme end
