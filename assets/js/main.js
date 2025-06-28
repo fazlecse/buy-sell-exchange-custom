@@ -425,19 +425,6 @@ if ($(".search-box2").length) {
 }
 // Dropdown select with Filter end
 
-// Adv search box start
-$(document).ready(function () {
-  if ($("#adv_search_btn").length) {
-    $("#adv_search_btn").on("click", function () {
-      $("#additional_box").toggleClass("active");
-    });
-    $("#cancel_btn").on("click", function () {
-      $("#additional_box").removeClass("active");
-    });
-  }
-});
-// Adv search box end
-
 // Modal select to input focus start
 document.addEventListener("DOMContentLoaded", function () {
   function handleInput(inputAmountBox, inputAmountBoxInner) {
@@ -452,23 +439,12 @@ document.addEventListener("DOMContentLoaded", function () {
         inputAmountBox.classList.remove("active");
       });
 
-      // inputField.addEventListener("click", function () {
-      //   inputField.setSelectionRange(
-      //     inputField.value.length,
-      //     inputField.value.length
-      //   );
-      // });
-
       inputAmountBox.addEventListener("click", function (event) {
         if (
           !event.target.closest(".icon-area") &&
           !event.target.closest(".text-area")
         ) {
           inputField.focus();
-          // inputField.setSelectionRange(
-          //   inputField.value.length,
-          //   inputField.value.length
-          // );
         }
       });
     }

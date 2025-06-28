@@ -61,14 +61,10 @@ Typography
   --white-smoke: 245, 245, 245;
   --lime-green: 12, 164, 100;
   --soft-red: 216, 42, 104;
-  --yellow: #fcda69;
   --orange: 255, 193, 7;
   --input-color: var(--bg-color2);
-  --bg-color1: #0c0d0e;
   --bg-color1: #ffffff;
-  --bg-color2: #121417;
   --bg-color2: #f9f9f9;
-  // --bg-color2: #F9FAFC;
   --bg-color3: #ffffff;
   --bg-color4: #020612;
   --border-color1: rgba(231, 234, 243, 0.7);
@@ -1070,7 +1066,7 @@ a.ui-button:active,
 }
 
 strong {
-  font-weight: 500;
+  font-weight: 600;
   color: rgb(var(--heading-color));
 }
 
@@ -2240,16 +2236,16 @@ Offcanvas end
   z-index: 1;
   color: rgb(var(--primary-color));
   border: 1px solid rgb(var(--primary-color));
-  padding: 0 24px;
+  padding: 0 20px;
   transition: var(--transition);
-  font-size: 16px;
+  font-size: 14px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-weight: 500;
+  font-weight: 600;
   text-transform: capitalize;
   gap: 5px;
-  border-radius: 8px;
+  border-radius: 12px;
 
   &:hover {
     .btn-wrapper {
@@ -5670,13 +5666,13 @@ Cmn table start
     background-color: var(--bg-color4);
 
     table {
-      color: rgb(var(--primary-color));
+      color: rgb(var(--body-color));
 
       thead {
         tr {
           th {
             color: rgb(var(--primary-color));
-            background-color: var(--bg-color6);
+            background-color: rgb(var(--primary-color), 0.05);
           }
         }
       }
@@ -5687,9 +5683,6 @@ Cmn table start
     }
   }
 
-  .table-striped>tbody>tr:nth-of-type(odd)>* {
-    color: rgb(var(--primary-color));
-  }
 }
 
 // Dark theme cmn table end
@@ -7753,65 +7746,6 @@ Calculator details section start
       cursor: pointer;
     }
   }
-}
-
-.payment-method-section {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-top: 30px;
-
-  .select2-container .select2-selection--single:focus,
-  .select2-container .select2-selection--multiple:focus {
-    border: 1px solid transparent;
-  }
-
-  span.select2.select2-container.select2-container--default {
-    max-width: 200px;
-  }
-
-  .select2-container--default .select2-selection--single .select2-selection__rendered {
-    padding: 5px;
-    border: 1px solid var(--border-color2);
-    border-radius: 5px;
-    font-weight: 500;
-    font-family: var(--heading-font);
-    margin-top: -7px;
-    background-color: var(--bg-color3);
-  }
-}
-
-.payment-offers-seciton {
-  margin-top: 25px;
-}
-
-.btn.offer-btn {
-  width: 100%;
-  padding: 15px;
-  background-color: var(--bg-color2);
-  color: var(--heading-color);
-  font-weight: 500;
-  display: flex;
-  justify-content: space-between;
-  box-shadow: var(--shadow3);
-  border-radius: 10px;
-  border: 2px solid transparent;
-
-  img {
-    max-height: 25px;
-  }
-
-  &:hover {
-    background-color: var(--primary-color-opacity-low);
-    border: 2px solid var(--primary-color);
-    color: var(--heading-color);
-  }
-}
-
-.btn-check:checked+.btn.offer-btn {
-  background-color: var(--primary-color-opacity-low);
-  border: 2px solid var(--primary-color);
-  color: var(--heading-color);
 }
 
 // Responsive calculator details section start

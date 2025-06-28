@@ -377,533 +377,160 @@
 
         <main id="main" class="main">
             <div class="main-wrapper">
-                <div class="row g-4">
-                    <div class="col-xxl-4 col-lg-6">
-                        <h5 class="d-flex gap-2"><i class="fa-regular fa-plus highlight"></i> New Order</h5>
-                        <form class="calculator mt-20">
-                            <div class="banner-slider" data-bs-toggle="modal" data-bs-target="#announcement-modal">
-                                <div class="calculator-banner">
-                                    <div class="calculator-banner-wrapper">
-                                        <div class="left-side">
-                                            <div class="image-area">
-                                                <img src="./assets/img/calculator/popularPairBanner.png" alt="" />
-                                            </div>
-                                            <div class="text-area">
-                                                <p class="mb-0">
-                                                    Hottest rates for
-                                                    <strong> USDT/BTC, USDT/ETH</strong> swaps
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="right-side">
-                                            <i class="fa-regular fa-angle-right"></i>
-                                        </div>
+                <!-- Calculate details section start -->
+                <did class="calculator-details-section">
+                    <div class="container">
+                        <div class="row g-xl-5 g-4 justify-content-center">
+                            <div class="col-lg-3 order-2 order-lg-1">
+                                <div class="progress-section">
+                                    <h6>Provide address information to create a transaction</h6>
+                                    <div class="progress" role="progressbar" aria-label="Example with label"
+                                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar" style="width: 25%"></div>
                                     </div>
-                                </div>
-                                <div class="calculator-banner">
-                                    <div class="calculator-banner-wrapper">
-                                        <div class="left-side">
-                                            <div class="image-area">
-                                                <img src="./assets/img/calculator/stablecoinRateBanner.png" alt="" />
+                                    <div class="progress-step-area">
+                                        <div class="item">
+                                            <div class="icon-area checkmark">
+                                                <i class="fa-light fa-check"></i>
                                             </div>
-                                            <div class="text-area">
-                                                <p class="mb-0">
-                                                    Rate for stablecoin swaps:
-                                                    <strong> same coin, any chain</strong>
-                                                </p>
+                                            <div class="content-area">
+                                                <h6>Exchange pair</h6>
+                                                <span>Set the preferred exchange pair</span>
                                             </div>
                                         </div>
-                                        <div class="right-side">
-                                            <i class="fa-regular fa-angle-right"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="cmn-tabs mt-15 mb-15">
-                                <ul class="nav nav-pills" id="pills-tab" role="tablist">
-                                    <li class="nav-item" role="presentation">
-                                        <button class="nav-link active" id="pills-exchange-tab" data-bs-toggle="pill"
-                                            data-bs-target="#pills-exchange" type="button" role="tab"
-                                            aria-controls="pills-exchange" aria-selected="true">exchange</button>
-                                    </li>
-                                    <li class="nav-item" role="presentation">
-                                        <button class="nav-link" id="pills-Buy-tab" data-bs-toggle="pill"
-                                            data-bs-target="#pills-Buy" type="button" role="tab"
-                                            aria-controls="pills-Buy" aria-selected="false">Buy</button>
-                                    </li>
-                                    <li class="nav-item" role="presentation">
-                                        <button class="nav-link" id="pills-Sell-tab" data-bs-toggle="pill"
-                                            data-bs-target="#pills-Sell" type="button" role="tab"
-                                            aria-controls="pills-Sell" aria-selected="false">Sell</button>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="calculator-body">
-                                <div class="tab-content" id="pills-tabContent">
-
-                                    <div class="tab-pane fade show active" id="pills-exchange" role="tabpanel"
-                                        aria-labelledby="pills-exchange-tab" tabindex="0">
-
-                                        <div class="body-top">
-                                            <div class="input-amount-box" id="inputAmountBox">
-                                                <span class="linear-gradient"></span>
-                                                <div class="input-amount-wrapper">
-                                                    <label class="form-label mb-1">You send</label>
-                                                    <div class="input-amount-box-inner" id="inputAmountBoxInner">
-                                                        <a href="#" class="icon-area" data-bs-toggle="modal"
-                                                            data-bs-target="#calculator-modal">
-                                                            <img class="img-flag" src="./assets/img/crypto-icon/btc.svg"
-                                                                alt="">
-                                                        </a>
-                                                        <div class="text-area w-100">
-                                                            <div class="d-flex gap-3 justify-content-between">
-                                                                <a href="#"
-                                                                    class="currency-name d-flex align-items-center gap-1"
-                                                                    data-bs-toggle="modal"
-                                                                    data-bs-target="#calculator-modal">
-                                                                    <div class="title">BTC</div>
-                                                                    <i class="fa-regular fa-angle-down"></i>
-                                                                </a>
-                                                                <input type="text" name="" id="" placeholder="You send"
-                                                                    value="321"
-                                                                    onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
-                                                            </div>
-                                                            <div class="d-flex justify-content-between">
-                                                                <div class="sub-title">Bitcoin</div>
-                                                                <div class="fw-500">Max is 2.98 BTC</div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                        <div class="item">
+                                            <div class="icon-area">
+                                                <i class="fa-light fa-arrow-right"></i>
                                             </div>
-
-                                            <div class="swap-area">
-                                                <div class="swap-icon" id="swapBtn">
-                                                    <i class="fa-regular fa-arrow-up-arrow-down"></i>
-                                                </div>
-                                            </div>
-
-                                            <div class="input-amount-box" id="inputAmountBox2">
-                                                <span class="linear-gradient"></span>
-                                                <div class="input-amount-wrapper">
-                                                    <label class="form-label mb-1">You send</label>
-                                                    <div class="input-amount-box-inner" id="inputAmountBoxInner2">
-                                                        <a href="#" class="icon-area" data-bs-toggle="modal"
-                                                            data-bs-target="#calculator-modal2">
-                                                            <img class="img-flag" src="./assets/img/crypto-icon/act.svg"
-                                                                alt="">
-                                                        </a>
-                                                        <div class="text-area w-100">
-                                                            <div class="d-flex gap-3 justify-content-between">
-                                                                <a href="#"
-                                                                    class="currency-name d-flex align-items-center gap-1"
-                                                                    data-bs-toggle="modal"
-                                                                    data-bs-target="#calculator-modal2">
-                                                                    <div class="title">BTC</div>
-                                                                    <i class="fa-regular fa-angle-down"></i>
-                                                                </a>
-                                                                <input type="text" name="" id="" placeholder="You send"
-                                                                    value="500"
-                                                                    onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
-                                                            </div>
-                                                            <div class="d-flex justify-content-between">
-                                                                <div>Bitcoin</div>
-                                                                <div class="fw-500">Max is 2.98 BTC</div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                            <div class="content-area">
+                                                <h6>Wallet address</h6>
+                                                <span>Fill in the crypto wallet address details</span>
                                             </div>
                                         </div>
-                                        <div class="body-bottom">
-                                            <div>
-                                                <label for="exampleFormControlInput1" class="form-label">Your Contact
-                                                    Email (Required)
-                                                </label>
-                                                <input type="email" class="form-control" name=""
-                                                    id="exampleFormControlInput1" placeholder="Email">
-                                            </div>
-                                            <div class="mt-20">
-                                                <a class="cmn-btn w-100" href="user-panel-exchange.html">
-                                                    <div class="btn-wrapper h-55">
-                                                        <div class="main-text btn-single h-55">
-                                                            proceed <i class="fa-regular fa-arrow-right-long"></i>
-                                                        </div>
-                                                        <div class="hover-text btn-single">
-                                                            proceed <i class="fa-regular fa-arrow-right-long"></i>
-                                                        </div>
-                                                    </div>
-                                                </a>
+                                        <div class="item">
+                                            <div class="number">3</div>
+                                            <div class="content-area">
+                                                <h6>Payment</h6>
+                                                <span>Deposit the amount required for the exchange</span>
                                             </div>
                                         </div>
-
-                                    </div>
-                                    <div class="tab-pane fade" id="pills-Buy" role="tabpanel"
-                                        aria-labelledby="pills-Buy-tab" tabindex="0">
-
-                                        <div class="body-top">
-                                            <div class="input-amount-box" id="inputAmountBox">
-                                                <span class="linear-gradient"></span>
-                                                <div class="input-amount-wrapper">
-                                                    <label class="form-label mb-1">You send</label>
-                                                    <div class="input-amount-box-inner" id="inputAmountBoxInner">
-                                                        <a href="#" class="icon-area" data-bs-toggle="modal"
-                                                            data-bs-target="#calculator-modal">
-                                                            <img class="img-flag" src="./assets/img/crypto-icon/btc.svg"
-                                                                alt="">
-                                                        </a>
-                                                        <div class="text-area w-100">
-                                                            <div class="d-flex gap-3 justify-content-between">
-                                                                <a href="#"
-                                                                    class="currency-name d-flex align-items-center gap-1"
-                                                                    data-bs-toggle="modal"
-                                                                    data-bs-target="#calculator-modal">
-                                                                    <div class="title">BTC</div>
-                                                                    <i class="fa-regular fa-angle-down"></i>
-                                                                </a>
-                                                                <input type="text" name="" id="" placeholder="You send"
-                                                                    value="321"
-                                                                    onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
-                                                            </div>
-                                                            <div class="d-flex justify-content-between">
-                                                                <div class="sub-title">Bitcoin</div>
-                                                                <div class="fw-500">Max is 2.98 BTC</div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="swap-area">
-                                                <div class="swap-icon" id="swapBtn">
-                                                    <i class="fa-regular fa-arrow-up-arrow-down"></i>
-                                                </div>
-                                            </div>
-
-                                            <div class="input-amount-box" id="inputAmountBox2">
-                                                <span class="linear-gradient"></span>
-                                                <div class="input-amount-wrapper">
-                                                    <label class="form-label mb-1">You send</label>
-                                                    <div class="input-amount-box-inner" id="inputAmountBoxInner2">
-                                                        <a href="#" class="icon-area" data-bs-toggle="modal"
-                                                            data-bs-target="#calculator-modal2">
-                                                            <img class="img-flag" src="./assets/img/crypto-icon/act.svg"
-                                                                alt="">
-                                                        </a>
-                                                        <div class="text-area w-100">
-                                                            <div class="d-flex gap-3 justify-content-between">
-                                                                <a href="#"
-                                                                    class="currency-name d-flex align-items-center gap-1"
-                                                                    data-bs-toggle="modal"
-                                                                    data-bs-target="#calculator-modal2">
-                                                                    <div class="title">BTC</div>
-                                                                    <i class="fa-regular fa-angle-down"></i>
-                                                                </a>
-                                                                <input type="text" name="" id="" placeholder="You send"
-                                                                    value="500"
-                                                                    onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
-                                                            </div>
-                                                            <div class="d-flex justify-content-between">
-                                                                <div>Bitcoin</div>
-                                                                <div class="fw-500">Max is 2.98 BTC</div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="body-bottom">
-                                            <div>
-                                                <label for="exampleFormControlInput1" class="form-label">Your Contact
-                                                    Email (Required)
-                                                </label>
-                                                <input type="email" class="form-control" name=""
-                                                    id="exampleFormControlInput1" placeholder="Email">
-                                            </div>
-                                            <div class="mt-20">
-                                                <a class="cmn-btn w-100" href="login.html">
-                                                    <div class="btn-wrapper h-55">
-                                                        <div class="main-text btn-single h-55">
-                                                            proceed <i class="fa-regular fa-arrow-right-long"></i>
-                                                        </div>
-                                                        <div class="hover-text btn-single">
-                                                            proceed <i class="fa-regular fa-arrow-right-long"></i>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="tab-pane fade" id="pills-Sell" role="tabpanel"
-                                        aria-labelledby="pills-Sell-tab" tabindex="0">
-
-                                        <div class="body-top">
-                                            <div class="input-amount-box" id="inputAmountBox">
-                                                <span class="linear-gradient"></span>
-                                                <div class="input-amount-wrapper">
-                                                    <label class="form-label mb-1">You send</label>
-                                                    <div class="input-amount-box-inner" id="inputAmountBoxInner">
-                                                        <a href="#" class="icon-area" data-bs-toggle="modal"
-                                                            data-bs-target="#calculator-modal">
-                                                            <img class="img-flag" src="./assets/img/crypto-icon/btc.svg"
-                                                                alt="">
-                                                        </a>
-                                                        <div class="text-area w-100">
-                                                            <div class="d-flex gap-3 justify-content-between">
-                                                                <a href="#"
-                                                                    class="currency-name d-flex align-items-center gap-1"
-                                                                    data-bs-toggle="modal"
-                                                                    data-bs-target="#calculator-modal">
-                                                                    <div class="title">BTC</div>
-                                                                    <i class="fa-regular fa-angle-down"></i>
-                                                                </a>
-                                                                <input type="text" name="" id="" placeholder="You send"
-                                                                    value="321"
-                                                                    onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
-                                                            </div>
-                                                            <div class="d-flex justify-content-between">
-                                                                <div class="sub-title">Bitcoin</div>
-                                                                <div class="fw-500">Max is 2.98 BTC</div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="swap-area">
-                                                <div class="swap-icon" id="swapBtn">
-                                                    <i class="fa-regular fa-arrow-up-arrow-down"></i>
-                                                </div>
-                                            </div>
-
-                                            <div class="input-amount-box" id="inputAmountBox2">
-                                                <span class="linear-gradient"></span>
-                                                <div class="input-amount-wrapper">
-                                                    <label class="form-label mb-1">You send</label>
-                                                    <div class="input-amount-box-inner" id="inputAmountBoxInner2">
-                                                        <a href="#" class="icon-area" data-bs-toggle="modal"
-                                                            data-bs-target="#calculator-modal2">
-                                                            <img class="img-flag" src="./assets/img/crypto-icon/act.svg"
-                                                                alt="">
-                                                        </a>
-                                                        <div class="text-area w-100">
-                                                            <div class="d-flex gap-3 justify-content-between">
-                                                                <a href="#"
-                                                                    class="currency-name d-flex align-items-center gap-1"
-                                                                    data-bs-toggle="modal"
-                                                                    data-bs-target="#calculator-modal2">
-                                                                    <div class="title">BTC</div>
-                                                                    <i class="fa-regular fa-angle-down"></i>
-                                                                </a>
-                                                                <input type="text" name="" id="" placeholder="You send"
-                                                                    value="500"
-                                                                    onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
-                                                            </div>
-                                                            <div class="d-flex justify-content-between">
-                                                                <div>Bitcoin</div>
-                                                                <div class="fw-500">Max is 2.98 BTC</div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="body-bottom">
-                                            <div>
-                                                <label for="exampleFormControlInput1" class="form-label">Your Contact
-                                                    Email (Required)
-                                                </label>
-                                                <input type="email" class="form-control" name=""
-                                                    id="exampleFormControlInput1" placeholder="Email">
-                                            </div>
-                                            <div class="mt-20">
-                                                <a class="cmn-btn w-100" href="login.html">
-                                                    <div class="btn-wrapper h-55">
-                                                        <div class="main-text btn-single h-55">
-                                                            proceed <i class="fa-regular fa-arrow-right-long"></i>
-                                                        </div>
-                                                        <div class="hover-text btn-single h-55">
-                                                            proceed <i class="fa-regular fa-arrow-right-long"></i>
-                                                        </div>
-                                                    </div>
-                                                </a>
+                                        <div class="item">
+                                            <div class="number">4</div>
+                                            <div class="content-area">
+                                                <h6>Exchange</h6>
+                                                <span>Wait for your transaction to be completed</span>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </form>
-                    </div>
-                    <div class="col-xxl-8 col-lg-6">
-                        <!-- Dashboard card start -->
-                        <h5 class="d-flex gap-2">Welcome Fazle Rabbi !</h5>
-                        <div class="mt-20">
-                            <div class="row g-4">
-                                <div class="col-xxl-6 col-sm-6 card-item">
-                                    <div class="box-card">
-                                        <div class="icon-box">
-                                            <i class="fa-regular fa-sack-dollar"></i>
-                                        </div>
-                                        <div class="text-box">
-                                            <p class="mb-1">Total Orders</p>
-                                            <h4>50</h4>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xxl-6 col-sm-6 card-item">
-                                    <div class="box-card">
-                                        <div class="icon-box">
-                                            <i class="fa-sharp fa-regular fa-hands-holding-dollar"></i>
-                                        </div>
-                                        <div class="text-box">
-                                            <p class="mb-1">Done Orders</p>
-                                            <h4>45</h4>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xxl-6 col-sm-6 card-item">
-                                    <div class="box-card">
-                                        <div class="icon-box">
-                                            <i class="fa-regular fa-circle-dollar"></i>
-                                        </div>
-                                        <div class="text-box">
-                                            <p class="mb-1">Send Volume</p>
-                                            <h4>$5900</h4>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xxl-6 col-sm-6 card-item">
-                                    <div class="box-card">
-                                        <div class="icon-box">
-                                            <i class="fa-regular fa-chart-line-up"></i>
-                                        </div>
-                                        <div class="text-box">
-                                            <p class="mb-1">Receive Volume</p>
-                                            <h4>$214325</h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card mt-25">
-                            <div class="card-header pb-0 border-0">
-                                <h4 class="mb-0">Others card</h4>
-                            </div>
-                            <div class="card-body">
-                                <div class="row g-4">
-                                    <div class="col-xxl-6 col-xl-12 col-sm-6">
-                                        <div class="box-card3">
-                                            <div class="icon-box">
-                                                <i class="fa-solid fa-chart-line-up"></i>
+                            <div class="col-xl-5 col-lg-6 order-1 order-lg-2">
+                                <div class="transaction-card">
+                                    <h4 class="title">Send funds to the address below</h4>
+                                    <div class="transaction-table">
+                                        <div class="table-row">
+                                            <div class="item"><span>Amount</span></div>
+                                            <div class="item">
+                                                <h6>0.1 BTC<i class="fa-regular fa-pen"></i></h6>
                                             </div>
-                                            <div class="text-box">
-                                                <p class="mb-1">Total Investment</p>
-                                                <h4 class="mb-0">208</h4>
+                                        </div>
+                                        <div class="table-row">
+                                            <div class="item"><span>Changelly address (BTC)</span></div>
+                                            <div class="item">
+                                                <h6>GUBGMHVpwcTsPFvNNVdG5DKtpv6UwksAfzw5aULcGzgG</h6>
+                                                <small class="highlight">blockchain: bitcoin</small>
+                                                <div class="btn-area">
+                                                    <a class="cmn-btn" href="transaction.html">
+                                                        <div class="btn-wrapper">
+                                                            <div class="main-text btn-single">
+                                                                Copy address <i class="fa-regular fa-copy"></i>
+                                                            </div>
+                                                            <div class="hover-text btn-single">
+                                                                Copy address <i class="fa-regular fa-copy"></i>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                    <a class="cmn-btn2" href="transaction.html">
+                                                        <div class="btn-wrapper">
+                                                            <div class="main-text btn-single">
+                                                                <i class="fa-regular fa-barcode-read"></i>
+                                                            </div>
+                                                            <div class="hover-text btn-single">
+                                                                <i class="fa-regular fa-barcode-read"></i>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-xxl-6 col-xl-12 col-sm-6">
-                                        <div class="box-card3">
-                                            <div class="icon-box">
-                                                <i class="fa-solid fa-chart-line-up"></i>
-                                            </div>
-                                            <div class="text-box">
-                                                <p class="mb-1">Running Investment</p>
-                                                <h4 class="mb-0">195</h4>
-                                            </div>
-                                        </div>
+                                    <div class="alert-message mt-20">
+                                        <i class="fa-solid fa-circle-info fa-rotate-180"></i>
+                                        <span>Please note that you can send funds to the address above only
+                                            once.</span>
                                     </div>
-                                    <div class="col-xxl-6 col-xl-12 col-sm-6">
-                                        <div class="box-card3">
-                                            <div class="icon-box">
-                                                <i class="fa-solid fa-chart-line-up"></i>
-                                            </div>
-                                            <div class="text-box">
-                                                <p class="mb-1">Due Investment</p>
-                                                <h4 class="mb-0">13</h4>
-                                            </div>
+                                    <form class="request-found-form">
+                                        <h6>or request funds with FIO</h6>
+                                        <div class="form-floating my-3">
+                                            <input type="email" class="form-control" id="floatingInput"
+                                                placeholder="name@example.com" />
+                                            <label for="floatingInput">FIO address</label>
                                         </div>
-                                    </div>
-                                    <div class="col-xxl-6 col-xl-12 col-sm-6">
-                                        <div class="box-card3">
-                                            <div class="icon-box">
-                                                <i class="fa-solid fa-chart-line-up"></i>
+                                        <a class="cmn-btn w-100" href="transaction.html">
+                                            <div class="btn-wrapper h-55">
+                                                <div class="main-text btn-single h-55">
+                                                    request <i class="fa-regular fa-angle-right"></i>
+                                                </div>
+                                                <div class="hover-text btn-single h-55">
+                                                    request <i class="fa-regular fa-angle-right"></i>
+                                                </div>
                                             </div>
-                                            <div class="text-box">
-                                                <p class="mb-1">Completed Investment</p>
-                                                <h4 class="mb-0">0</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xxl-6 col-xl-12 col-sm-6">
-                                        <div class="box-card3">
-                                            <div class="icon-box">
-                                                <i class="fa-regular fa-gift"></i>
-                                            </div>
-                                            <div class="text-box">
-                                                <p class="mb-1">Total Referral Bonus</p>
-                                                <h4 class="mb-0">$5075</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xxl-6 col-xl-12 col-sm-6">
-                                        <div class="box-card3">
-                                            <div class="icon-box">
-                                                <i class="fa-regular fa-gift"></i>
-                                            </div>
-                                            <div class="text-box">
-                                                <p class="mb-1">Last Referral Bonus</p>
-                                                <h4 class="mb-0">$0.5</h4>
-                                            </div>
-                                        </div>
-                                    </div>
+                                        </a>
+                                    </form>
                                 </div>
                             </div>
-                        </div>
-                        <!-- Dashboard card end -->
-                    </div>
-                </div>
-                <div class="mt-25">
+                            <div class="col-lg-3 order-3 order-lg-3">
+                                <div class="deadline-timer-section">
+                                    <div class="countdown-area">
+                                        <h6><i class="fa-regular fa-clock"></i></h6>
+                                        <h6 id="countdown1"></h6>
+                                    </div>
+                                    <span>Time left to send 0.1 BTC</span>
+                                    <hr />
+                                    <h6>vsgmh1a2xq6pn0vx <i class="fa-regular fa-copy"></i></h6>
+                                    <span>Transaction ID</span>
+                                </div>
+                                <div class="transaction-summery">
+                                    <h5 class="title">Transaction details</h5>
+                                    <div class="transaction-item-container">
+                                        <div class="item">
+                                            <span>You send</span>
+                                            <h6>1 BTC</h6>
+                                        </div>
+                                        <div class="item">
+                                            <span>Exchange rate</span>
+                                            <h6>1 BTC ~ 16.45093894 ETH</h6>
+                                        </div>
+                                        <div class="item">
+                                            <span>Service fee 0.25%</span>
+                                            <h6>0.04112735 ETH</h6>
+                                        </div>
+                                        <div class="item">
+                                            <span>Network fee</span>
+                                            <h6>0.00189 ETH</h6>
+                                        </div>
 
-                    <div class="mt-25">
-                        <div class="row g-4">
-                            <div class="col-xxl-9 col-lg-8">
-                                <div id="columnChart"></div>
-                            </div>
-                            <div class="col-xxl-3 col-lg-4">
-                                <div class="bonus-box">
-                                    <div class="icon-box">
-                                        <i class="fa-regular fa-gift"></i>
-                                    </div>
-                                    <div class="text-box">
-                                        <h4 class="mb-10">$50 Welcome Bonus</h4>
-                                        <p>By making a first deposit of $500 or more, you will receive a $50 welcome
-                                            bonus in your balance!</p>
-                                        <a href="" class="cmn-btn5 mt-10">get bonus</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-12">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h4 class="mb-20">Referral Link</h4>
-                                        <div class="input-group">
-                                            <input id="referralURL" type="text" class="form-control"
-                                                value="https://dodger-blue-hyip.bugfinder.net/register/demouser"
-                                                aria-label="Recipient's username" aria-describedby="basic-addon2"
-                                                readonly>
-                                            <div class="input-group-text" id="copyBtn"><i
-                                                    class="fa-regular fa-copy"></i>copy
-                                            </div>
+                                        <div class="item">
+                                            <span>You get</span>
+                                            <h6>~ 16.388904 ETH</h6>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-
+                </did>
+                <!-- Calculate details section end -->
             </div>
         </main>
     </div>
@@ -1292,6 +919,8 @@
     <script src="assets/js/jquery.lineProgressbar.js"></script>
     <!-- Slick slider js link -->
     <script src="assets/js/slick.min.js"></script>
+    <!-- countdown Js link -->
+    <script src="assets/js/jquery.countdown.min.js"></script>
     <!-- Main Js slink -->
     <script src="assets/js/dashboard.js"></script>
 
