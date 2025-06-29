@@ -218,79 +218,7 @@ $(document).ready(function () {
       dateFormat: "d-m-Y",
     });
   }
-
-  // Isotope start
-  if ($(".listing-row").length) {
-    $(document).ready(function () {
-      var $grid = $(".listing-row").isotope({
-        itemSelector: ".grid-item",
-        percentPosition: true,
-        masonry: {
-          columnWidth: 1,
-        },
-      });
-
-      var selectedFilter = localStorage.getItem("selectedFilter") || ".all";
-      $grid.isotope({ filter: selectedFilter });
-
-      $(".isotope-btn-group button").removeClass("active");
-      $(
-        '.isotope-btn-group button[data-filter="' + selectedFilter + '"]'
-      ).addClass("active");
-
-      $(".isotope-btn-group").on("click", "button", function () {
-        var filterValue = $(this).attr("data-filter");
-        $grid.isotope({ filter: filterValue });
-        localStorage.setItem("selectedFilter", filterValue);
-
-        $(this).siblings(".active").removeClass("active");
-        $(this).addClass("active");
-      });
-
-      $grid.isotope("layout");
-
-      $(".form-check-input").on("change", function () {
-        $(".review-single-hidden-box").toggle(this.checked);
-        $grid.isotope("layout");
-      });
-    });
-  }
-  // Isotope ends
 });
-// Fancybox carousel section start
-if ($(".fancybox-carousel-section").length) {
-  // Initialise Carousel
-  const mainCarousel = new Carousel(document.querySelector("#mainCarousel"), {
-    Dots: false,
-  });
-
-  // Thumbnails
-  const thumbCarousel = new Carousel(document.querySelector("#thumbCarousel"), {
-    Sync: {
-      target: mainCarousel,
-      friction: 0,
-    },
-    Dots: false,
-    Navigation: false,
-    center: false,
-    slidesPerPage: 1,
-    infinite: true,
-  });
-
-  // Customize Fancybox
-  Fancybox.bind('[data-fancybox="gallery"]', {
-    Carousel: {
-      on: {
-        change: (that) => {
-          mainCarousel.slideTo(mainCarousel.findPageForSlide(that.page), {
-            friction: 0,
-          });
-        },
-      },
-    },
-  });
-}
-// Fancybox carousel section end
 
 // Tooltip
 const tooltipTriggerList = document.querySelectorAll(
@@ -348,7 +276,6 @@ if ($("#copyBtn").length) {
     }
   });
 }
-
 // Copy page url end
 
 // input field show hide password start
@@ -372,58 +299,6 @@ if (document.querySelector(".login-register-form")) {
   });
 }
 // input field show hide password end
-
-// Dropdown select with Filter end
-if ($(".search-box2").length) {
-  function handleSelect(searchBox2, searchInput, searchItem) {
-    searchInput.addEventListener("click", function (event) {
-      searchBox2.classList.add("active");
-      event.stopPropagation();
-    });
-
-    window.addEventListener("click", function () {
-      searchBox2.classList.remove("active");
-    });
-
-    searchItem.forEach(function (searchItemSingle) {
-      searchItemSingle.addEventListener("click", function () {
-        const text = searchItemSingle.querySelector(".title");
-        const textContent = text.textContent;
-        searchInput.value = textContent;
-        searchBox2.classList.remove("active");
-      });
-    });
-  }
-
-  const searchBox2 = document.querySelector("#search-box2");
-  const searchInput = document.querySelector("#search-input");
-  const searchItem = document.querySelectorAll("#search-result .search-item");
-  handleSelect(searchBox2, searchInput, searchItem);
-
-  // filter start
-  function filterItems(inputId, items) {
-    const input = document.getElementById(inputId);
-    const filter = input.value.toUpperCase();
-
-    items.forEach((item) => {
-      const title = item.querySelector(".title");
-      const txtValue = title.textContent || title.innerText;
-
-      if (txtValue.toUpperCase().includes(filter)) {
-        item.style.display = "";
-      } else {
-        item.style.display = "none";
-      }
-    });
-  }
-  const filterSearchInputId = "search-input";
-  const filterSearchInput = document.getElementById(filterSearchInputId);
-  const items = document.querySelectorAll("#search-result .search-item");
-  filterSearchInput.addEventListener("keyup", function () {
-    filterItems(filterSearchInputId, items);
-  });
-}
-// Dropdown select with Filter end
 
 // Modal select to input focus start
 document.addEventListener("DOMContentLoaded", function () {

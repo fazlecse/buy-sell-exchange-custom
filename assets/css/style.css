@@ -1981,7 +1981,7 @@ html[dir=rtl] .cmn-btn2 i {
   background-color: rgba(163, 163, 163, 0.2);
 }
 
-@media (max-width: 767px) {
+@media (max-width: 575px) {
   .login-btn {
     padding: 5px;
     height: 40px;
@@ -3274,6 +3274,14 @@ html[dir=rtl] .cmn-list .item:not(:last-child)::after {
   padding: 20px;
 }
 
+@media (max-width: 575px) {
+  .card .card-header {
+    padding: 12px;
+  }
+  .card .card-body {
+    padding: 12px;
+  }
+}
 .nice-select {
   border-color: var(--border-color1);
   text-transform: capitalize;
@@ -5800,6 +5808,9 @@ Bottom Mobile, Tab nav end
   gap: 8px;
   flex-grow: 1;
 }
+.notice-bar .cmn-btn2 {
+  background-color: rgb(var(--primary-color));
+}
 
 .calculator-banner {
   position: relative;
@@ -6020,19 +6031,8 @@ Bottom Mobile, Tab nav end
   flex-direction: column;
   justify-content: space-between;
 }
-.calculator-promotional-box::-moz-selection {
-  color: rgb(var(--black));
-  color: red !important;
-  background-color: black;
-}
-.calculator-promotional-box::selection {
-  color: rgb(var(--black));
-  color: red !important;
-  background-color: black;
-}
-.calculator-promotional-box::-moz-selection {
-  color: red !important;
-  background-color: black;
+.calculator-promotional-box .bottom-box {
+  margin-top: 25px;
 }
 
 @media (min-width: 992px) {
@@ -6048,6 +6048,9 @@ Bottom Mobile, Tab nav end
 @media (max-width: 767px) {
   .calculator-banner-wrapper .left-side p {
     font-size: 12px;
+  }
+  .notice-bar {
+    font-size: 14px;
   }
 }
 @media (max-width: 575px) {
@@ -6409,7 +6412,7 @@ Why choose us section start
 Why choose us section end
 ----------------------------------------------*/
 /*----------------------------------------------
-Trade section section start
+Trade section start
 ----------------------------------------------*/
 .coin-box {
   display: flex;
@@ -6435,7 +6438,7 @@ Trade section section start
 }
 
 /*----------------------------------------------
-Trade section section end
+Trade section end
 ----------------------------------------------*/
 /*----------------------------------------------
 05. Partner section start
@@ -7118,122 +7121,6 @@ html[dir=rtl] .footer-section .footer-widget .contact-item i {
 Footer section end
 ----------------------------------------------*/
 /*----------------------------------------------
-21. Copyright section start
-----------------------------------------------*/
-.copyright-section {
-  background-color: var(--bg-color4);
-  font-size: 16px;
-}
-
-.copyright-inner {
-  padding: 20px 0;
-}
-
-.language {
-  display: flex;
-  justify-content: end;
-  gap: 15px;
-}
-.language .item {
-  font-family: var(--poppins);
-}
-.language .item.active {
-  color: rgb(var(--primary-color));
-}
-.language .item:hover {
-  color: rgb(var(--primary-color));
-}
-
-@media (max-width: 575px) {
-  .copyright-area {
-    text-align: center;
-  }
-  .language {
-    justify-content: center;
-  }
-}
-/*----------------------------------------------
-Copyright end
-----------------------------------------------*/
-/*----------------------------------------------
-16. Banner section start
-----------------------------------------------*/
-.banner-section {
-  position: relative;
-  padding: 50px 0 60px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: 0;
-  background-image: url(../img/banner/banner-img.jpg);
-  color: rgb(var(--white));
-}
-.banner-section::after {
-  content: "";
-  height: 100%;
-  width: 100%;
-  inset: 0;
-  position: absolute;
-  background-image: linear-gradient(90deg, rgb(var(--black), 0.93) 26%, rgba(0, 0, 0, 0.07) 100%);
-  z-index: -1;
-}
-.banner-section h4 {
-  text-transform: capitalize;
-  margin-bottom: 5px;
-  color: rgb(var(--white));
-}
-.banner-section .price {
-  font-size: 20px;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.banner-section .price .price-title {
-  font-weight: 700;
-  font-size: 32px;
-  color: rgb(var(--primary-color));
-}
-.banner-section .location {
-  font-size: 16px;
-  text-transform: capitalize;
-  display: flex;
-  align-items: center;
-  gap: 7px;
-}
-.banner-section .reviews {
-  font-size: 16px;
-  background-color: rgb(var(--primary-color));
-  display: inline-flex;
-  align-items: baseline;
-  gap: 5px;
-  padding: 3px 6px;
-  border-radius: 4px;
-}
-.banner-section .reviews .active {
-  color: rgb(var(--white));
-}
-.banner-section .small-text {
-  font-size: 14px;
-}
-
-@media (max-width: 991px) {
-  .banner-section h3 {
-    font-size: 36px;
-  }
-}
-@media (max-width: 767px) {
-  .banner-section {
-    padding: 50px 0;
-  }
-  .banner-section h3 {
-    font-size: 28px;
-  }
-}
-/*----------------------------------------------
-Banner end
-----------------------------------------------*/
-/*----------------------------------------------
 24. Contact section start
 ----------------------------------------------*/
 .contact-section {
@@ -7519,138 +7406,4 @@ Policy section end
 }
 /*----------------------------------------------
 Error end
-----------------------------------------------*/
-/*----------------------------------------------
-Reviews details section start 
-----------------------------------------------*/
-.all-reviews-section {
-  background-color: rgb(var(--bg-color1));
-}
-.all-reviews-section .isotop-content {
-  background-color: rgb(var(--bg-color2));
-  border: 1px solid var(--border-color1);
-  padding: 25px;
-  border-radius: 20px;
-  font-size: 16px;
-}
-
-.sidebar-card-box {
-  background-color: var(--bg-color1);
-  padding: 25px;
-  border-radius: 12px;
-  border: 1px solid var(--border-color1);
-  box-shadow: var(--shadow1);
-  position: sticky;
-  top: 100px;
-}
-.sidebar-card-box .header-box {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  border-bottom: 1px solid var(--border-color1);
-  padding-bottom: 20px;
-}
-.sidebar-card-box .header-box .img-box {
-  width: 90px;
-  min-width: 90px;
-  height: 100px;
-}
-.sidebar-card-box .header-box .img-box img {
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.reviews-rating-box {
-  margin-top: 20px;
-  display: flex;
-  justify-content: space-around;
-}
-.reviews-rating-box .item {
-  text-align: center;
-}
-
-.progress-box {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.progress-box .progress-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-}
-.progress-box .progress-item h6 {
-  max-width: 80px;
-  width: 100%;
-  font-size: 16px;
-}
-.progress-box .progress-item .progress {
-  width: 100%;
-  height: 5px;
-}
-.progress-box .progress-item .progress .progress-bar {
-  background-color: rgb(var(--primary-color));
-  transition: all 5s;
-}
-
-.reviews-single {
-  display: flex;
-  justify-content: space-between;
-  gap: 30px;
-}
-.reviews-single:not(:last-child) {
-  margin-bottom: 20px;
-}
-.reviews-single .left-side {
-  display: flex;
-  gap: 10px;
-  min-width: 215px;
-}
-.reviews-single .left-side .img-box {
-  width: 45px;
-  min-width: 45px;
-  height: 45px;
-}
-.reviews-single .left-side .img-box img {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-}
-.reviews-single .left-side .text-box .title {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-.reviews-single .left-side .text-box .title h6 {
-  font-size: 16px;
-}
-.reviews-single .left-side .text-box .title i {
-  font-size: 15px;
-  color: rgb(var(--primary-color));
-}
-.reviews-single .left-side .text-box .contact-item {
-  font-size: 16px;
-}
-.reviews-single .right-side {
-  display: flex;
-  gap: 5px;
-}
-.reviews-single .right-side .reviews {
-  font-size: 16px;
-}
-
-@media (max-width: 767px) {
-  .reviews-single {
-    flex-direction: column;
-  }
-  .reviews-single .right-side {
-    flex-direction: column;
-  }
-}
-/*----------------------------------------------
-Reviews details section end 
 ----------------------------------------------*/

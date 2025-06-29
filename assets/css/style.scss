@@ -2347,7 +2347,7 @@ Offcanvas end
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 575px) {
   .login-btn {
     padding: 5px;
     height: 40px;
@@ -3894,9 +3894,21 @@ hr.divider:after {
   }
 }
 
-// Card sectio end
-// Nice select start
+@media(max-width: 575px) {
+  .card {
+    .card-header {
+      padding: 12px;
+    }
 
+    .card-body {
+      padding: 12px;
+    }
+  }
+}
+
+// Card section end
+
+// Nice select start
 .nice-select {
   // width: 100%;
   border-color: var(--border-color1);
@@ -7082,6 +7094,10 @@ Bottom Mobile, Tab nav end
     gap: 8px;
     flex-grow: 1;
   }
+
+  .cmn-btn2 {
+    background-color: rgb(var(--primary-color));
+  }
 }
 
 .calculator-banner {
@@ -7347,15 +7363,8 @@ Bottom Mobile, Tab nav end
   flex-direction: column;
   justify-content: space-between;
 
-  &::selection {
-    color: rgb(var(--black));
-    color: red !important;
-    background-color: black;
-  }
-
-  &::-moz-selection {
-    color: red !important;
-    background-color: black;
+  .bottom-box {
+    margin-top: 25px;
   }
 }
 
@@ -7375,6 +7384,10 @@ Bottom Mobile, Tab nav end
 @media (max-width: 767px) {
   .calculator-banner-wrapper .left-side p {
     font-size: 12px;
+  }
+
+  .notice-bar {
+    font-size: 14px;
   }
 }
 
@@ -7432,6 +7445,7 @@ Bottom Mobile, Tab nav end
     background: linear-gradient(308deg, #cef 14.16%, rgba(238, 239, 255, 0) 49.73%, #feddf5 97.86%), #eef3ff;
     background: linear-gradient(271deg, #3e661f 9.24%, rgba(238, 239, 255, 0) 49.61%, #27245e 89.2%), #55575a;
   }
+
 }
 
 /*----------------------------------------------
@@ -7816,7 +7830,7 @@ Why choose us section end
 ----------------------------------------------*/
 
 /*----------------------------------------------
-Trade section section start
+Trade section start
 ----------------------------------------------*/
 .coin-box {
   display: flex;
@@ -7846,7 +7860,7 @@ Trade section section start
 }
 
 /*----------------------------------------------
-Trade section section end
+Trade section end
 ----------------------------------------------*/
 
 /*----------------------------------------------
@@ -8709,151 +8723,6 @@ Footer section end
 ----------------------------------------------*/
 
 /*----------------------------------------------
-21. Copyright section start
-----------------------------------------------*/
-.copyright-section {
-  background-color: var(--bg-color4);
-  font-size: 16px;
-}
-
-.copyright-inner {
-  padding: 20px 0;
-}
-
-.language {
-  display: flex;
-  justify-content: end;
-  gap: 15px;
-
-  .item {
-    font-family: var(--poppins);
-
-    &.active {
-      color: rgb(var(--primary-color));
-    }
-
-    &:hover {
-      color: rgb(var(--primary-color));
-    }
-  }
-}
-
-// Responsive copyright start
-@media (max-width: 575px) {
-  .copyright-area {
-    text-align: center;
-  }
-
-  .language {
-    justify-content: center;
-  }
-}
-
-// Responsive copyright end
-
-/*----------------------------------------------
-Copyright end
-----------------------------------------------*/
-
-/*----------------------------------------------
-16. Banner section start
-----------------------------------------------*/
-.banner-section {
-  position: relative;
-  padding: 50px 0 60px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: 0;
-  background-image: url(../img/banner/banner-img.jpg);
-  color: rgb(var(--white));
-
-  &::after {
-    content: "";
-    height: 100%;
-    width: 100%;
-    inset: 0;
-    position: absolute;
-    background-image: linear-gradient(90deg, rgb(var(--black), 0.93) 26%, rgb(0, 0, 0, 0.07) 100%);
-    z-index: -1;
-  }
-
-  h4 {
-    text-transform: capitalize;
-    margin-bottom: 5px;
-    color: rgb(var(--white));
-  }
-
-  .price {
-
-    font-size: 20px;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-
-    .price-title {
-      font-weight: 700;
-      font-size: 32px;
-      color: rgb(var(--primary-color));
-    }
-  }
-
-  .location {
-    font-size: 16px;
-    text-transform: capitalize;
-    display: flex;
-    align-items: center;
-    gap: 7px;
-  }
-
-  .reviews {
-    font-size: 16px;
-    background-color: rgb(var(--primary-color));
-    display: inline-flex;
-    align-items: baseline;
-    gap: 5px;
-    padding: 3px 6px;
-    border-radius: 4px;
-
-    .active {
-      color: rgb(var(--white));
-    }
-  }
-
-  .small-text {
-    font-size: 14px;
-  }
-}
-
-// Responsive banner section start
-
-@media (max-width: 991px) {
-  .banner-section {
-
-    h3 {
-      font-size: 36px;
-    }
-  }
-}
-
-@media (max-width: 767px) {
-  .banner-section {
-    padding: 50px 0;
-
-    h3 {
-      font-size: 28px;
-    }
-  }
-}
-
-// Responsive banner section end
-
-/*----------------------------------------------
-Banner end
-----------------------------------------------*/
-
-/*----------------------------------------------
 24. Contact section start
 ----------------------------------------------*/
 .contact-section {
@@ -9217,163 +9086,4 @@ Policy section end
 // Responsive error section end
 /*----------------------------------------------
 Error end
-----------------------------------------------*/
-
-/*----------------------------------------------
-Reviews details section start 
-----------------------------------------------*/
-.all-reviews-section {
-  background-color: rgb(var(--bg-color1));
-
-  .isotop-content {
-    background-color: rgb(var(--bg-color2));
-    border: 1px solid var(--border-color1);
-    padding: 25px;
-    border-radius: 20px;
-    font-size: 16px;
-  }
-}
-
-.sidebar-card-box {
-  background-color: var(--bg-color1);
-  padding: 25px;
-  border-radius: 12px;
-  border: 1px solid var(--border-color1);
-  box-shadow: var(--shadow1);
-  position: sticky;
-  top: 100px;
-
-  .header-box {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    border-bottom: 1px solid var(--border-color1);
-    padding-bottom: 20px;
-
-    .img-box {
-      width: 90px;
-      min-width: 90px;
-      height: 100px;
-
-      img {
-        width: 100%;
-        height: 100%;
-        border-radius: 10px;
-        object-fit: cover;
-      }
-    }
-  }
-}
-
-.reviews-rating-box {
-  margin-top: 20px;
-  display: flex;
-  justify-content: space-around;
-
-  .item {
-    text-align: center;
-  }
-}
-
-.progress-box {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-
-  .progress-item {
-    h6 {
-      max-width: 80px;
-      width: 100%;
-      font-size: 16px;
-    }
-
-    .progress {
-      width: 100%;
-      height: 5px;
-
-      .progress-bar {
-        background-color: rgb(var(--primary-color));
-        transition: all 5s;
-      }
-    }
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-  }
-}
-
-.reviews-single {
-  display: flex;
-  justify-content: space-between;
-  gap: 30px;
-
-  &:not(:last-child) {
-    margin-bottom: 20px;
-  }
-
-  .left-side {
-    display: flex;
-    gap: 10px;
-    min-width: 215px;
-
-    .img-box {
-      width: 45px;
-      min-width: 45px;
-      height: 45px;
-
-      img {
-        width: 100%;
-        height: 100%;
-        border-radius: 50%;
-      }
-    }
-
-    .text-box {
-      .title {
-        display: flex;
-        align-items: center;
-        gap: 5px;
-
-        h6 {
-          font-size: 16px;
-        }
-
-        i {
-          font-size: 15px;
-          color: rgb(var(--primary-color));
-        }
-      }
-
-      .contact-item {
-        font-size: 16px;
-      }
-    }
-  }
-
-  .right-side {
-    display: flex;
-    gap: 5px;
-
-    .reviews {
-      font-size: 16px;
-    }
-  }
-}
-
-// Responsive reviews section start
-@media (max-width: 767px) {
-  .reviews-single {
-    flex-direction: column;
-
-    .right-side {
-      flex-direction: column;
-    }
-  }
-}
-
-// Responsive reviews section end
-/*----------------------------------------------
-Reviews details section end 
 ----------------------------------------------*/

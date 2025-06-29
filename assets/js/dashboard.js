@@ -60,32 +60,7 @@ function formatState(state) {
 // cmn-select2 with image start
 
 $(document).ready(function () {
-  // owl carousel dashboard card
-  $(".carousel-1").owlCarousel({
-    loop: true,
-    // autoplay: true,
-    margin: -20,
-    nav: false,
-    dots: false,
-    // rtl:true,
-    responsive: {
-      0: {
-        items: 1,
-      },
-      375: {
-        items: 2,
-      },
-      576: {
-        items: 3,
-      },
-      768: {
-        items: 4,
-      },
-      992: {
-        items: 3,
-      },
-    },
-  });
+
   // Banner sllider start
   if ($(".banner-slider").length) {
     $(".banner-slider").slick({

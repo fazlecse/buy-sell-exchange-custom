@@ -92,43 +92,6 @@ preloader section start
 /*----------------------------------------------
 preloader end
 ----------------------------------------------*/
-.scroll-up {
-  position: fixed;
-  bottom: 40px;
-  right: 40px;
-  z-index: 99999;
-}
-
-html[dir=rtl] .scroll-up {
-  left: 50px;
-  right: auto;
-}
-
-@media (max-width: 767px) {
-  .scroll-up {
-    bottom: 50px;
-    right: 20px;
-  }
-  html[dir=rtl] .scroll-up {
-    left: 20px;
-  }
-}
-.scroll-up i {
-  color: #fff;
-  height: 40px;
-  width: 40px;
-  background: var(--btn-bg1);
-  border-radius: 4px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: var(--transition);
-}
-.scroll-up i:hover {
-  background: var(--btn-bg2);
-}
-
 *,
 *::after,
 *::before {
@@ -146,7 +109,7 @@ ol {
 
 body {
   font-family: var(--body-font);
-  line-height: 1.5;
+  line-height: 1.4;
   color: rgb(var(--body-color));
   font-size: 16px;
   background-color: var(--bg-color1);
@@ -191,10 +154,28 @@ textarea.form-control {
 
 .form-control,
 .form-select {
-  border-radius: 10px;
+  border-radius: 8px;
   background-color: var(--input-color);
   border: 1px solid var(--border-color2);
-  height: 45px;
+  height: 50px;
+  color: rgb(var(--heading-color));
+  font-weight: 300;
+  padding: 10px 20px;
+}
+.form-control::-moz-placeholder, .form-select::-moz-placeholder {
+  color: #8a8a8a;
+}
+.form-control::placeholder,
+.form-select::placeholder {
+  color: #8a8a8a;
+}
+.form-control:focus,
+.form-select:focus {
+  box-shadow: none;
+  border: 1px solid rgb(var(--primary-color));
+  outline: 1px solid rgb(var(--primary-color));
+  background-color: rgb(var(--bg-color1));
+  color: rgb(var(--heading-color));
 }
 
 .form-control:disabled {
@@ -203,14 +184,6 @@ textarea.form-control {
 
 .dark-theme .form-control:disabled {
   background-color: var(--bg-color3);
-}
-
-.form-control:focus,
-.form-select:focus {
-  box-shadow: none;
-  border: 1px solid rgb(var(--primary-color));
-  outline: 1px solid rgb(var(--primary-color));
-  background-color: var(--bg-color1);
 }
 
 .form-check label,
@@ -3087,6 +3060,11 @@ html[dir=rtl] .logo img {
     opacity: 1;
   }
 }
+@media (max-width: 575px) {
+  .header {
+    padding: 0 15px;
+  }
+}
 html[dir=rtl] .header .toggle-sidebar-btn {
   margin-left: 0;
   margin-right: 10px;
@@ -3114,7 +3092,7 @@ Header Nav start
 .header-nav .nav-icons {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 18px;
 }
 .header-nav .nav-icon {
   font-size: 20px;
@@ -4922,7 +4900,7 @@ Calculator details section start
   gap: 20px;
   margin-top: 20px;
   padding: 25px;
-  background-color: var(--bg-color2);
+  background-color: var(--bg-color1);
 }
 .wallet-address-section .form-floating {
   display: flex;
