@@ -472,12 +472,18 @@
                                     </div>
                                     <div class="chat-box-bottom">
                                         <div class="cmn-btn-group2 d-flex justify-content-sm-end ">
-                                            <button type="button" data-bs-toggle="tooltip" data-bs-placement="top"
-                                                data-bs-title="Attached file" class="single-btn2">
-                                                <i class="fa-regular fa-paperclip"></i>
+                                            <button class="send-file-btn pt-0">
+                                                <i class="fa-regular fa-paperclip" aria-hidden="true"></i>
+                                                <input class="form-control" id="file-input" type="file" multiple />
                                             </button>
-
                                         </div>
+                                        <div class="attached-file">
+                                            <button type="button" class="close-btn">
+                                                <i class="fa-regular fa-times"></i>
+                                            </button>
+                                            <p class="mb-0 "><span class="fileLength">0</span> file(s) selected</p>
+                                        </div>
+
                                         <textarea class="form-control" id="exampleFormControlTextarea1"
                                             rows="3"></textarea>
                                         <button type="button" data-bs-toggle="tooltip" data-bs-placement="top"
@@ -490,12 +496,8 @@
                         <!-- Chat section end -->
                     </div>
                 </div>
-
-
             </div>
-
         </main>
-
     </div>
 
 

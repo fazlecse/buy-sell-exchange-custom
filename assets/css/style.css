@@ -2071,6 +2071,9 @@ html[dir=rtl] .cmn-btn2 i {
   padding: 6px;
   background-color: rgb(var(--white));
   transition: var(--transition);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .action-btn:hover {
   background-color: rgb(var(--white), 0.8);
@@ -2092,6 +2095,9 @@ html[dir=rtl] .cmn-btn2 i {
   padding: 6px;
   transition: var(--transition);
   font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .action-btn2.active {
   color: rgb(var(--primary-color));

@@ -60,7 +60,6 @@ function formatState(state) {
 // cmn-select2 with image start
 
 $(document).ready(function () {
-
   // Banner sllider start
   if ($(".banner-slider").length) {
     $(".banner-slider").slick({
@@ -374,7 +373,6 @@ toggleBtn.addEventListener("click", function () {
 
 function setTheme() {
   const isDarkTheme = localStorage.getItem("dark-theme");
-  console.log(isDarkTheme);
   if (isDarkTheme == 1) {
     document.querySelector("body").classList.add("dark-theme");
     document.getElementById("moon").style.display = "none";
@@ -387,3 +385,33 @@ function setTheme() {
 }
 setTheme();
 // Dark theme end
+
+// show hide attch file box start
+
+const fileInput = document.getElementById("file-input");
+const attachedFile = document.querySelector(".attached-file");
+const fileLength = document.querySelector(".fileLength");
+const closeBtn = document.querySelector(".close-btn");
+
+if (fileInput.files.length === 0) {
+  attachedFile.style.display = "none";
+}
+
+fileInput.addEventListener("change", (e) => {
+  const files = e.target.files;
+  fileLength.textContent = files.length;
+
+  if (files.length > 0) {
+    attachedFile.style.display = "block";
+  } else {
+    attachedFile.style.display = "none";
+  }
+});
+
+closeBtn.addEventListener("click", () => {
+  fileInput.value = "";
+  fileLength.textContent = "0";
+  attachedFile.style.display = "none";
+});
+
+// show hide attch file box end

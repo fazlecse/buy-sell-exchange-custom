@@ -2444,6 +2444,9 @@ Offcanvas end
   padding: 6px;
   background-color: rgb(var(--white));
   transition: var(--transition);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &:hover {
     background-color: rgb(var(--white), 0.8);
@@ -2467,6 +2470,9 @@ Offcanvas end
   padding: 6px;
   transition: var(--transition);
   font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &.active {
     color: rgb(var(--primary-color));
