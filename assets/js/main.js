@@ -114,6 +114,21 @@ $(document).ready(function () {
   }
   // Banner sllider end
 
+  // Faq swiper start
+  if ($(".faq-swiper").length) {
+    var swiper = new Swiper(".faq-swiper", {
+      slidesPerView: "auto",
+      spaceBetween: 20,
+      grabCursor: true,
+      // loop: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  }
+  // Faq swiper end
+
   // Nice select start
   if ($(".nice-select").length) {
     $(".nice-select").niceSelect();

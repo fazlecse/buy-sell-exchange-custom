@@ -1,87 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exchanger</title>
+    <!-- Favicon link -->
+    <link
+      rel="shortcut icon"
+      href="./assets/img/logo/favicon.png"
+      type="image/x-icon"
+    />
+    <!-- Fontawesome6 Css link -->
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <!-- Bootstrap5 Css link -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <!-- Owl carousel Css link -->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css" />
+    <!-- nice-select Css link -->
+    <link rel="stylesheet" href="assets/css/nice-select.css" />
+    <!-- select2 Css link -->
+    <link rel="stylesheet" href="assets/css/select2.min.css" />
+    <!-- swiper-Css-link -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+    <!-- Style Css link -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Exchanger</title>
-  <!-- Favicon link -->
-  <link rel="shortcut icon" href="./assets/img/logo/favicon.png" type="image/x-icon" />
-  <!-- Fontawesome6 Css link -->
-  <link rel="stylesheet" href="assets/css/all.min.css" />
-  <!-- Bootstrap5 Css link -->
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-  <!-- Owl carousel Css link -->
-  <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
-  <link rel="stylesheet" href="assets/css/owl.theme.default.min.css" />
-  <!-- nice-select Css link -->
-  <link rel="stylesheet" href="assets/css/nice-select.css" />
-  <!-- select2 Css link -->
-  <link rel="stylesheet" href="assets/css/select2.min.css" />
-  <!-- Style Css link -->
-  <link rel="stylesheet" href="assets/css/style.css" />
-</head>
+  <body onload="preloaderFunction()" class="">
+    <!-- Preloader section start -->
+    <div id="preloader">
+      <img src="./assets/img/preloader/buy.png" alt="preloader-img" />
+    </div>
+    <!-- Preloader section end -->
 
-<body onload="preloaderFunction()" class="">
+    <!-- Nav section start -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="container">
+        <a class="navbar-brand logo" href="index.html"
+          ><img src="assets/img/logo/logo-white.png" alt="digiGoods"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+        >
+          <i class="fa-light fa-list"></i>
+        </button>
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbar"
+        >
+          <div class="offcanvas-header">
+            <a class="navbar-brand" href="index.html"
+              ><img
+                class="logo"
+                src="assets/img/logo/logo-white.png"
+                alt="digiGoods"
+            /></a>
 
-  <!-- Preloader section start -->
-  <div id="preloader">
-    <img src="./assets/img/preloader/buy.png" alt="preloader-img" />
-  </div>
-  <!-- Preloader section end -->
-
-  <!-- Nav section start -->
-  <nav class="navbar navbar-expand-lg sticky-top">
-    <div class="container">
-      <a class="navbar-brand logo" href="index.html"><img src="assets/img/logo/logo-white.png" alt="digiGoods" /></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-        aria-controls="offcanvasNavbar">
-        <i class="fa-light fa-list"></i>
-      </button>
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbar">
-        <div class="offcanvas-header">
-          <a class="navbar-brand" href="index.html"><img class="logo" src="assets/img/logo/logo-white.png"
-              alt="digiGoods" /></a>
-
-          <button type="button" class="cmn-btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
-            <i class="fa-light fa-arrow-right"></i>
-          </button>
+            <button
+              type="button"
+              class="cmn-btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            >
+              <i class="fa-light fa-arrow-right"></i>
+            </button>
+          </div>
+          <div
+            class="offcanvas-body align-items-center justify-content-between"
+          >
+            <ul class="navbar-nav m-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="aml-kyc.html">AML/KYC</a>
+              </li>
+              <li class="nav-item d-sm-none d-flex justify-content-center">
+                <select
+                  class="nice-select language-select"
+                  aria-label="Default select example"
+                >
+                  <option selected>English</option>
+                  <option value="2">Bengali</option>
+                  <option value="3">Arabic</option>
+                </select>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="offcanvas-body align-items-center justify-content-between">
-          <ul class="navbar-nav m-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="aml-kyc.html">AML/KYC</a>
-            </li>
-            <li class="nav-item d-sm-none d-flex justify-content-center">
-              <select class="nice-select language-select" aria-label="Default select example">
+        <div class="nav-right">
+          <ul class="custom-nav">
+            <li class="nav-item d-none d-sm-block">
+              <select
+                class="nice-select language-select"
+                aria-label="Default select example"
+              >
                 <option selected>English</option>
                 <option value="2">Bengali</option>
                 <option value="3">Arabic</option>
               </select>
             </li>
-          </ul>
-        </div>
-      </div>
-      <div class="nav-right">
-        <ul class="custom-nav">
-          <li class="nav-item d-none d-sm-block">
-            <select class="nice-select language-select" aria-label="Default select example">
-              <option selected>English</option>
-              <option value="2">Bengali</option>
-              <option value="3">Arabic</option>
-            </select>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link login-btn" href="login.html">
-              <span class="d-none d-sm-block">login</span>
-              <span class="d-sm-none"><i class="fa-regular fa-right-to-bracket"></i></span>
-            </a>
-          </li>
-          <!-- <li class="nav-item">
+            <li class="nav-item">
+              <a class="nav-link login-btn" href="login.html">
+                <span class="d-none d-sm-block">login</span>
+                <span class="d-sm-none"
+                  ><i class="fa-regular fa-right-to-bracket"></i
+                ></span>
+              </a>
+            </li>
+            <!-- <li class="nav-item">
             <div class="user-profile-box">
               <div class="img-box">
                 <img src="./assets/img/person/1.jpg" class="img-fluid" alt="Exchanger" />
@@ -110,224 +145,2237 @@
               </ul>
             </div>
           </li> -->
-          <li class="nav-item d-none d-sm-block">
-            <a class="nav-link cmn-btn2" href="register.html">
-              <div class="btn-wrapper">
-                <div class="main-text btn-single">
-                  Register
+            <li class="nav-item d-none d-sm-block">
+              <a class="nav-link cmn-btn2" href="register.html">
+                <div class="btn-wrapper">
+                  <div class="main-text btn-single">Register</div>
+                  <div class="hover-text btn-single">Register</div>
                 </div>
-                <div class="hover-text btn-single">
-                  Register
-                </div>
-              </div>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a id="toggle-btn" class="nav-link d-flex toggle-btn">
-              <i class="fa-regular fa-moon" id="moon"></i>
-              <i class="fa-regular fa-sun-bright" id="sun"></i>
-            </a>
-          </li>
-        </ul>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a id="toggle-btn" class="nav-link d-flex toggle-btn">
+                <i class="fa-regular fa-moon" id="moon"></i>
+                <i class="fa-regular fa-sun-bright" id="sun"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
-  <!-- Nav section end -->
+    </nav>
+    <!-- Nav section end -->
 
-  <!-- Bottom Mobile Tab nav section start -->
-  <ul class="nav bottom-nav fixed-bottom d-lg-none">
-    <li class="nav-item">
-      <a class="nav-link" data-bs-toggle="offcanvas" role="button" aria-controls="offcanvasNavbar"
-        href="#offcanvasNavbar" aria-current="page"><i class="fa-light fa-list"></i></a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#"><i class="fa-light fa-planet-ringed"></i></a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link active"><i class="fa-regular fa-house"></i></a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#"><i class="fa-light fa-address-book"></i></a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#"><i class="fa-light fa-user"></i></a>
-    </li>
-  </ul>
-  <!-- Bottom Mobile Tab nav section end -->
+    <!-- Bottom Mobile Tab nav section start -->
+    <ul class="nav bottom-nav fixed-bottom d-lg-none">
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          data-bs-toggle="offcanvas"
+          role="button"
+          aria-controls="offcanvasNavbar"
+          href="#offcanvasNavbar"
+          aria-current="page"
+          ><i class="fa-light fa-list"></i
+        ></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"
+          ><i class="fa-light fa-planet-ringed"></i
+        ></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active"><i class="fa-regular fa-house"></i></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"
+          ><i class="fa-light fa-address-book"></i
+        ></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><i class="fa-light fa-user"></i></a>
+      </li>
+    </ul>
+    <!-- Bottom Mobile Tab nav section end -->
 
-  <!-- Faq section start -->
-  <section class="faq-section">
-    <div class="container">
-
-      <div class="row g-4 g-xl-5">
-        <div class="col-lg-5">
-          <div class="left-side">
-            <div class="section-subtitle">FAQs</div>
-            <h3>Got Questions? We’ve Got <br> Answers.</h3>
+    <!-- Faq section start -->
+    <section class="faq-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Antares CapitalX FAQ</h2>
+          <p>
+            Welcome to the Antares CapitalX Frequently Asked Questions (FAQ)
+            section. This comprehensive guide addresses a wide range of
+            inquiries about our platform, organized into logical sections for
+            clarity. We’ve included detailed answers on logins, staking,
+            exchanges, network selection, 2FA, KYC, and more, using examples
+            from our homepage’s latest trades table (e.g., BTC to XRP swaps) and
+            policies. Our platform prioritizes secure, AML-compliant
+            cryptocurrency transactions, featuring instant swaps, staking, and
+            live support. If your question isn’t answered, contact our 24/7
+            support via the live chat widget or email
+            <a href="" class="link highlight"> support@antarescapitalx.com.</a>
+          </p>
+        </div>
+        <div class="faq-swiper-box">
+          <div class="swiper-button-prev">
+            <i class="fa-regular fa-arrow-left-long"></i>
+          </div>
+          <div class="swiper faq-swiper">
+            <div class="swiper-wrapper" role="tablist">
+              <div class="swiper-slide">
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link active"
+                    id="General-Questions-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#General-Questions"
+                    type="button"
+                    role="tab"
+                    aria-controls="General-Questions"
+                    aria-selected="false"
+                  >
+                    General Questions
+                  </button>
+                </li>
+              </div>
+              <div class="swiper-slide">
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="KYC-AML-Questions-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#KYC-AML-Questions"
+                    type="button"
+                    role="tab"
+                    aria-controls="KYC-AML-Questions"
+                    aria-selected="false"
+                  >
+                    KYC-AML Questions
+                  </button>
+                </li>
+              </div>
+              <div class="swiper-slide">
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="Purchasing-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#Purchasing"
+                    type="button"
+                    role="tab"
+                    aria-controls="Purchasing"
+                    aria-selected="false"
+                  >
+                    Services & Products
+                  </button>
+                </li>
+              </div>
+              <div class="swiper-slide">
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="Refunds-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#Refunds"
+                    type="button"
+                    role="tab"
+                    aria-controls="Refunds"
+                    aria-selected="false"
+                  >
+                    Refunds
+                  </button>
+                </li>
+              </div>
+              <div class="swiper-slide">
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="Customization-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#Customization"
+                    type="button"
+                    role="tab"
+                    aria-controls="Customization"
+                    aria-selected="false"
+                  >
+                    Customization
+                  </button>
+                </li>
+              </div>
+              <div class="swiper-slide">
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="Licensing-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#Licensing"
+                    type="button"
+                    role="tab"
+                    aria-controls="Licensing"
+                    aria-selected="false"
+                  >
+                    Licensing
+                  </button>
+                </li>
+              </div>
+              <div class="swiper-slide">
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="Compatibility-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#Compatibility"
+                    type="button"
+                    role="tab"
+                    aria-controls="Compatibility"
+                    aria-selected="false"
+                  >
+                    Compatibility
+                  </button>
+                </li>
+              </div>
+              <div class="swiper-slide">
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="Security-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#Security"
+                    type="button"
+                    role="tab"
+                    aria-controls="Security"
+                    aria-selected="false"
+                  >
+                    Security
+                  </button>
+                </li>
+              </div>
+              <div class="swiper-slide">
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="Updates-Upgrades-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#Updates-Upgrades"
+                    type="button"
+                    role="tab"
+                    aria-controls="Updates-Upgrades"
+                    aria-selected="false"
+                  >
+                    Updates & Upgrades
+                  </button>
+                </li>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next">
+            <i class="fa-regular fa-arrow-right-long"></i>
           </div>
         </div>
-        <div class="col-lg-7">
-          <div class="faq-content">
-            <div class="accordion" id="accordionExample3">
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                    aria-expanded="true" aria-controls="collapseOne">
-                    How do I book a service?
-                  </button>
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample3">
-                  <div class="accordion-body">
-                    <p class="mb-0">
-                      Simply sign up, browse or search for the service you need, choose a provider, set your preferred
-                      time, and confirm the booking. It’s quick and secure.
-                    </p>
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="tab-content" id="pills-tabContent">
+              <div
+                class="tab-pane fade show active"
+                id="General-Questions"
+                role="tabpanel"
+                aria-labelledby="General-Questions-tab"
+                tabindex="0"
+              >
+                <div class="accordion" id="accordionExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne"
+                        aria-expanded="true"
+                        aria-controls="collapseOne"
+                      >
+                        <div class="d-flex gap-3">
+                          <div class="number">01.</div>
+                          <div class="text">
+                            What is the difference between UI and UX design?
+                          </div>
+                        </div>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseOne"
+                      class="accordion-collapse collapse show"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        UI (User Interface) design focuses on the visual
+                        elements and interactive features of a product, like
+                        colors, typography, and layout. UX (User Experience)
+                        design, on the other hand, is about the overall feel and
+                        experience of using a product, encompassing the design,
+                        usability, and functionality. Both are crucial for
+                        creating products that are not only visually appealing
+                        but also functional and user-friendly.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo"
+                        aria-expanded="false"
+                        aria-controls="collapseTwo"
+                      >
+                        <div class="d-flex gap-3">
+                          <div class="number">02.</div>
+                          <div class="text">
+                            Do I need user testing in the UX design process?
+                          </div>
+                        </div>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseTwo"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        UI (User Interface) design focuses on the visual
+                        elements and interactive features of a product, like
+                        colors, typography, and layout. UX (User Experience)
+                        design, on the other hand, is about the overall feel and
+                        experience of using a product, encompassing the design,
+                        usability, and functionality. Both are crucial for
+                        creating products that are not only visually appealing
+                        but also functional and user-friendly.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree"
+                        aria-expanded="false"
+                        aria-controls="collapseThree"
+                      >
+                        <div class="d-flex gap-3">
+                          <div class="number">03.</div>
+                          <div class="text">
+                            Do you make information architecture in the UX
+                            design process?
+                          </div>
+                        </div>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseThree"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        UI (User Interface) design focuses on the visual
+                        elements and interactive features of a product, like
+                        colors, typography, and layout. UX (User Experience)
+                        design, on the other hand, is about the overall feel and
+                        experience of using a product, encompassing the design,
+                        usability, and functionality. Both are crucial for
+                        creating products that are not only visually appealing
+                        but also functional and user-friendly.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseFour"
+                        aria-expanded="false"
+                        aria-controls="collapseFour"
+                      >
+                        <div class="d-flex gap-3">
+                          <div class="number">04.</div>
+                          <div class="text">
+                            Can you design a responsive landing page UX?
+                          </div>
+                        </div>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseFour"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        UI (User Interface) design focuses on the visual
+                        elements and interactive features of a product, like
+                        colors, typography, and layout. UX (User Experience)
+                        design, on the other hand, is about the overall feel and
+                        experience of using a product, encompassing the design,
+                        usability, and functionality. Both are crucial for
+                        creating products that are not only visually appealing
+                        but also functional and user-friendly.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseFive"
+                        aria-expanded="false"
+                        aria-controls="collapseFive"
+                      >
+                        <div class="d-flex gap-3">
+                          <div class="number">05.</div>
+                          <div class="text">
+                            How long do you take for a UI/UX project?
+                          </div>
+                        </div>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseFive"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        UI (User Interface) design focuses on the visual
+                        elements and interactive features of a product, like
+                        colors, typography, and layout. UX (User Experience)
+                        design, on the other hand, is about the overall feel and
+                        experience of using a product, encompassing the design,
+                        usability, and functionality. Both are crucial for
+                        creating products that are not only visually appealing
+                        but also functional and user-friendly.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseSix"
+                        aria-expanded="false"
+                        aria-controls="collapseSix"
+                      >
+                        <div class="d-flex gap-3">
+                          <div class="number">06.</div>
+                          <div class="text">
+                            Do you offer only UI service for a mobile app?
+                          </div>
+                        </div>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseSix"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        UI (User Interface) design focuses on the visual
+                        elements and interactive features of a product, like
+                        colors, typography, and layout. UX (User Experience)
+                        design, on the other hand, is about the overall feel and
+                        experience of using a product, encompassing the design,
+                        usability, and functionality. Both are crucial for
+                        creating products that are not only visually appealing
+                        but also functional and user-friendly.
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                    Are the service providers verified?
-                  </button>
-                </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample3">
-                  <div class="accordion-body">
-                    <p class="mb-0">
-                      Yes, we thoroughly verify all professionals through ID checks, experience validation, and customer
-                      reviews to ensure safety and quality.
-                    </p>
+
+              <div
+                class="tab-pane fade"
+                id="KYC-AML-Questions"
+                role="tabpanel"
+                aria-labelledby="KYC-AML-Questions-tab"
+                tabindex="0"
+              >
+                <div class="accordion" id="accordionExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne"
+                        aria-expanded="true"
+                        aria-controls="collapseOne"
+                      >
+                        <div class="d-flex gap-3">
+                          <div class="number">01.</div>
+                          <div class="text">
+                            What is the difference between UI and UX design?
+                          </div>
+                        </div>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseOne"
+                      class="accordion-collapse collapse show"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        UI (User Interface) design focuses on the visual
+                        elements and interactive features of a product, like
+                        colors, typography, and layout. UX (User Experience)
+                        design, on the other hand, is about the overall feel and
+                        experience of using a product, encompassing the design,
+                        usability, and functionality. Both are crucial for
+                        creating products that are not only visually appealing
+                        but also functional and user-friendly.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo"
+                        aria-expanded="false"
+                        aria-controls="collapseTwo"
+                      >
+                        <div class="d-flex gap-3">
+                          <div class="number">02.</div>
+                          <div class="text">
+                            Do I need user testing in the UX design process?
+                          </div>
+                        </div>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseTwo"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        UI (User Interface) design focuses on the visual
+                        elements and interactive features of a product, like
+                        colors, typography, and layout. UX (User Experience)
+                        design, on the other hand, is about the overall feel and
+                        experience of using a product, encompassing the design,
+                        usability, and functionality. Both are crucial for
+                        creating products that are not only visually appealing
+                        but also functional and user-friendly.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree"
+                        aria-expanded="false"
+                        aria-controls="collapseThree"
+                      >
+                        <div class="d-flex gap-3">
+                          <div class="number">03.</div>
+                          <div class="text">
+                            Do you make information architecture in the UX
+                            design process?
+                          </div>
+                        </div>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseThree"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        UI (User Interface) design focuses on the visual
+                        elements and interactive features of a product, like
+                        colors, typography, and layout. UX (User Experience)
+                        design, on the other hand, is about the overall feel and
+                        experience of using a product, encompassing the design,
+                        usability, and functionality. Both are crucial for
+                        creating products that are not only visually appealing
+                        but also functional and user-friendly.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseFour"
+                        aria-expanded="false"
+                        aria-controls="collapseFour"
+                      >
+                        <div class="d-flex gap-3">
+                          <div class="number">04.</div>
+                          <div class="text">
+                            Can you design a responsive landing page UX?
+                          </div>
+                        </div>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseFour"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        UI (User Interface) design focuses on the visual
+                        elements and interactive features of a product, like
+                        colors, typography, and layout. UX (User Experience)
+                        design, on the other hand, is about the overall feel and
+                        experience of using a product, encompassing the design,
+                        usability, and functionality. Both are crucial for
+                        creating products that are not only visually appealing
+                        but also functional and user-friendly.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseFive"
+                        aria-expanded="false"
+                        aria-controls="collapseFive"
+                      >
+                        <div class="d-flex gap-3">
+                          <div class="number">05.</div>
+                          <div class="text">
+                            How long do you take for a UI/UX project?
+                          </div>
+                        </div>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseFive"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        UI (User Interface) design focuses on the visual
+                        elements and interactive features of a product, like
+                        colors, typography, and layout. UX (User Experience)
+                        design, on the other hand, is about the overall feel and
+                        experience of using a product, encompassing the design,
+                        usability, and functionality. Both are crucial for
+                        creating products that are not only visually appealing
+                        but also functional and user-friendly.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseSix"
+                        aria-expanded="false"
+                        aria-controls="collapseSix"
+                      >
+                        <div class="d-flex gap-3">
+                          <div class="number">06.</div>
+                          <div class="text">
+                            Do you offer only UI service for a mobile app?
+                          </div>
+                        </div>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseSix"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        UI (User Interface) design focuses on the visual
+                        elements and interactive features of a product, like
+                        colors, typography, and layout. UX (User Experience)
+                        design, on the other hand, is about the overall feel and
+                        experience of using a product, encompassing the design,
+                        usability, and functionality. Both are crucial for
+                        creating products that are not only visually appealing
+                        but also functional and user-friendly.
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-                    How do I pay for a service?
-                  </button>
-                </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample3">
-                  <div class="accordion-body">
-                    <p class="mb-0">
-                      Payments are made securely through our platform using credit/debit cards, digital wallets, or
-                      other available methods. Providers receive payment only after service completion.
-                    </p>
+
+              <div
+                class="tab-pane fade"
+                id="Purchasing"
+                role="tabpanel"
+                aria-labelledby="Purchasing-tab"
+                tabindex="0"
+              >
+                <div class="accordion" id="accordionExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne"
+                        aria-expanded="true"
+                        aria-controls="collapseOne"
+                      >
+                        <div class="d-flex gap-3">
+                          <div class="number">01.</div>
+                          <div class="text">
+                            What is the difference between UI and UX design?
+                          </div>
+                        </div>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseOne"
+                      class="accordion-collapse collapse show"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        UI (User Interface) design focuses on the visual
+                        elements and interactive features of a product, like
+                        colors, typography, and layout. UX (User Experience)
+                        design, on the other hand, is about the overall feel and
+                        experience of using a product, encompassing the design,
+                        usability, and functionality. Both are crucial for
+                        creating products that are not only visually appealing
+                        but also functional and user-friendly.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo"
+                        aria-expanded="false"
+                        aria-controls="collapseTwo"
+                      >
+                        <div class="d-flex gap-3">
+                          <div class="number">02.</div>
+                          <div class="text">
+                            Do I need user testing in the UX design process?
+                          </div>
+                        </div>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseTwo"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        UI (User Interface) design focuses on the visual
+                        elements and interactive features of a product, like
+                        colors, typography, and layout. UX (User Experience)
+                        design, on the other hand, is about the overall feel and
+                        experience of using a product, encompassing the design,
+                        usability, and functionality. Both are crucial for
+                        creating products that are not only visually appealing
+                        but also functional and user-friendly.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree"
+                        aria-expanded="false"
+                        aria-controls="collapseThree"
+                      >
+                        <div class="d-flex gap-3">
+                          <div class="number">03.</div>
+                          <div class="text">
+                            Do you make information architecture in the UX
+                            design process?
+                          </div>
+                        </div>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseThree"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        UI (User Interface) design focuses on the visual
+                        elements and interactive features of a product, like
+                        colors, typography, and layout. UX (User Experience)
+                        design, on the other hand, is about the overall feel and
+                        experience of using a product, encompassing the design,
+                        usability, and functionality. Both are crucial for
+                        creating products that are not only visually appealing
+                        but also functional and user-friendly.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseFour"
+                        aria-expanded="false"
+                        aria-controls="collapseFour"
+                      >
+                        <div class="d-flex gap-3">
+                          <div class="number">04.</div>
+                          <div class="text">
+                            Can you design a responsive landing page UX?
+                          </div>
+                        </div>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseFour"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        UI (User Interface) design focuses on the visual
+                        elements and interactive features of a product, like
+                        colors, typography, and layout. UX (User Experience)
+                        design, on the other hand, is about the overall feel and
+                        experience of using a product, encompassing the design,
+                        usability, and functionality. Both are crucial for
+                        creating products that are not only visually appealing
+                        but also functional and user-friendly.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseFive"
+                        aria-expanded="false"
+                        aria-controls="collapseFive"
+                      >
+                        <div class="d-flex gap-3">
+                          <div class="number">05.</div>
+                          <div class="text">
+                            How long do you take for a UI/UX project?
+                          </div>
+                        </div>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseFive"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        UI (User Interface) design focuses on the visual
+                        elements and interactive features of a product, like
+                        colors, typography, and layout. UX (User Experience)
+                        design, on the other hand, is about the overall feel and
+                        experience of using a product, encompassing the design,
+                        usability, and functionality. Both are crucial for
+                        creating products that are not only visually appealing
+                        but also functional and user-friendly.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseSix"
+                        aria-expanded="false"
+                        aria-controls="collapseSix"
+                      >
+                        <div class="d-flex gap-3">
+                          <div class="number">06.</div>
+                          <div class="text">
+                            Do you offer only UI service for a mobile app?
+                          </div>
+                        </div>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseSix"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        UI (User Interface) design focuses on the visual
+                        elements and interactive features of a product, like
+                        colors, typography, and layout. UX (User Experience)
+                        design, on the other hand, is about the overall feel and
+                        experience of using a product, encompassing the design,
+                        usability, and functionality. Both are crucial for
+                        creating products that are not only visually appealing
+                        but also functional and user-friendly.
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-                    What happens if I’m not satisfied with the service?
-                  </button>
-                </h2>
-                <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample3">
-                  <div class="accordion-body">
-                    <p class="mb-0">
-                      If you're unhappy with a service, you can contact our support team within 24 hours of the job. We
-                      offer dispute resolution and, if necessary, refunds or reassignments.
-                    </p>
+
+              <div
+                class="tab-pane fade"
+                id="Refunds"
+                role="tabpanel"
+                aria-labelledby="Refunds-tab"
+                tabindex="0"
+              >
+                <div class="accordion" id="accordionExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne"
+                        aria-expanded="true"
+                        aria-controls="collapseOne"
+                      >
+                        <div class="d-flex gap-3">
+                          <div class="number">01.</div>
+                          <div class="text">
+                            What is the difference between UI and UX design?
+                          </div>
+                        </div>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseOne"
+                      class="accordion-collapse collapse show"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        UI (User Interface) design focuses on the visual
+                        elements and interactive features of a product, like
+                        colors, typography, and layout. UX (User Experience)
+                        design, on the other hand, is about the overall feel and
+                        experience of using a product, encompassing the design,
+                        usability, and functionality. Both are crucial for
+                        creating products that are not only visually appealing
+                        but also functional and user-friendly.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo"
+                        aria-expanded="false"
+                        aria-controls="collapseTwo"
+                      >
+                        <div class="d-flex gap-3">
+                          <div class="number">02.</div>
+                          <div class="text">
+                            Do I need user testing in the UX design process?
+                          </div>
+                        </div>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseTwo"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        UI (User Interface) design focuses on the visual
+                        elements and interactive features of a product, like
+                        colors, typography, and layout. UX (User Experience)
+                        design, on the other hand, is about the overall feel and
+                        experience of using a product, encompassing the design,
+                        usability, and functionality. Both are crucial for
+                        creating products that are not only visually appealing
+                        but also functional and user-friendly.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree"
+                        aria-expanded="false"
+                        aria-controls="collapseThree"
+                      >
+                        <div class="d-flex gap-3">
+                          <div class="number">03.</div>
+                          <div class="text">
+                            Do you make information architecture in the UX
+                            design process?
+                          </div>
+                        </div>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseThree"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        UI (User Interface) design focuses on the visual
+                        elements and interactive features of a product, like
+                        colors, typography, and layout. UX (User Experience)
+                        design, on the other hand, is about the overall feel and
+                        experience of using a product, encompassing the design,
+                        usability, and functionality. Both are crucial for
+                        creating products that are not only visually appealing
+                        but also functional and user-friendly.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseFour"
+                        aria-expanded="false"
+                        aria-controls="collapseFour"
+                      >
+                        <div class="d-flex gap-3">
+                          <div class="number">04.</div>
+                          <div class="text">
+                            Can you design a responsive landing page UX?
+                          </div>
+                        </div>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseFour"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        UI (User Interface) design focuses on the visual
+                        elements and interactive features of a product, like
+                        colors, typography, and layout. UX (User Experience)
+                        design, on the other hand, is about the overall feel and
+                        experience of using a product, encompassing the design,
+                        usability, and functionality. Both are crucial for
+                        creating products that are not only visually appealing
+                        but also functional and user-friendly.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseFive"
+                        aria-expanded="false"
+                        aria-controls="collapseFive"
+                      >
+                        <div class="d-flex gap-3">
+                          <div class="number">05.</div>
+                          <div class="text">
+                            How long do you take for a UI/UX project?
+                          </div>
+                        </div>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseFive"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        UI (User Interface) design focuses on the visual
+                        elements and interactive features of a product, like
+                        colors, typography, and layout. UX (User Experience)
+                        design, on the other hand, is about the overall feel and
+                        experience of using a product, encompassing the design,
+                        usability, and functionality. Both are crucial for
+                        creating products that are not only visually appealing
+                        but also functional and user-friendly.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseSix"
+                        aria-expanded="false"
+                        aria-controls="collapseSix"
+                      >
+                        <div class="d-flex gap-3">
+                          <div class="number">06.</div>
+                          <div class="text">
+                            Do you offer only UI service for a mobile app?
+                          </div>
+                        </div>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseSix"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        UI (User Interface) design focuses on the visual
+                        elements and interactive features of a product, like
+                        colors, typography, and layout. UX (User Experience)
+                        design, on the other hand, is about the overall feel and
+                        experience of using a product, encompassing the design,
+                        usability, and functionality. Both are crucial for
+                        creating products that are not only visually appealing
+                        but also functional and user-friendly.
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
-                    Can I cancel or reschedule a booking?
-                  </button>
-                </h2>
-                <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample3">
-                  <div class="accordion-body">
-                    <p class="mb-0">
-                      Yes, you can cancel or reschedule up to [X] hours before the service time. Check our cancellation
-                      policy for more details.
-                    </p>
+
+              <div
+                class="tab-pane fade"
+                id="Customization"
+                role="tabpanel"
+                aria-labelledby="Customization-tab"
+                tabindex="0"
+              >
+                <div class="accordion" id="accordionExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne"
+                        aria-expanded="true"
+                        aria-controls="collapseOne"
+                      >
+                        <div class="d-flex gap-3">
+                          <div class="number">01.</div>
+                          <div class="text">
+                            What is the difference between UI and UX design?
+                          </div>
+                        </div>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseOne"
+                      class="accordion-collapse collapse show"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        UI (User Interface) design focuses on the visual
+                        elements and interactive features of a product, like
+                        colors, typography, and layout. UX (User Experience)
+                        design, on the other hand, is about the overall feel and
+                        experience of using a product, encompassing the design,
+                        usability, and functionality. Both are crucial for
+                        creating products that are not only visually appealing
+                        but also functional and user-friendly.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo"
+                        aria-expanded="false"
+                        aria-controls="collapseTwo"
+                      >
+                        <div class="d-flex gap-3">
+                          <div class="number">02.</div>
+                          <div class="text">
+                            Do I need user testing in the UX design process?
+                          </div>
+                        </div>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseTwo"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        UI (User Interface) design focuses on the visual
+                        elements and interactive features of a product, like
+                        colors, typography, and layout. UX (User Experience)
+                        design, on the other hand, is about the overall feel and
+                        experience of using a product, encompassing the design,
+                        usability, and functionality. Both are crucial for
+                        creating products that are not only visually appealing
+                        but also functional and user-friendly.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree"
+                        aria-expanded="false"
+                        aria-controls="collapseThree"
+                      >
+                        <div class="d-flex gap-3">
+                          <div class="number">03.</div>
+                          <div class="text">
+                            Do you make information architecture in the UX
+                            design process?
+                          </div>
+                        </div>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseThree"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        UI (User Interface) design focuses on the visual
+                        elements and interactive features of a product, like
+                        colors, typography, and layout. UX (User Experience)
+                        design, on the other hand, is about the overall feel and
+                        experience of using a product, encompassing the design,
+                        usability, and functionality. Both are crucial for
+                        creating products that are not only visually appealing
+                        but also functional and user-friendly.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseFour"
+                        aria-expanded="false"
+                        aria-controls="collapseFour"
+                      >
+                        <div class="d-flex gap-3">
+                          <div class="number">04.</div>
+                          <div class="text">
+                            Can you design a responsive landing page UX?
+                          </div>
+                        </div>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseFour"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        UI (User Interface) design focuses on the visual
+                        elements and interactive features of a product, like
+                        colors, typography, and layout. UX (User Experience)
+                        design, on the other hand, is about the overall feel and
+                        experience of using a product, encompassing the design,
+                        usability, and functionality. Both are crucial for
+                        creating products that are not only visually appealing
+                        but also functional and user-friendly.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseFive"
+                        aria-expanded="false"
+                        aria-controls="collapseFive"
+                      >
+                        <div class="d-flex gap-3">
+                          <div class="number">05.</div>
+                          <div class="text">
+                            How long do you take for a UI/UX project?
+                          </div>
+                        </div>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseFive"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        UI (User Interface) design focuses on the visual
+                        elements and interactive features of a product, like
+                        colors, typography, and layout. UX (User Experience)
+                        design, on the other hand, is about the overall feel and
+                        experience of using a product, encompassing the design,
+                        usability, and functionality. Both are crucial for
+                        creating products that are not only visually appealing
+                        but also functional and user-friendly.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseSix"
+                        aria-expanded="false"
+                        aria-controls="collapseSix"
+                      >
+                        <div class="d-flex gap-3">
+                          <div class="number">06.</div>
+                          <div class="text">
+                            Do you offer only UI service for a mobile app?
+                          </div>
+                        </div>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseSix"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        UI (User Interface) design focuses on the visual
+                        elements and interactive features of a product, like
+                        colors, typography, and layout. UX (User Experience)
+                        design, on the other hand, is about the overall feel and
+                        experience of using a product, encompassing the design,
+                        usability, and functionality. Both are crucial for
+                        creating products that are not only visually appealing
+                        but also functional and user-friendly.
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
-                    How can I join as a service provider?
-                  </button>
-                </h2>
-                <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample3">
-                  <div class="accordion-body">
-                    <p class="mb-0">
-                      Click on “Become a Provider,” complete the application form, upload the required documents, and
-                      once approved, you can start receiving job requests.
-                    </p>
+
+              <div
+                class="tab-pane fade"
+                id="Licensing"
+                role="tabpanel"
+                aria-labelledby="Licensing-tab"
+                tabindex="0"
+              >
+                <div class="accordion" id="accordionExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne"
+                        aria-expanded="true"
+                        aria-controls="collapseOne"
+                      >
+                        <div class="d-flex gap-3">
+                          <div class="number">01.</div>
+                          <div class="text">
+                            What is the difference between UI and UX design?
+                          </div>
+                        </div>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseOne"
+                      class="accordion-collapse collapse show"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        UI (User Interface) design focuses on the visual
+                        elements and interactive features of a product, like
+                        colors, typography, and layout. UX (User Experience)
+                        design, on the other hand, is about the overall feel and
+                        experience of using a product, encompassing the design,
+                        usability, and functionality. Both are crucial for
+                        creating products that are not only visually appealing
+                        but also functional and user-friendly.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo"
+                        aria-expanded="false"
+                        aria-controls="collapseTwo"
+                      >
+                        <div class="d-flex gap-3">
+                          <div class="number">02.</div>
+                          <div class="text">
+                            Do I need user testing in the UX design process?
+                          </div>
+                        </div>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseTwo"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        UI (User Interface) design focuses on the visual
+                        elements and interactive features of a product, like
+                        colors, typography, and layout. UX (User Experience)
+                        design, on the other hand, is about the overall feel and
+                        experience of using a product, encompassing the design,
+                        usability, and functionality. Both are crucial for
+                        creating products that are not only visually appealing
+                        but also functional and user-friendly.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree"
+                        aria-expanded="false"
+                        aria-controls="collapseThree"
+                      >
+                        <div class="d-flex gap-3">
+                          <div class="number">03.</div>
+                          <div class="text">
+                            Do you make information architecture in the UX
+                            design process?
+                          </div>
+                        </div>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseThree"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        UI (User Interface) design focuses on the visual
+                        elements and interactive features of a product, like
+                        colors, typography, and layout. UX (User Experience)
+                        design, on the other hand, is about the overall feel and
+                        experience of using a product, encompassing the design,
+                        usability, and functionality. Both are crucial for
+                        creating products that are not only visually appealing
+                        but also functional and user-friendly.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseFour"
+                        aria-expanded="false"
+                        aria-controls="collapseFour"
+                      >
+                        <div class="d-flex gap-3">
+                          <div class="number">04.</div>
+                          <div class="text">
+                            Can you design a responsive landing page UX?
+                          </div>
+                        </div>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseFour"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        UI (User Interface) design focuses on the visual
+                        elements and interactive features of a product, like
+                        colors, typography, and layout. UX (User Experience)
+                        design, on the other hand, is about the overall feel and
+                        experience of using a product, encompassing the design,
+                        usability, and functionality. Both are crucial for
+                        creating products that are not only visually appealing
+                        but also functional and user-friendly.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseFive"
+                        aria-expanded="false"
+                        aria-controls="collapseFive"
+                      >
+                        <div class="d-flex gap-3">
+                          <div class="number">05.</div>
+                          <div class="text">
+                            How long do you take for a UI/UX project?
+                          </div>
+                        </div>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseFive"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        UI (User Interface) design focuses on the visual
+                        elements and interactive features of a product, like
+                        colors, typography, and layout. UX (User Experience)
+                        design, on the other hand, is about the overall feel and
+                        experience of using a product, encompassing the design,
+                        usability, and functionality. Both are crucial for
+                        creating products that are not only visually appealing
+                        but also functional and user-friendly.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseSix"
+                        aria-expanded="false"
+                        aria-controls="collapseSix"
+                      >
+                        <div class="d-flex gap-3">
+                          <div class="number">06.</div>
+                          <div class="text">
+                            Do you offer only UI service for a mobile app?
+                          </div>
+                        </div>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseSix"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        UI (User Interface) design focuses on the visual
+                        elements and interactive features of a product, like
+                        colors, typography, and layout. UX (User Experience)
+                        design, on the other hand, is about the overall feel and
+                        experience of using a product, encompassing the design,
+                        usability, and functionality. Both are crucial for
+                        creating products that are not only visually appealing
+                        but also functional and user-friendly.
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
-                    Do I have to pay any charge if I don’t take any service?
-                  </button>
-                </h2>
-                <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionExample3">
-                  <div class="accordion-body">
-                    <p class="mb-0">
-                      If you don’t avail any services for your AC after our Service Provider send a technician at your
-                      doorstep then you only have to pay the visiting charge which is BDT 200.
-                    </p>
+
+              <div
+                class="tab-pane fade"
+                id="Compatibility"
+                role="tabpanel"
+                aria-labelledby="Compatibility-tab"
+                tabindex="0"
+              >
+                <div class="accordion" id="accordionExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne"
+                        aria-expanded="true"
+                        aria-controls="collapseOne"
+                      >
+                        <div class="d-flex gap-3">
+                          <div class="number">01.</div>
+                          <div class="text">
+                            What is the difference between UI and UX design?
+                          </div>
+                        </div>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseOne"
+                      class="accordion-collapse collapse show"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        UI (User Interface) design focuses on the visual
+                        elements and interactive features of a product, like
+                        colors, typography, and layout. UX (User Experience)
+                        design, on the other hand, is about the overall feel and
+                        experience of using a product, encompassing the design,
+                        usability, and functionality. Both are crucial for
+                        creating products that are not only visually appealing
+                        but also functional and user-friendly.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo"
+                        aria-expanded="false"
+                        aria-controls="collapseTwo"
+                      >
+                        <div class="d-flex gap-3">
+                          <div class="number">02.</div>
+                          <div class="text">
+                            Do I need user testing in the UX design process?
+                          </div>
+                        </div>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseTwo"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        UI (User Interface) design focuses on the visual
+                        elements and interactive features of a product, like
+                        colors, typography, and layout. UX (User Experience)
+                        design, on the other hand, is about the overall feel and
+                        experience of using a product, encompassing the design,
+                        usability, and functionality. Both are crucial for
+                        creating products that are not only visually appealing
+                        but also functional and user-friendly.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree"
+                        aria-expanded="false"
+                        aria-controls="collapseThree"
+                      >
+                        <div class="d-flex gap-3">
+                          <div class="number">03.</div>
+                          <div class="text">
+                            Do you make information architecture in the UX
+                            design process?
+                          </div>
+                        </div>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseThree"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        UI (User Interface) design focuses on the visual
+                        elements and interactive features of a product, like
+                        colors, typography, and layout. UX (User Experience)
+                        design, on the other hand, is about the overall feel and
+                        experience of using a product, encompassing the design,
+                        usability, and functionality. Both are crucial for
+                        creating products that are not only visually appealing
+                        but also functional and user-friendly.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseFour"
+                        aria-expanded="false"
+                        aria-controls="collapseFour"
+                      >
+                        <div class="d-flex gap-3">
+                          <div class="number">04.</div>
+                          <div class="text">
+                            Can you design a responsive landing page UX?
+                          </div>
+                        </div>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseFour"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        UI (User Interface) design focuses on the visual
+                        elements and interactive features of a product, like
+                        colors, typography, and layout. UX (User Experience)
+                        design, on the other hand, is about the overall feel and
+                        experience of using a product, encompassing the design,
+                        usability, and functionality. Both are crucial for
+                        creating products that are not only visually appealing
+                        but also functional and user-friendly.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseFive"
+                        aria-expanded="false"
+                        aria-controls="collapseFive"
+                      >
+                        <div class="d-flex gap-3">
+                          <div class="number">05.</div>
+                          <div class="text">
+                            How long do you take for a UI/UX project?
+                          </div>
+                        </div>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseFive"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        UI (User Interface) design focuses on the visual
+                        elements and interactive features of a product, like
+                        colors, typography, and layout. UX (User Experience)
+                        design, on the other hand, is about the overall feel and
+                        experience of using a product, encompassing the design,
+                        usability, and functionality. Both are crucial for
+                        creating products that are not only visually appealing
+                        but also functional and user-friendly.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseSix"
+                        aria-expanded="false"
+                        aria-controls="collapseSix"
+                      >
+                        <div class="d-flex gap-3">
+                          <div class="number">06.</div>
+                          <div class="text">
+                            Do you offer only UI service for a mobile app?
+                          </div>
+                        </div>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseSix"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        UI (User Interface) design focuses on the visual
+                        elements and interactive features of a product, like
+                        colors, typography, and layout. UX (User Experience)
+                        design, on the other hand, is about the overall feel and
+                        experience of using a product, encompassing the design,
+                        usability, and functionality. Both are crucial for
+                        creating products that are not only visually appealing
+                        but also functional and user-friendly.
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseEight" aria-expanded="true" aria-controls="collapseEight">
-                    Do I have to pay advance money before availing your service?
-                  </button>
-                </h2>
-                <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionExample3">
-                  <div class="accordion-body">
-                    <p class="mb-0">
-                      Of course not! After service completion you will receive a text on your mobile from Sheba.xyz then
-                      you have to pay through Online or Cash on Delivery.
-                    </p>
+              <div
+                class="tab-pane fade"
+                id="Security"
+                role="tabpanel"
+                aria-labelledby="Security-tab"
+                tabindex="0"
+              >
+                <div class="accordion" id="accordionExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne"
+                        aria-expanded="true"
+                        aria-controls="collapseOne"
+                      >
+                        <div class="d-flex gap-3">
+                          <div class="number">01.</div>
+                          <div class="text">
+                            What is the difference between UI and UX design?
+                          </div>
+                        </div>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseOne"
+                      class="accordion-collapse collapse show"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        UI (User Interface) design focuses on the visual
+                        elements and interactive features of a product, like
+                        colors, typography, and layout. UX (User Experience)
+                        design, on the other hand, is about the overall feel and
+                        experience of using a product, encompassing the design,
+                        usability, and functionality. Both are crucial for
+                        creating products that are not only visually appealing
+                        but also functional and user-friendly.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo"
+                        aria-expanded="false"
+                        aria-controls="collapseTwo"
+                      >
+                        <div class="d-flex gap-3">
+                          <div class="number">02.</div>
+                          <div class="text">
+                            Do I need user testing in the UX design process?
+                          </div>
+                        </div>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseTwo"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        UI (User Interface) design focuses on the visual
+                        elements and interactive features of a product, like
+                        colors, typography, and layout. UX (User Experience)
+                        design, on the other hand, is about the overall feel and
+                        experience of using a product, encompassing the design,
+                        usability, and functionality. Both are crucial for
+                        creating products that are not only visually appealing
+                        but also functional and user-friendly.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree"
+                        aria-expanded="false"
+                        aria-controls="collapseThree"
+                      >
+                        <div class="d-flex gap-3">
+                          <div class="number">03.</div>
+                          <div class="text">
+                            Do you make information architecture in the UX
+                            design process?
+                          </div>
+                        </div>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseThree"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        UI (User Interface) design focuses on the visual
+                        elements and interactive features of a product, like
+                        colors, typography, and layout. UX (User Experience)
+                        design, on the other hand, is about the overall feel and
+                        experience of using a product, encompassing the design,
+                        usability, and functionality. Both are crucial for
+                        creating products that are not only visually appealing
+                        but also functional and user-friendly.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseFour"
+                        aria-expanded="false"
+                        aria-controls="collapseFour"
+                      >
+                        <div class="d-flex gap-3">
+                          <div class="number">04.</div>
+                          <div class="text">
+                            Can you design a responsive landing page UX?
+                          </div>
+                        </div>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseFour"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        UI (User Interface) design focuses on the visual
+                        elements and interactive features of a product, like
+                        colors, typography, and layout. UX (User Experience)
+                        design, on the other hand, is about the overall feel and
+                        experience of using a product, encompassing the design,
+                        usability, and functionality. Both are crucial for
+                        creating products that are not only visually appealing
+                        but also functional and user-friendly.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseFive"
+                        aria-expanded="false"
+                        aria-controls="collapseFive"
+                      >
+                        <div class="d-flex gap-3">
+                          <div class="number">05.</div>
+                          <div class="text">
+                            How long do you take for a UI/UX project?
+                          </div>
+                        </div>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseFive"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        UI (User Interface) design focuses on the visual
+                        elements and interactive features of a product, like
+                        colors, typography, and layout. UX (User Experience)
+                        design, on the other hand, is about the overall feel and
+                        experience of using a product, encompassing the design,
+                        usability, and functionality. Both are crucial for
+                        creating products that are not only visually appealing
+                        but also functional and user-friendly.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseSix"
+                        aria-expanded="false"
+                        aria-controls="collapseSix"
+                      >
+                        <div class="d-flex gap-3">
+                          <div class="number">06.</div>
+                          <div class="text">
+                            Do you offer only UI service for a mobile app?
+                          </div>
+                        </div>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseSix"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        UI (User Interface) design focuses on the visual
+                        elements and interactive features of a product, like
+                        colors, typography, and layout. UX (User Experience)
+                        design, on the other hand, is about the overall feel and
+                        experience of using a product, encompassing the design,
+                        usability, and functionality. Both are crucial for
+                        creating products that are not only visually appealing
+                        but also functional and user-friendly.
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseNine" aria-expanded="true" aria-controls="collapseNine">
-                    Is this only for household AC?
-                  </button>
-                </h2>
-                <div id="collapseNine" class="accordion-collapse collapse" data-bs-parent="#accordionExample3">
-                  <div class="accordion-body">
-                    <p>
-                      Definitely not! As long as you want to avail this service for your AC then you can order for your
-                      office Air Conditioners too.
-                    </p>
+              <div
+                class="tab-pane fade"
+                id="Updates-Upgrades"
+                role="tabpanel"
+                aria-labelledby="Updates-Upgrades-tab"
+                tabindex="0"
+              >
+                <div class="accordion" id="accordionExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne"
+                        aria-expanded="true"
+                        aria-controls="collapseOne"
+                      >
+                        <div class="d-flex gap-3">
+                          <div class="number">01.</div>
+                          <div class="text">
+                            What is the difference between UI and UX design?
+                          </div>
+                        </div>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseOne"
+                      class="accordion-collapse collapse show"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        UI (User Interface) design focuses on the visual
+                        elements and interactive features of a product, like
+                        colors, typography, and layout. UX (User Experience)
+                        design, on the other hand, is about the overall feel and
+                        experience of using a product, encompassing the design,
+                        usability, and functionality. Both are crucial for
+                        creating products that are not only visually appealing
+                        but also functional and user-friendly.
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseTen" aria-expanded="true" aria-controls="collapseTen">
-                    What if they damage my AC?
-                  </button>
-                </h2>
-                <div id="collapseTen" class="accordion-collapse collapse" data-bs-parent="#accordionExample3">
-                  <div class="accordion-body">
-                    <p>
-                      Our professional Service Providers have expert and skilled AC technicians. If they occur any
-                      damages
-                      to your AC during repairing you will get proper compensation after proper investigation. However,
-                      your complaint for any pre-damaged problems will not be considered.
-                    </p>
+
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo"
+                        aria-expanded="false"
+                        aria-controls="collapseTwo"
+                      >
+                        <div class="d-flex gap-3">
+                          <div class="number">02.</div>
+                          <div class="text">
+                            Do I need user testing in the UX design process?
+                          </div>
+                        </div>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseTwo"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        UI (User Interface) design focuses on the visual
+                        elements and interactive features of a product, like
+                        colors, typography, and layout. UX (User Experience)
+                        design, on the other hand, is about the overall feel and
+                        experience of using a product, encompassing the design,
+                        usability, and functionality. Both are crucial for
+                        creating products that are not only visually appealing
+                        but also functional and user-friendly.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree"
+                        aria-expanded="false"
+                        aria-controls="collapseThree"
+                      >
+                        <div class="d-flex gap-3">
+                          <div class="number">03.</div>
+                          <div class="text">
+                            Do you make information architecture in the UX
+                            design process?
+                          </div>
+                        </div>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseThree"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        UI (User Interface) design focuses on the visual
+                        elements and interactive features of a product, like
+                        colors, typography, and layout. UX (User Experience)
+                        design, on the other hand, is about the overall feel and
+                        experience of using a product, encompassing the design,
+                        usability, and functionality. Both are crucial for
+                        creating products that are not only visually appealing
+                        but also functional and user-friendly.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseFour"
+                        aria-expanded="false"
+                        aria-controls="collapseFour"
+                      >
+                        <div class="d-flex gap-3">
+                          <div class="number">04.</div>
+                          <div class="text">
+                            Can you design a responsive landing page UX?
+                          </div>
+                        </div>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseFour"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        UI (User Interface) design focuses on the visual
+                        elements and interactive features of a product, like
+                        colors, typography, and layout. UX (User Experience)
+                        design, on the other hand, is about the overall feel and
+                        experience of using a product, encompassing the design,
+                        usability, and functionality. Both are crucial for
+                        creating products that are not only visually appealing
+                        but also functional and user-friendly.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseFive"
+                        aria-expanded="false"
+                        aria-controls="collapseFive"
+                      >
+                        <div class="d-flex gap-3">
+                          <div class="number">05.</div>
+                          <div class="text">
+                            How long do you take for a UI/UX project?
+                          </div>
+                        </div>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseFive"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        UI (User Interface) design focuses on the visual
+                        elements and interactive features of a product, like
+                        colors, typography, and layout. UX (User Experience)
+                        design, on the other hand, is about the overall feel and
+                        experience of using a product, encompassing the design,
+                        usability, and functionality. Both are crucial for
+                        creating products that are not only visually appealing
+                        but also functional and user-friendly.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseSix"
+                        aria-expanded="false"
+                        aria-controls="collapseSix"
+                      >
+                        <div class="d-flex gap-3">
+                          <div class="number">06.</div>
+                          <div class="text">
+                            Do you offer only UI service for a mobile app?
+                          </div>
+                        </div>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseSix"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        UI (User Interface) design focuses on the visual
+                        elements and interactive features of a product, like
+                        colors, typography, and layout. UX (User Experience)
+                        design, on the other hand, is about the overall feel and
+                        experience of using a product, encompassing the design,
+                        usability, and functionality. Both are crucial for
+                        creating products that are not only visually appealing
+                        but also functional and user-friendly.
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -335,99 +2383,117 @@
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  <!-- Faq section end -->
+    </section>
+    <!-- Faq section end -->
 
-  <!-- Footer Section start -->
-  <section class="footer-section">
-    <div class="container">
-      <div class="row gy-4 g-sm-5">
-        <div class="col-lg-4 col-sm-6">
-          <div class="footer-widget">
-            <div class="widget-logo">
-              <a href="#nav_area"><img class="footer-logo" src="assets/img/logo/logo-white.png" alt="TrueCraft" /></a>
+    <!-- Footer Section start -->
+    <section class="footer-section">
+      <div class="container">
+        <div class="row gy-4 g-sm-5">
+          <div class="col-lg-4 col-sm-6">
+            <div class="footer-widget">
+              <div class="widget-logo">
+                <a href="#nav_area"
+                  ><img
+                    class="footer-logo"
+                    src="assets/img/logo/logo-white.png"
+                    alt="TrueCraft"
+                /></a>
+              </div>
+              <p>
+                Experience the Exchanger Advantage - Empowering Social Success
+                with Advanced, Data-Driven Solutions and Innovative Strategies.
+              </p>
+
+              <ul class="social-box mt-30">
+                <li>
+                  <a href="https://facebook.com" aria-label="Facebook"
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="https://twitter.com" aria-label="Twitter"
+                    ><i class="fab fa-twitter"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="https://www.linkedin.com" aria-label="Linkedin"
+                    ><i class="fab fa-linkedin"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="https://instagram.com" aria-label="Instagram"
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                </li>
+              </ul>
             </div>
-            <p>
-              Experience the Exchanger Advantage - Empowering Social Success
-              with Advanced, Data-Driven Solutions and Innovative Strategies.
-            </p>
-
-            <ul class="social-box mt-30">
-              <li>
-                <a href="https://facebook.com" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-              </li>
-              <li>
-                <a href="https://twitter.com" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-              </li>
-              <li>
-                <a href="https://www.linkedin.com" aria-label="Linkedin"><i class="fab fa-linkedin"></i></a>
-              </li>
-              <li>
-                <a href="https://instagram.com" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-              </li>
-            </ul>
+          </div>
+          <div class="col-lg-2 col-sm-6">
+            <div class="footer-widget">
+              <h5 class="widget-title">Quick Links</h5>
+              <ul>
+                <li><a class="widget-link" href="about.html">About</a></li>
+                <li><a class="widget-link" href="blog.html">Blogs</a></li>
+                <li><a class="widget-link" href="faq.html">FAQs</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 pt-sm-0 pt-3 ps-lg-5">
+            <div class="footer-widget">
+              <h5 class="widget-title">Support</h5>
+              <ul>
+                <li>
+                  <a class="widget-link" href="policy.html">Privacy Policy</a>
+                </li>
+                <li><a class="widget-link" href="">Terms of use</a></li>
+                <li><a class="widget-link" href="aml-kyc.html">AML/KYC</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 pt-sm-0 pt-3">
+            <div class="footer-widget">
+              <h5 class="widget-title">Newsletter</h5>
+              <p>Subscribe To Our Mailing List And Stay Up To Date</p>
+              <form class="newsletter-form">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Your email"
+                  name="newsletter-form"
+                />
+                <button type="button" class="subscribe-btn">
+                  <i class="fa-regular fa-paper-plane"></i>
+                </button>
+              </form>
+            </div>
           </div>
         </div>
-        <div class="col-lg-2 col-sm-6">
-          <div class="footer-widget">
-            <h5 class="widget-title">Quick Links</h5>
-            <ul>
-              <li><a class="widget-link" href="about.html">About</a></li>
-              <li><a class="widget-link" href="blog.html">Blogs</a></li>
-              <li><a class="widget-link" href="faq.html">FAQs</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-3 col-sm-6 pt-sm-0 pt-3 ps-lg-5">
-          <div class="footer-widget">
-            <h5 class="widget-title">Support</h5>
-            <ul>
-              <li>
-                <a class="widget-link" href="policy.html">Privacy Policy</a>
-              </li>
-              <li><a class="widget-link" href="">Terms of use</a></li>
-              <li><a class="widget-link" href="aml-kyc.html">AML/KYC</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-3 col-sm-6 pt-sm-0 pt-3">
-          <div class="footer-widget">
-            <h5 class="widget-title">Newsletter</h5>
-            <p>Subscribe To Our Mailing List And Stay Up To Date</p>
-            <form class="newsletter-form">
-              <input type="text" class="form-control" placeholder="Your email" name="newsletter-form">
-              <button type="button" class="subscribe-btn">
-                <i class="fa-regular fa-paper-plane"></i>
-              </button>
-            </form>
-          </div>
+        <hr class="cmn-hr" />
+        <div class="copyright-area">
+          <p class="mb-0 text-center">
+            Copyright ©2025
+            <a class="highlight" href="index.html">Exchanger</a> All Rights
+            Reserved
+          </p>
         </div>
       </div>
-      <hr class="cmn-hr" />
-      <div class="copyright-area">
-        <p class="mb-0 text-center">
-          Copyright ©2025
-          <a class="highlight" href="index.html">Exchanger</a> All Rights
-          Reserved
-        </p>
-      </div>
-    </div>
-  </section>
-  <!-- Footer Section end -->
+    </section>
+    <!-- Footer Section end -->
 
-  <!-- Jquery Js link -->
-  <script src="assets/js/jquery-3.7.1.min.js"></script>
-  <!-- Bootstrap Js link -->
-  <script src="assets/js/bootstrap.bundle.min.js"></script>
-  <!-- Owl carausel Js link -->
-  <script src="assets/js/owl.carousel.min.js"></script>
-  <!-- select2 Js link -->
-  <script src="assets/js/select2.min.js"></script>
-  <!-- nice-select Js link -->
-  <script src="assets/js/jquery.nice-select.min.js"></script>
-  <!-- Main Js link -->
-  <script src="assets/js/main.js"></script>
-</body>
-
+    <!-- Jquery Js link -->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap Js link -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Owl carausel Js link -->
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <!-- select2 Js link -->
+    <script src="assets/js/select2.min.js"></script>
+    <!-- nice-select Js link -->
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <!-- swiper Js link -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <!-- Main Js link -->
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
